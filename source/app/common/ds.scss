@@ -502,16 +502,30 @@ pre {
 
 .ds-specs {
 	&__list {
-		&:nth-child(n+3) {
-			@include mng-rem(margin-top, 16px);
+		@include mng-rem(margin-top, 16px);
+		&:first-child {
+			@include mng-rem(margin-top, 0);
+		}
+		@include mng-breakpoint($screen-md-min) {
+			margin-top: 0;
+			&:nth-child(n+3) {
+				@include mng-rem(margin-top, 16px);
+			}
 		}
 	}
 }
 
 .ds-doDont {
 	&__box {
-		&:nth-child(n+3) {
-			@include mng-rem(margin-top, 62px);
+		@include mng-rem(margin-top, 62px);
+		&:first-child {
+			@include mng-rem(margin-top, 0);
+		}
+		@include mng-breakpoint($screen-md-min) {
+			margin-top: 0;
+			&:nth-child(n+3) {
+				@include mng-rem(margin-top, 62px);
+			}
 		}
 	}
 	&__wrap {
