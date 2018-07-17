@@ -104,12 +104,12 @@ block codeBody
 		ul.ds-specs.row
 			each val in [1, 2, 3, 4, 5, 6, 7, 8]
 				li.ds-specs__list.col-xs-12.col-md-6
-					img(src="/assets/img/btn/" + val + ".png", alt="")
+					img(src="/assets/img/components/buttons/specs/general/" + val + ".png", alt="")
 		h4 Mobile
 		ul.ds-specs.row
 			each val in [1, 2, 3, 4]
 				li.ds-specs__list.col-xs-12.col-md-6
-					img(src="/assets/img/btn/" + val + ".png", alt="")
+					img(src="/assets/img/components/buttons/specs/mobile/" + val + ".png", alt="")
 block use
 	section
 		h3 Descripción funcional
@@ -137,7 +137,7 @@ block use
 					- for (var i = 0; i < dodont.info.length; i++)
 						.col-xs-12.col-md-6.ds-doDont__box
 							.ds-doDont__wrap
-								img(alt="", src='/assets/img/btn/samples/' + i + '.png').ds-doDont__img
+								img(alt="", src='/assets/img/components/buttons/dodont/' + i + '.png').ds-doDont__img
 							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
 								p
 									span.ds-doDont__check= dodont.info[i].uso
