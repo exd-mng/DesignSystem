@@ -137,8 +137,8 @@ pre {
 	background-color: $color-white;
 	z-index: 3;
 	&__btn {
-		@include mng-rem(width, 45px);
-		@include mng-rem(height, 45px);
+		@include mng-rem(width, 50px);
+		@include mng-rem(height, 50px);
 		@include mng-rem(top, 3px);
 		@include mng-rem(left, 16px);
 		position: absolute;
@@ -437,6 +437,9 @@ pre {
 .ds-specimen {
 	@include mng-breakpoint($screen-md-min) {
 		@include mng-rem(margin-top, 80px);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
 	&__sample {
 		@include mng-rem(margin-top, 72px);
@@ -460,11 +463,14 @@ pre {
 	}
 	&--secondary {
 		font-family: 'Austin', Georgia, 'Times New Roman', Times, serif;
-	}
-	@include mng-breakpoint($screen-md-min) {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
+		.ds-specimen__tit {
+			@include mng-rem(font-size, 210px);
+		}
+		.ds-specimen__txt {
+			@include mng-breakpoint($screen-md-min) {
+				@include mng-rem(font-size, 14px)
+			}
+		}
 	}
 }
 
