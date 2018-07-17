@@ -60,7 +60,6 @@ gulp.task('styles', function () {
   return gulp
     .src('source/app/common/**/**/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('source/app/common'))
     .pipe(cssnano())
     .pipe(prefix(autoprefixerOptions))
     .pipe(sourcemaps.write())

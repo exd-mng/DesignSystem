@@ -18,9 +18,6 @@ body {
 			width: 100%;
 			position: absolute;
 			right: 0;
-			@include mng-breakpoint($screen-lg-min) {
-				width: 80%;
-			}
 		}
 		&::before {   
 			top: 0;
@@ -35,13 +32,15 @@ body {
 			}
 		}
 		&::after {
-			@include mng-rem(margin-top, -53px);
+			@include mng-rem(margin-top, -57px);
 			border-top: 1px solid $color-woodsmoke;
 		}
 	}
 }
 
-b, strong, h3 {
+b, 
+strong, 
+h3 {
 	font-weight: 400;
 }
 
@@ -56,13 +55,14 @@ h1 {
 	z-index: 3;
 	@include mng-breakpoint($screen-md-min) {
 		@include mng-rem(top, 26px);
-		@include mng-rem(margin-left, 16px);
+		@include mng-rem(margin-left, 40px);
 		@include mng-rem(width, 119px);
 		@include mng-rem(height, 19px);
 	}
 	@include mng-breakpoint($screen-lg-min) {
+		@include mng-rem(top, 32px);
 		transform: none;
-		left: 10%;
+		left: 0;
 		position: fixed;
 	}
 }
@@ -78,16 +78,15 @@ h2 {
 h3 {
 	@include mng-rem(font-size, 12px);
 	@include mng-rem(margin-top, 64px);
-	@include mng-rem(margin-bottom, 32px);
+	@include mng-rem(margin-bottom, 40px);
 	text-transform: uppercase;
 	color: $color-bombay;
 }
 
 h4 {
 	@include mng-rem(font-size, 14px);
-	@include mng-rem(margin-top, 56px);
+	@include mng-rem(margin-top, 64px);
 	@include mng-rem(margin-bottom, 24px);
-	@include mng-rem(padding-bottom, 8px);
 }
 
 p {
@@ -106,27 +105,6 @@ pre {
 	font-family: 'Courier New', monospace;
 }
 
-.ds-container--open {
-	.ds-mainHeader__btnLine {
-		background-color: transparent;
-		&::before, 
-		&::after {
-			margin-top: 0;
-		}
-		&::before {
-			transform: rotate(45deg);
-		}
-		&::after {
-			transform: rotate(-45deg);
-		}
-	}
-	.ds-mainNav {
-		opacity: 1;
-		transform: translateY(0);
-		transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1.000) .2s , transform .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-	}
-}
-
 .ds-mainHeader {
 	@include mng-rem(height, 56px);
 	position: fixed;
@@ -136,10 +114,10 @@ pre {
 	background-color: $color-white;
 	z-index: 3;
 	&__btn {
-		@include mng-rem(width, 50px);
-		@include mng-rem(height, 50px);
-		@include mng-rem(top, 3px);
+		@include mng-rem(width, 55px);
+		@include mng-rem(height, 55px);
 		@include mng-rem(left, 16px);
+		top: 0;
 		position: absolute;
 		z-index: 3;
 		@include mng-breakpoint($screen-md-min) {
@@ -184,6 +162,9 @@ pre {
 		&__btn {
 			display: none;
 		}
+	}
+	&--open {
+
 	}
 }
 
@@ -243,12 +224,12 @@ pre {
 		display: block;
 	}
 	@include mng-breakpoint($screen-md-min) {
-		left: 5%;
+		@include mng-rem(width, 264px);
+		left: 0;
 		position: fixed;
-		width: 25%;
 		&__tit,
 		&__link {
-			@include mng-rem(padding-left, 16px);
+			@include mng-rem(padding-left, 40px);
 		}
 		&::before {
 			content: "";
@@ -260,8 +241,7 @@ pre {
 		}
 	}
 	@include mng-breakpoint($screen-lg-min) {
-		left: 10%;
-		width: 20%;
+		@include mng-rem(padding-top, 83px);
 		opacity: 1;
 		transform: none;
 		&::before {
@@ -271,8 +251,10 @@ pre {
 			position: static;
 		}
 	}
-	@include mng-breakpoint($screen-hd-min) {
-		width: 16.66667%;
+	&--open {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1.000) .2s , transform .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	}
 }
 
@@ -309,7 +291,7 @@ pre {
 
 .ds-headLine {
 	position: relative;
-	@include mng-rem(padding-top, 57px);
+	@include mng-rem(padding-top, 64px);
 	width: 100%;
 	&__txt {
 		@include mng-rem(font-size, 16px);
@@ -379,7 +361,7 @@ pre {
 }
 
 .ds-sample {
-	@include mng-rem(padding, 34px);
+	@include mng-rem(padding, 52px 34px);
 	@include mng-rem(margin-top, 24px);
 	background-color: rgba($color-concrete, .5);
 	text-align: center;
@@ -392,6 +374,7 @@ pre {
 }
 
 .ds-color {
+	@include mng-rem(margin-top, -32px);
 	&__item {
 		@include mng-rem(margin-top, 32px);
 	}
@@ -423,9 +406,8 @@ pre {
 }
 
 .ds-specimen {
-	@include mng-rem(padding, 34px);
 	@include mng-breakpoint($screen-md-min) {
-		@include mng-rem(margin-top, 46px);
+		@include mng-rem(margin-top, 38px);
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -444,7 +426,7 @@ pre {
 	}
 	&__txt {
 		@include mng-rem(font-size, 14px);
-		margin-top: 0;
+		@include mng-rem(margin-top, 5px);
 		text-align: center;
 		@include mng-breakpoint($screen-md-min) {
 			@include mng-rem(font-size, 12px)
@@ -465,8 +447,8 @@ pre {
 }
 
 .ds-scaffolding {
-	@include mng-rem(margin-top, -24px);
-	@include mng-rem(padding, 32px 0);
+	@include mng-rem(margin-top, -18px);
+	@include mng-rem(padding, 16px 0 32px);
 	border-top: 1px solid $color-iron;
 	border-bottom: 1px solid $color-iron;
 	&__tit {
@@ -479,7 +461,7 @@ pre {
 		@include mng-rem(font-size, 11px);
 		@include mng-rem(margin-top, 16px);
 		font-family: 'Courier New', monospace;
-		color: $color-bombay;
+		color: $color-nevada;
 	}
 	@include mng-breakpoint($screen-md-min) {
 		display: flex;
@@ -617,12 +599,15 @@ pre {
 
 .ds-footer {
 	@include mng-rem(margin-top, 32px);
-	@include mng-rem(padding, 18px 0);
-	border-top: 1px solid $color-black-solid;
+	@include mng-rem(padding, 22px 0 18px);
 	p {
 		@include mng-rem(font-size, 11px);
 		color: $color-bombay;
 		text-align: center;
+	}
+	@include mng-breakpoint($screen-lg-min) {
+		@include mng-rem(margin-top, 144px);
+		text-align: left;
 	}
 }
 
@@ -794,4 +779,25 @@ pre[class*="language-"] {
 }
 .token.entity {
 	cursor: help;
+}
+
+.nav-open {
+	.ds-mainHeader__btnLine {
+		background-color: transparent;
+		&::before, 
+		&::after {
+			margin-top: 0;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+	.ds-mainNav {
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1.000) .2s , transform .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
 }

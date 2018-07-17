@@ -5,7 +5,7 @@
 
 $('.ds-mainHeader__btn').click(function(e){
 	e.stopPropagation();
-	$('.container').toggleClass("ds-container--open")
+	$('body').toggleClass("nav-open")
 });
 
 

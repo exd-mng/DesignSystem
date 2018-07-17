@@ -22,18 +22,17 @@ block content
         .ds-tabs__content
           .ds-tabs__panel(id="tab1")
             .row
-              .col-xs.col-hd-9
-                .row
-                  .ds-headLine
-                    .ds-headLine__txt.col-md-10
-                      block codeHead
+              .col-xs.col-lg-9.col-hd-6
+                .ds-headLine
+                  .ds-headLine__txt
+                    block codeHead
             .row
-              .col-xs.col-hd-8
+              .col-xs.col-lg-11.col-hd-8
                 block codeBody
           .ds-tabs__panel.u-hidden(id="tab2")
             .row
-              .col-xs.col-hd-8
+              .col-xs.col-lg-11.col-hd-8
                 block use
         .row
-          .col-xs.col-hd-12
+          .col-xs
             block paginator
