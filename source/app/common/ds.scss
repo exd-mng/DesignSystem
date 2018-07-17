@@ -103,7 +103,6 @@ a {
 
 pre {
 	@include mng-rem(font-size, 14px);
-	@include mng-rem(margin-top, 24px);
 	font-family: 'Courier New', monospace;
 }
 
@@ -277,12 +276,6 @@ pre {
 	}
 }
 
-.ds-mainContent {
-	@include mng-breakpoint($screen-lg-min) {
-	//	padding-left: 25%;
-	}
-}
-
 .ds-list {
 	@include mng-rem(margin-top, 24px);
 	@include mng-rem(padding-left, 32px);
@@ -296,7 +289,6 @@ pre {
 .ds-intro {
 	@include mng-rem(padding-top, 48px);
 	@include mng-rem(height, 198px);
-//	background-color: $color-concrete;
 	position: relative;
 	&__family {
 		color: $color-bombay;
@@ -340,7 +332,6 @@ pre {
 	&__list {
 		@include mng-rem(margin-top, -33px);
 		display: flex;
-		//background-color: $color-concrete;
 	}
 	&__item {
 		flex: 1;
@@ -398,9 +389,6 @@ pre {
 	&--fakes {
 		pointer-events: none;
 	}
-	+ pre {
-		margin-top: 0;
-	}
 }
 
 .ds-color {
@@ -435,8 +423,9 @@ pre {
 }
 
 .ds-specimen {
+	@include mng-rem(padding, 34px);
 	@include mng-breakpoint($screen-md-min) {
-		@include mng-rem(margin-top, 80px);
+		@include mng-rem(margin-top, 46px);
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
