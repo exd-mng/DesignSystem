@@ -11,11 +11,6 @@ block codeHead
 	:markdown-it
 		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus, non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
 
-block codeHeadBtn
-	+a-mngBtnGhost("#")(class="ds-headLine__link") 
-		+svg-icon("duplicate")(class="o-mngIco--mr") 
-		| Descargar librería
-
 block codeBody
 	each color in COLORS
 		h3.tit.tit--h3= color.title

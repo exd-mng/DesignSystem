@@ -10,11 +10,6 @@ block codeHead
 	:markdown-it
 		Los botones principalmente indican al usuario acciones a realizar, ya sea en primer o segundo nivel del flujo de navegación.
 
-block codeHeadBtn
-	+a-mngBtnGhost("#")(class="ds-headLine__btn") 
-			+svg-icon("duplicate")(class="o-mngIco--mr") 
-			| Descargar librería
-
 block codeBody
 	h3 HTML
 	section
@@ -105,9 +100,15 @@ block codeBody
 					</button>
 	section
 		h3 Especificaciones
-		ul.row
+		h4 General
+		ul.ds-specs.row
 			each val in [1, 2, 3, 4, 5, 6, 7, 8]
-				li.col-xs-12.col-md-6.u-spacer--2
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="/assets/img/btn/" + val + ".png", alt="")
+		h4 Mobile
+		ul.ds-specs.row
+			each val in [1, 2, 3, 4]
+				li.ds-specs__list.col-xs-12.col-md-6
 					img(src="/assets/img/btn/" + val + ".png", alt="")
 block use
 	section
@@ -134,7 +135,7 @@ block use
 			each dodont in SAMPLEBUTTONS
 				.row
 					- for (var i = 0; i < dodont.info.length; i++)
-						.col-xs-12.col-md-6
+						.col-xs-12.col-md-6.ds-doDont__box
 							.ds-doDont__wrap
 								img(alt="", src='/assets/img/btn/samples/' + i + '.png').ds-doDont__img
 							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
