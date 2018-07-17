@@ -1,0 +1,74 @@
+extends ../../_layouts/components.view.pug
+
+block config
+	- var active = "Input"
+	- var title = "Input";
+	- var next = "radio";
+	- var prev = "links";
+
+block codeHead
+	:markdown-it
+		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus, non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
+
+block codeHeadBtn
+	+a-mngBtnGhost("#")(class="ds-headLine__btn") 
+		+svg-icon("duplicate")(class="o-mngIco--mr") 
+		| Descargar librería
+
+block codeBody
+	h3 HTML
+	section
+		h4 Reposo
+		.ds-sample
+			+mngInput('Texto label','ptt', 'ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput">
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+					</div>
+	section
+		h4 Error
+		.ds-sample
+			+mngInputError('Texto label','ptt', 'ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput is-error">
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+					</div>
+	section
+		h4 Deshabilitado
+		.ds-sample
+			+mngInputDisabled('Texto label','ptt', 'ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput is-disabled">
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label" disabled="disabled">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+					</div>
+	section
+		h4 Inverso
+		.ds-sample.ds-sample--inverse
+			+mngInputReverse('Texto label','ptt', 'ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput c-mngInput--reverse">
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+					</div>
+block use
+block example
+block paginator
+	+paginator("paginatorOptions",[
+		{ 
+			next:"Radio Buttons",
+			prev:"Enlaces", 
+			familyPrev: "components", 
+			familyNext: "components" 
+		}
+	])

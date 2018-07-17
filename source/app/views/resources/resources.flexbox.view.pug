@@ -1,0 +1,670 @@
+//
+
+	extends ../../_layouts/design.view.pug
+
+	block config
+		- var nav = "flexbox";
+		- var title = "Clases Flexbox";
+
+	block code
+		.ds-headLine
+			:markdown-it
+				Conjunto de clases para alinear elementos con Flexbox.
+		section
+			h3.tit.tit--h3
+				code .u-flex
+			:markdown-it
+				Crea un contenedor "flex"
+			.box.box-container.u-flex.u-spacer--3
+				- for (var x = 1; x < 3; x++)
+					.box-nested= x + ". Item en fila"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div>1. Item en fila</div>
+							<div>2. Item en fila</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flexInline
+			:markdown-it
+				Crea un contenedor "flex inline"
+			.box.box-container.u-spacer--3
+				- for (var x = 1; x < 4; x++)
+					.u-flexInline.box-nested= "Contenedor inline"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flexInline">Contenedor inline</div>
+						<div class="u-flexInline">Contenedor inline</div>
+						<div class="u-flexInline">Contenedor inline</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--row
+			:markdown-it
+				Muestra los elementos en fila
+			.box.box-container.u-flex.u-flex--row.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item en fila"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--row">
+							<div>1. Item en fila</div>
+							<div>2. Item en fila</div>
+							<div>3. Item en fila</div>
+							<div>4. Item en fila</div>
+							<div>5. Item en fila</div>
+							<div>6. Item en fila</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--rowReverse
+			:markdown-it
+				Invierte los elementos en fila
+			.box.box-container.u-flex.u-flex--rowReverse.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item en fila"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--rowReverse">
+							<div>1. Item en fila</div>
+							<div>2. Item en fila</div>
+							<div>3. Item en fila</div>
+							<div>4. Item en fila</div>
+							<div>5. Item en fila</div>
+							<div>6. Item en fila</div>
+						</div>
+		section
+			h3.tit.tit--h3 
+				code .u-flex--col
+			:markdown-it
+				Muestra los elementos en columna
+			.box.box-container.u-flex.u-flex--col.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item en columna"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--col">
+							<div>1. Item en columna</div>
+							<div>2. Item en columna</div>
+							<div>3. Item en columna</div>
+							<div>4. Item en columna</div>
+							<div>5. Item en columna</div>
+							<div>6. Item en columna</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--colReverse
+			:markdown-it
+				Invierte los elementos en columna
+			.box.box-container.u-flex.u-flex--colReverse.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item en columna"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--colReverse">
+							<div>1. Item en columna</div>
+							<div>2. Item en columna</div>
+							<div>3. Item en columna</div>
+							<div>4. Item en columna</div>
+							<div>5. Item en columna</div>
+							<div>6. Item en columna</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--wrap
+			:markdown-it
+				Los elementos caen a la siguiente linea si el contenedor es demasiado pequeño.
+			.box.box-container.u-flex.u-flex--wrap.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item cae cuando no hay espacio"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--wrap">
+							<div>1. Item cae cuando no hay espacio</div>
+							<div>2. Item cae cuando no hay espacio</div>
+							<div>3. Item cae cuando no hay espacio</div>
+							<div>4. Item cae cuando no hay espacio</div>
+							<div>5. Item cae cuando no hay espacio</div>
+							<div>6. Item cae cuando no hay espacio</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--noWrap
+			:markdown-it
+				Mantiene los elementos en una única fila independientemente del tamaño del contenedor.
+			.box.box-container.u-flex.u-flex--noWrap.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item en una única fila"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--noWrap">
+							<div>1. Item en una única fila</div>
+							<div>2. Item en una única fila</div>
+							<div>3. Item en una única fila</div>
+							<div>4. Item en una única fila</div>
+							<div>5. Item en una única fila</div>
+							<div>6. Item en una única fila</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--wrapReverse
+			:markdown-it
+				Invierte el órden de los elementos encajados en varias filas.
+			.box.box-container.u-flex.u-flex--wrapReverse.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item cae cuando no hay espacio"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--wrapReverse">
+							<div>1. Item cae cuando no hay espacio</div>
+							<div>2. Item cae cuando no hay espacio</div>
+							<div>3. Item cae cuando no hay espacio</div>
+							<div>4. Item cae cuando no hay espacio</div>
+							<div>5. Item cae cuando no hay espacio</div>
+							<div>6. Item cae cuando no hay espacio</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--justifyStart
+			:markdown-it
+				Los elementos se alinean a la izquierda del eje principal.
+			.box.box-container.u-flex.u-flex--justifyStart.u-spacer--3
+				- for (var x = 1; x < 4; x++)
+					.box-nested= x + ". Item a la izquierda"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--justifyStart">
+							<div>1. Item a la izquierda</div>
+							<div>2. Item a la izquierda</div>
+							<div>3. Item a la izquierda</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--justifyEnd
+			:markdown-it
+				Los elementos se alinean a la derecha del eje principal.
+			.box.box-container.u-flex.u-flex--justifyEnd.u-spacer--3
+				- for (var x = 1; x < 4; x++)
+					.box-nested= x + ". Item a la derecha"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--justifyEnd">
+							<div>1. Item a la derecha</div>
+							<div>2. Item a la derecha</div>
+							<div>3. Item a la derecha</div>
+						</div>
+
+		section
+			h3.tit.tit--h3 
+				code .u-flex--justifyCenter
+			:markdown-it
+				Los elementos se alinean al centro del eje principal.
+			.box.box-container.u-flex.u-flex--justifyCenter.u-spacer--3
+				- for (var x = 1; x < 4; x++)
+					.box-nested= x + ". Item al centro"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--justifyCenter">
+						<div>1. Item al centro</div>
+						<div>2. Item al centro</div>
+						<div>3. Item al centro</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--justifyBetween
+			:markdown-it
+				Los elementos se distribuyen en el eje principal de manera proporcional.
+			.box.box-container.u-flex.u-flex--justifyBetween.u-spacer--3
+				- for (var x = 1; x < 4; x++)
+					.box-nested= x + ". Item distribuido"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--justifyBetween">
+							<div>1. Item distribuido</div>
+							<div>2. Item distribuido</div>
+							<div>3. Item distribuido</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--justifyAround
+			:markdown-it
+				Los elementos se distribuyen en el eje principal dejando el mismo espacio entre ellos.
+			.box.box-container.u-flex.u-flex--justifyAround.u-spacer--3
+				- for (var x = 1; x < 4; x++)
+					.box-nested= x + ". Item distribuido con el mismo espacio"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--justifyAround">
+							<div>1. Item distribuido con el mismo espacio</div>
+							<div>2. Item distribuido con el mismo espacio</div>
+							<div>3. Item distribuido con el mismo espacio</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignItemsStretch
+			:markdown-it
+				Los elementos se extienden hasta llenar el contenedor.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsStretch.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item extendido"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignItemsStretch">
+							<div>1. Item extendido</div>
+							<div>2. Item extendido</div>
+							<div>3. Item extendido</div>
+							<div>4. Item extendido</div>
+							<div>5. Item extendido</div>
+							<div>6. Item extendido</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignItemsStart
+			:markdown-it
+				Los elementos se alinean al inicio del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsStart.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item al inicio"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignItemsStart">
+							<div>1. Item al inicio</div>
+							<div>2. Item al inicio</div>
+							<div>3. Item al inicio</div>
+							<div>4. Item al inicio</div>
+							<div>5. Item al inicio</div>
+							<div>6. Item al inicio</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignItemsEnd
+			:markdown-it
+				Los elementos se alinean al final del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsEnd.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item al final"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignItemsEnd">
+							<div>1. Item al final</div>
+							<div>2. Item al final</div>
+							<div>3. Item al final</div>
+							<div>4. Item al final</div>
+							<div>5. Item al final</div>
+							<div>6. Item al final</div>
+						</div>
+
+		section
+			h3.tit.tit--h3 
+				code .u-flex--alignItemsCenter
+			:markdown-it
+				Los elementos se alinean al centro del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsCenter.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item centrado verticalmente"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignItemsCenter">
+							<div>1. Item centrado verticalmente</div>
+							<div>2. Item centrado verticalmente</div>
+							<div>3. Item centrado verticalmente</div>
+							<div>4. Item centrado verticalmente</div>
+							<div>5. Item centrado verticalmente</div>
+							<div>6. Item centrado verticalmente</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignItemsBaseline
+			:markdown-it
+				Los elementos tienen su linea base alineada en el eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsBaseline.u-spacer--3
+				.box-nested(style="padding-top: 25px")
+					| 1. Item alienado a la linea base
+				.box-nested(style="padding-top: 50px")
+					| 2. Item alienado a la linea base
+				.box-nested
+					| 3. Item alienado a la linea base
+				.box-nested(style="padding-top: 25px")
+					| 4. Item alienado a la linea base
+				.box-nested(style="padding-top: 50px")
+					| 5. Item alienado a la linea base
+				.box-nested
+					| 6. Item alienado a la linea base
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignItemsBaseline">
+							<div>1. Item alienado a la linea base</div>
+							<div>2. Item alienado a la linea base</div>
+							<div>3. Item alienado a la linea base</div>
+							<div>4. Item alienado a la linea base</div>
+							<div>5. Item alienado a la linea base</div>
+							<div>6. Item alienado a la linea base</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignContentStart
+			:markdown-it
+				Los elementos se agrupan al incio del contenedor.
+			.box.box-container.box-large.u-flex.u-flex--wrap.u-flex--alignContentStart.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item al inicio"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignContentStart">
+							<div>1. Item al inicio</div>
+							<div>2. Item al inicio</div>
+							<div>3. Item al inicio</div>
+							<div>4. Item al inicio</div>
+							<div>5. Item al inicio</div>
+							<div>6. Item al inicio</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignContentEnd
+			:markdown-it
+				Los elementos se agrupan al final del contenedor.
+			.box.box-container.box-large.u-flex.u-flex--wrap.u-flex--alignContentEnd.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item al final"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignContentEnd">
+							<div>1. Item al final</div>
+							<div>2. Item al final</div>
+							<div>3. Item al final</div>
+							<div>4. Item al final</div>
+							<div>5. Item al final</div>
+							<div>6. Item al final</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignContentCenter
+			:markdown-it
+				Los elementos se agrupan al centro del contenedor.
+			.box.box-container.box-large.u-flex.u-flex--wrap.u-flex--alignContentCenter.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item al centro"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignContentCenter">
+							<div>1. Item al centro</div>
+							<div>2. Item al centro</div>
+							<div>3. Item al centro</div>
+							<div>4. Item al centro</div>
+							<div>5. Item al centro</div>
+							<div>6. Item al centro</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignContentStretch
+			:markdown-it
+				Los elementos se extienden hasta ocupar todo el espacio disponible.
+			.box.box-container.box-large.u-flex.u-flex--wrap.u-flex--alignContentStretch.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item extendido"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignContentStretch">
+							<div>1. Item extendido</div>
+							<div>2. Item extendido</div>
+							<div>3. Item extendido</div>
+							<div>4. Item extendido</div>
+							<div>5. Item extendido</div>
+							<div>6. Item extendido</div>
+						</div>
+
+		section
+			h3.tit.tit--h3 .u-flex--alignContentBetween
+			:markdown-it
+				Las filas se distribuyen uniformemente; la primera será al inicio del contenedor mientras que la última al final.
+			.box.box-container.box-large.u-flex.u-flex--wrap.u-flex--alignContentBetween.u-spacer--3
+				.box-nested
+					| 1. Item al inicio
+				.box-nested
+					| 2. Item al inicio
+				.box-nested
+					| 3. Item al inicio
+				.box-nested
+					| 4. Item al inicio
+				.box-nested
+					| 5. Item al inicio
+				.box-nested
+					| 6. Item al final
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignContentBetween">
+							<div>1. Item al inicio</div>
+							<div>2. Item al inicio</div>
+							<div>3. Item al inicio</div>
+							<div>4. Item al inicio</div>
+							<div>5. Item al inicio</div>
+							<div>6. Item al final</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignContentAround
+			:markdown-it
+				Las filas se distribuyen uniformemente con el mismo espacio entre cada fila.
+			.box.box-container.box-large.u-flex.u-flex--wrap.u-flex--alignContentAround.u-spacer--3
+				- for (var x = 1; x < 7; x++)
+					.box-nested= x + ". Item con espacio alrededor"
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex u-flex--alignContentAround">
+						<div>1. Item con espacio alrededor</div>
+						<div>2. Item con espacio alrededor</div>
+						<div>3. Item con espacio alrededor</div>
+						<div>4. Item con espacio alrededor</div>
+						<div>5. Item con espacio alrededor</div>
+						<div>6. Item con espacio alrededor</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignSelfStart
+			:markdown-it
+				Alinea un único elemento al incio del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsEnd.u-spacer--3
+				.box-nested.u-flex--alignSelfStart
+					| 1. Item al inicio
+				.box-nested
+					| 2. Item al final
+				.box-nested
+					| 3. Item al final
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div class="u-flex--alignSelfStart">1. Item al inicio</div>
+							<div>2. Item al final</div>
+							<div>3. Item al final</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignSelfEnd
+			:markdown-it
+				Alinea un único elemento al final del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsStart.u-spacer--3
+				.box-nested.u-flex--alignSelfEnd
+					| 1. Item al final
+				.box-nested
+					| 2. Item al inicio
+				.box-nested
+					| 3. Item al inicio
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div class="u-flex--alignSelfEnd">1. Item al final</div>
+							<div>2. Item al inicio</div>
+							<div>3. Item al inicio</div>
+						</div>
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignSelfCenter
+			:markdown-it
+				Alinea un único elemento al centro del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsStart.u-spacer--3
+				.box-nested.u-flex--alignSelfCenter
+					| 1. Item al centro
+				.box-nested
+					| 2. Item al inicio
+				.box-nested
+					| 3. Item al incio
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div class="u-flex--alignSelfCenter">1. Item al centro</div>
+							<div>2. Item al inicio</div>
+							<div>3. Item al inicio</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--alignSelfStretch
+			:markdown-it
+				Estira un único elemento de arriba a abajo del eje secundario.
+			.box.box-container.box-large.u-flex.u-flex--alignItemsStart.u-spacer--3
+				.box-nested.u-flex--alignSelfStretch
+					| 1. Item extendido
+				.box-nested
+					| 2. Item al inicio
+				.box-nested
+					| 3. Item al inicio
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div class="u-flex--alignSelfStretch">1. Item extendido</div>
+							<div>2. Item al inicio</div>
+							<div>3. Item al inicio</div>
+						</div>
+
+		section
+			h3.tit.tit--h3
+				code .u-flex--orderFirst
+			:markdown-it
+				Posiciona un elemento al inicio.
+			.box.box-container.u-flex.u-spacer--3
+				.box-nested
+					| 1. Item
+				.box-nested
+					| 2. Item
+				.box-nested.u-flex--orderFirst
+					| 3. Item al inicio
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div>1. Item</div>
+							<div>2. Item</div>
+							<div class="u-flex--orderFirst">3. Item al inicio</div>
+						</div>
+			:markdown-it
+				Puede aplicarse a varios elementos.
+			.box.box-container.u-flex.u-spacer--3
+				.box-nested
+					| 1. Item
+				.box-nested.u-flex--orderFirst
+					| 2. Item reordenado
+				.box-nested.u-flex--orderFirst
+					| 3. Item reordenado
+				.box-nested
+					| 4. Item
+				.box-nested
+					| 5. Item
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div>1. Item</div>
+							<div class="u-flex--orderFirst">2. Item reordenado</div>
+							<div class="u-flex--orderFirst">3. Item reordenado</div>
+							<div>4 Item</div>
+							<div>5 Item</div>
+						</div>
+
+		section
+			h3.tit.tit--h3 .u-flex--orderLast
+			:markdown-it
+				Posiciona un elemento al final.
+			.box.box-container.u-flex.u-spacer--3
+				.box-nested.u-flex--orderLast
+					| 1. Item al final
+				.box-nested
+					| 2. Item
+				.box-nested
+					| 3. Item
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div class="u-flex--orderLast">1. Item al final</div>
+							<div>2. Item</div>
+							<div>3. Item</div>
+						</div>
+
+			:markdown-it
+				Puede aplicarse a varios elementos.
+			.box.box-container.u-flex.u-spacer--3
+				.box-nested.u-flex--orderLast
+					| 1. Penúltimo item
+				.box-nested.u-flex--orderLast
+					| 2.  Item al final
+				.box-nested
+					| 3. Item
+				.box-nested
+					| 4. Item
+				.box-nested
+					| 5. Item
+			pre
+				code.language-html
+					:markdown-it
+						<div class="u-flex">
+							<div class="u-flex--orderLast">1. item should be second from last</div>
+							<div class="u-flex--orderLast">2.  item should be last</div>
+							<div>3. default order</div>
+							<div>4. default order</div>
+							<div>5. default order</div>
+						</div>
+	block use
+	block example

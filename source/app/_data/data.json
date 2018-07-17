@@ -1,0 +1,516 @@
+{
+	"COLORS": {
+		"primary": {
+			"title": "Primarios",
+			"range": [
+				{
+					"color": "Black Solid",
+					"var": "$color-black-solid",
+					"code": "#000000"
+				},
+				{
+					"color": "Woodsmoke",
+					"var": "$color-woodsmoke",
+					"code": "#121314"
+				},
+				{
+					"color": "Shark",
+					"var": "$color-shark",
+					"code": "#323436"
+				},
+				{
+					"color": "Abbey",
+					"var": "$color-abbey",
+					"code": "#525457"
+				},
+				{
+					"color": "Nevada",
+					"var": "$color-nevada",
+					"code": "#6d6f71"
+				},
+				{
+					"color": "White",
+					"var": "$color-white",
+					"code": "#ffffff"
+				}
+			]
+		},
+		"utility": {
+			"title": "Utilidades",
+			"range": [
+				{
+					"color": "Pomegranate",
+					"var": "$color-pomegranate",
+					"code": "#f42837"
+				},
+				{
+					"color": "Marrakech",
+					"var": "$color-marrakech",
+					"code": "#ffcc33"
+				},
+				{
+					"color": "Capri",
+					"var": "$color-capri",
+					"code": "#339dff"
+				},
+				{
+					"color": "Ligt Green",
+					"var": "$color-light-green",
+					"code": "#4ca92b"
+				},
+				{
+					"color": "Bombay",
+					"var": "$color-bombay",
+					"code": "#adafb2"
+				},
+				{
+					"color": "Iron",
+					"var": "$color-iron",
+					"code": "#d7d7d8"
+				},
+				{
+					"color": "Concrete",
+					"var": "$color-concrete",
+					"code": "#f3f3f3"
+				}
+			]
+		}
+	},
+	"ICONS": {
+		"basics": {
+			"title": "Básicos",
+			"range": [
+				{
+					"icon": "plus"
+				},
+				{
+					"icon": "minus"
+				},
+				{
+					"icon": "up"
+				},
+				{
+					"icon": "down"
+				},
+				{
+					"icon": "right"
+				},
+				{
+					"icon": "left"
+				},
+				{
+					"icon": "intro"
+				},
+				{
+					"icon": "forward"
+				},
+				{
+					"icon": "back"
+				},
+				{
+					"icon": "close"
+				},
+				{
+					"icon": "session"
+				},
+				{
+					"icon": "checked"
+				}
+			]
+		},
+		"actions": {
+			"title": "Acciones",
+			"range": [
+				{
+					"icon": "edit"
+				},
+				{
+					"icon": "player"
+				},
+				{
+					"icon": "scan"
+				},
+				{
+					"icon": "connection"
+				},
+				{
+					"icon": "print"
+				},
+				{
+					"icon": "email"
+				},
+				{
+					"icon": "language"
+				},
+				{
+					"icon": "search"
+				},
+				{
+					"icon": "delete"
+				},
+				{
+					"icon": "shopping"
+				},
+				{
+					"icon": "show"
+				},
+				{
+					"icon": "hide"
+				},
+				{
+					"icon": "no-connection"
+				},
+				{
+					"icon": "add-user"
+				},
+				{
+					"icon": "delete-user"
+				},
+				{
+					"icon": "unauthorised"
+				},
+				{
+					"icon": "user"
+				},
+				{
+					"icon": "duplicate"
+				},
+				{
+					"icon": "new-order"
+				},
+				{
+					"icon": "refresh"
+				}
+			]
+		},
+		"utility": {
+			"title": "Utilidades",
+			"range": [
+				{
+					"icon": "provisional"
+				},
+				{
+					"icon": "expired"
+				},
+				{
+					"icon": "hanger"
+				},
+				{
+					"icon": "best"
+				},
+				{
+					"icon": "mother"
+				},
+				{
+					"icon": "lock"
+				},
+				{
+					"icon": "euro"
+				},
+				{
+					"icon": "help"
+				},
+				{
+					"icon": "pause"
+				},
+				{
+					"icon": "box"
+				},
+				{
+					"icon": "proposal"
+				},
+				{
+					"icon": "warning"
+				},
+				{
+					"icon": "erase"
+				},
+				{
+					"icon": "ok"
+				},
+				{
+					"icon": "ko"
+				},
+				{
+					"icon": "shop"
+				},
+				{
+					"icon": "daughter"
+				},
+				{
+					"icon": "shop-online"
+				}
+			]
+		},
+		"types": {
+			"title": "Formatos",
+			"range": [
+				{
+					"icon": "pdf"
+				},
+				{
+					"icon": "excel"
+				}
+			]
+		},
+		"custom": {
+			"title": "Propios",
+			"range": [
+				{
+					"icon": "beta-mark"
+				},
+				{
+					"icon": "nexus"
+				}
+			]
+		}
+	},
+	"SAMPLEBUTTONS": {
+		"buttons": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Usar los verbos de manera consistente en diferentes acciones."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				},
+				{
+					"uso": "Correcto",
+					"info": "Utilizar la palabra Cancelar para cancelar una acción."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				},
+				{
+					"uso": "Correcto",
+					"info": "Hace que un mensaje o diálogo desaparezca sin consecuencias."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				}
+			]
+		}
+	},
+	"SAMPLELINKS": {
+		"links": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Usar solo texto para enlaces."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "No usar gráficos o iconos para los enlaces."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Los enlaces deben ser de tres palabras o menos, de esta forma evitaremos los links con dos líneas en dispositivos móviles."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Evitar los literales largos y que contengan más de un concepto o idea."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Utilizar los links necesarios para la usabilidad de la página."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Los literales deben estar directamente relacionados con el contenido al que hacen referencia."
+				},
+				{
+					"uso": "Correcto",
+					"info": "El texto que describe un enlace debe ser entendible claramente por los usuarios."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Evitar el uso directo de la URL del contenido que vas a enlazar."
+				},
+				{
+					"uso": "Correcto",
+					"info": "El texto debe ser coherente con el título del destino previsto."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Para indicar una acción es preferible usar un <a href=\"/app/views/components/components.button.view.html#ghost\" class=\"c-mngLink\">Ghost Button</a> en lugar de un enlace."
+				}
+			]
+		}
+	},
+	"STYLESCOLORS": {
+		"buttons": {
+			"type": {
+				"thead": [
+					{
+						"th": "Elemento"
+					},
+					{
+						"th": "Fuente"
+					},
+					{
+						"th": "Peso"
+					},
+					{
+						"th": "Tamaño (PX / REM)"
+					}
+				],
+				"tbody": [
+					[
+						{
+							"td": "Texto botón"
+						},
+						{
+							"td": "Mango Sans"
+						},
+						{
+							"td": "Regular (400)"
+						},
+						{
+							"td": "14 / 0.875"
+						}
+					]
+				]
+			},
+			"primary": [
+				{
+					"Estado": "Inactivo",
+					"Color Fondo": "#d7d7d8 / $color-iron",
+					"Texto": "#f3f3f3 / $color-concrete"
+				},
+				{
+					"Estado": "Reposo",
+					"Color Fondo": "#121314 / $color-woodsmoke",
+					"Texto": "#ffffff / $color-white"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Fondo": "#525457 / $color-abbey",
+					"Texto": "#ffffff / $color-white"
+				}
+			],
+			"secondary": [
+				{
+					"Estado": "Inactivo",
+					"Color borde": "#d7d7d8 / $color-iron",
+					"Tamaño borde": "1px",
+					"Texto": "#f3f3f3 / $color-concrete"
+				},
+				{
+					"Estado": "Reposo",
+					"Color borde": "#121314 / $color-woodsmoke",
+					"Tamaño borde": "1px",
+					"Texto": "#121314 / $color-woodsmoke"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Fondo": "#121314 / $color-woodsmoke",
+					"Tamaño borde": "2px",
+					"Texto": "#121314 / $color-woodsmoke"
+				}
+			],
+			"reverse": [
+				{
+					"Estado": "Inactivo",
+					"Color borde": "#323436 / $color-shark",
+					"Tamaño borde": "1px",
+					"Texto": "#323436 / $color-shark"
+				},
+				{
+					"Estado": "Reposo",
+					"Color borde": "#ffffff / $color-white",
+					"Tamaño borde": "1px",
+					"Texto": "#ffffff / $color-white"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Borde": "#ffffff / $color-white",
+					"Tamaño borde": "2px",
+					"Texto": "#ffffff / $color-white"
+				}
+			],
+			"ghost": [
+				{
+					"Estado": "Reposo",
+					"Color Fondo": "Transparente",
+					"Texto": "#d7d7d8 / $color-iron"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Fondo": "#f3f3f3 / $color-concrete",
+					"Texto": "#d7d7d8 / $color-iron"
+				}
+			]
+		}
+	},
+	"TYPES": {
+		"display": {
+			"title": "Displays",
+			"range": [
+				{
+					"title": "Giga - 76",
+					"code": "font-size: 76px (4.75rem)",
+					"class": "o-type--giga"
+				},
+				{
+					"title": "Mega - 54",
+					"code": "font-size: 54px (3.375rem)",
+					"class": "o-type--mega"
+				}
+			]
+		},
+		"header": {
+			"title": "Headers",
+			"range": [
+				{
+					"title": "Alpha - 36",
+					"code": "font-size: 36px (2.25rem)",
+					"class": "o-type--alpha"
+				},
+				{
+					"title": "Beta - 28",
+					"code": "font-size: 28px (1.75rem)",
+					"class": "o-type--beta"
+				},
+				{
+					"title": "Gamma - 20",
+					"code": "font-size: 20px (1.25rem)",
+					"class": "o-type--gamma"
+				},
+				{
+					"title": "Delta - 18",
+					"code": "font-size: 54px (3.375rem)",
+					"class": "o-type--delta"
+				}
+			]
+		},
+		"basic": {
+			"title": "Basics",
+			"range": [
+				{
+					"title": "Epsilon - 16",
+					"code": "font-size: 16px (1rem)",
+					"class": "o-type--epsilon"
+				},
+				{
+					"title": "Zeta - 14",
+					"code": "font-size: 14px (.875rem)",
+					"class": "o-type--zeta"
+				},
+				{
+					"title": "Caption - 12",
+					"code": "font-size: 12px (.75rem)",
+					"class": "o-type--caption"
+				},
+				{
+					"title": "Legal - 11",
+					"code": "font-size: 11px (.6875rem)",
+					"class": "o-type--legal"
+				}
+			]
+		}
+	}
+}

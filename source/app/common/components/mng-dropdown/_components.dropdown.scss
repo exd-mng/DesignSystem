@@ -1,0 +1,72 @@
+$module: $c-prefix + 'Drop';
+
+.#{$module} {
+	@include mng-typescale(zeta);
+	width: 100%;
+	position: relative;
+	&__btn {
+		@include mng-rem(padding, 4px 0);
+		border-bottom: 1px solid $color-woodsmoke;
+		position: relative;
+		cursor: pointer;
+		&::after {
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-color: $color-woodsmoke;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: opacity .1s ease-in;
+		}
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+	&__container {
+		position: absolute;
+    max-height: 28.1rem;
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: scaleY(0);
+		opacity: 0;
+    transition: transform .25s ease-in-out, opacity .15s ease-in;
+    transform-origin: top;
+		z-index: 1;
+		background-color: $color-white;
+		box-shadow: 0 2px 7px $color-iron;
+    &::-webkit-scrollbar {
+      @include mng-rem(width, 8px);
+      &-track {
+        background-color: $color-concrete;
+      }
+      &-thumb {
+				@include mng-rem(border-radius, 7px);
+        background-color: $color-iron;
+      }
+    }
+	}
+	&.is-open {
+		.#{$module}__btn {
+			&::after {
+				opacity: 1;
+			}
+		}
+		.#{$module}__container {
+      transform: scaleY(1);
+      overflow: hidden;
+      opacity: 1;
+		}
+	}
+	&__link {
+		@include mng-rem(padding, 16px 8px);
+		display: block;
+		&:hover {
+			background-color: $color-iron;
+		}
+	}
+}

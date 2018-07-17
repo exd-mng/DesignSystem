@@ -1,0 +1,68 @@
+$module: $c-prefix + 'Accordion';
+
+.#{$module} {
+  @include mng-typescale(zeta);
+  &__tab {
+    border-bottom: 1px solid $color-woodsmoke;
+    position: relative;
+    &::after {
+      height: 1px;
+      content: "";
+      width: 100%;
+      position: absolute;
+      top: auto;
+      bottom: -2px;
+      background-color: $color-woodsmoke;
+      opacity: 0;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &.is-open {
+      border-bottom-color: $color-bombay;
+      &::after {
+        opacity: 0;
+      }
+      .#{$module}__content {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        padding-top: 12px;
+        padding-bottom: 25px;
+        transition: all .3s cubic-bezier(0.25, 0, 1, 1);
+      }
+      .#{$module}__ico {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__tit {
+    position: relative;
+  }
+  &__btn {
+    @include mng-rem(padding, 12px 0);
+    width: 100%;
+    text-align: left;
+    position: relative;
+    color: $color-woodsmoke;
+    cursor: pointer;
+  }
+  &__ico {
+    @include mng-rem(top, 19px);
+    position: absolute;
+    right: 0;
+    will-change: transform;
+    transition: transform .2s ease-in;
+  }
+  &__content {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding-right: 12px;
+    padding-left: 25px;
+    overflow: hidden;
+    transition: all .3s cubic-bezier(0, 0, .25, 1);
+  }
+}

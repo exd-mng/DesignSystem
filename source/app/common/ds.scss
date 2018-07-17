@@ -1,0 +1,767 @@
+@import "styles/itcss/settings/settings";
+@import "styles/itcss/tools/tools";
+
+body {
+	overflow-y: scroll;
+	&:not(.ds-home) {
+		@include mng-rem(padding-top, 56px);
+	
+		@include mng-breakpoint($screen-md-min) {
+			@include mng-rem(padding-top, 72px);
+		}
+		@include mng-breakpoint($screen-lg-min) {
+			padding-top: 0;
+		}
+		&::before, 
+		&::after {
+			content: "";
+			width: 100%;
+			position: absolute;
+			right: 0;
+			@include mng-breakpoint($screen-lg-min) {
+				width: 80%;
+			}
+		}
+		&::before {   
+			top: 0;
+			@include mng-rem(margin-top, 56px);
+			@include mng-rem(height, 199px);
+			background-color: $color-concrete;
+			@include mng-breakpoint($screen-md-min) {
+				@include mng-rem(margin-top, 72px);
+			}
+			@include mng-breakpoint($screen-lg-min) {
+				@include mng-rem(margin-top, 0);
+			}
+		}
+		&::after {
+			@include mng-rem(margin-top, -53px);
+			border-top: 1px solid $color-woodsmoke;
+		}
+	}
+}
+
+b, strong, h3 {
+	font-weight: 400;
+}
+
+h1 {
+	@include mng-rem(top, 20px);
+	@include mng-rem(width, 95px);
+	@include mng-rem(height, 16px);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 1px dashed $color-bombay;
+	z-index: 3;
+	@include mng-breakpoint($screen-md-min) {
+		@include mng-rem(top, 26px);
+		@include mng-rem(margin-left, 16px);
+		@include mng-rem(width, 119px);
+		@include mng-rem(height, 19px);
+	}
+	@include mng-breakpoint($screen-lg-min) {
+		transform: none;
+		left: 10%;
+		position: fixed;
+	}
+}
+
+h2, h3, h4 {
+	@include mng-line-height(heading);
+}
+
+h2 {
+	@include mng-rem(font-size, 36px);
+}
+
+h3 {
+	@include mng-rem(font-size, 12px);
+	@include mng-rem(margin-top, 64px);
+	@include mng-rem(margin-bottom, 32px);
+	text-transform: uppercase;
+	color: $color-bombay;
+}
+
+h4 {
+	@include mng-rem(font-size, 14px);
+	@include mng-rem(margin-top, 56px);
+	@include mng-rem(margin-bottom, 24px);
+	@include mng-rem(padding-bottom, 8px);
+}
+
+p {
+	+ p {
+		@include mng-rem(margin-top, 16px);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+pre {
+	@include mng-rem(font-size, 14px);
+	@include mng-rem(margin-top, 24px);
+	font-family: 'Courier New', monospace;
+}
+
+.ds-container--open {
+	.ds-mainHeader__btnLine {
+		background-color: transparent;
+		&::before, 
+		&::after {
+			margin-top: 0;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+	.ds-mainNav {
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1.000) .2s , transform .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+}
+
+.ds-mainHeader {
+	@include mng-rem(height, 56px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $color-white;
+	z-index: 3;
+	&__btn {
+		@include mng-rem(width, 45px);
+		@include mng-rem(height, 45px);
+		@include mng-rem(top, 3px);
+		@include mng-rem(left, 16px);
+		position: absolute;
+		z-index: 3;
+		@include mng-breakpoint($screen-md-min) {
+			@include mng-rem(top, 11px);
+		}
+	}
+	&__btnLine {
+		@include mng-rem(width, 20px);
+		@include mng-rem(margin-top, 4px);
+		margin-left: auto;
+		margin-right: auto;
+    height: 1px;
+    display: block;
+    background-color: $color-black-solid;
+		position: relative;
+		&::before, &::after {
+			content: "";
+			@include mng-rem(width, 20px);
+			height: 1px;
+			background-color: $color-black-solid;
+			position: absolute;
+			left: 0;
+			transition: transform .2s;
+		}
+		&::before {
+			@include mng-rem(margin, -6px 0 0);
+		}
+		&::after {
+			@include mng-rem(margin, 6px 0 0);
+		}
+	}
+	@include mng-breakpoint($screen-md-min) {
+		@include mng-rem(height, 72px);
+		&__btn {
+			@include mng-rem(left, 48px);
+		}
+	}
+	@include mng-breakpoint($screen-lg-min) {
+		width: 100%;
+		background-color: transparent;
+		@include mng-rem(height, 40px);
+		&__btn {
+			display: none;
+		}
+	}
+}
+
+.ds-mainNav {
+	@include mng-rem(padding-top, 72px);
+	width: 100%;
+	height: 100vh;
+	background-color: $color-white;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	z-index: 2;
+	transform: translateY(-100%);
+	box-shadow: 1px 0px 1px -1px $color-iron;
+	transition: none;
+	&__list {
+    overflow-y: auto;
+    position: absolute;
+		height: calc(100% - 4.5rem);
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+		&::-webkit-scrollbar {
+			@include mng-rem(width, 8px);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: #d7d7d8;
+			border-radius: .7rem;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: #f3f3f3;
+		}
+	}
+	&__tit,
+	&__link {
+		padding-left: 8.33333%;
+		display: block;
+		
+	}
+	&__tit {
+		@include mng-rem(padding-top, 24px);
+		@include mng-rem(padding-bottom, 24px);
+		text-transform: capitalize;
+		position: relative;
+	}
+	&__link {
+		@include mng-rem(font-size, 14px);
+		@include mng-rem(padding-top, 16px);
+		@include mng-rem(padding-bottom, 16px);
+		
+	}
+	.is-active {
+		background-color: $color-concrete;
+		pointer-events: none;
+	}
+	.is-open {
+		display: block;
+	}
+	@include mng-breakpoint($screen-md-min) {
+		left: 5%;
+		position: fixed;
+		width: 25%;
+		&__tit,
+		&__link {
+			@include mng-rem(padding-left, 16px);
+		}
+		&::before {
+			content: "";
+			background-color: $color-white;
+			left: -20%;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	@include mng-breakpoint($screen-lg-min) {
+		left: 10%;
+		width: 20%;
+		opacity: 1;
+		transform: none;
+		&::before {
+			display: none;
+		}
+		&__list {
+			position: static;
+		}
+	}
+	@include mng-breakpoint($screen-hd-min) {
+		width: 16.66667%;
+	}
+}
+
+.ds-mainContent {
+	@include mng-breakpoint($screen-lg-min) {
+	//	padding-left: 25%;
+	}
+}
+
+.ds-list {
+	@include mng-rem(margin-top, 24px);
+	@include mng-rem(padding-left, 32px);
+	list-style: disc;
+	line-height: 1.5;
+	&__item {
+		@include mng-rem(padding, 12px 12px 12px 0);
+	}
+}
+
+.ds-intro {
+	@include mng-rem(padding-top, 48px);
+	@include mng-rem(height, 198px);
+//	background-color: $color-concrete;
+	position: relative;
+	&__family {
+		color: $color-bombay;
+	}
+}
+
+.ds-wrap {
+	@include mng-rem(padding, 0 24px);
+	@include mng-breakpoint($screen-md-min) {
+		@include mng-rem(padding, 0 48px);
+	}
+	@include mng-breakpoint($screen-lg-min) {
+		@include mng-rem(max-width, 1600px);
+		padding-right: 0;
+		width: 80%;
+	}
+}
+
+.ds-headLine {
+	position: relative;
+	@include mng-rem(padding-top, 57px);
+	width: 100%;
+	&__txt {
+		@include mng-rem(font-size, 16px);
+		font-weight: 400;
+	}
+	&__btn {
+		@include mng-rem(margin-top, 24px);
+		position: relative;
+		margin-left: auto;
+	}
+	&__link {
+		@include mng-rem(padding-bottom, 8px);
+		@include mng-breakpoint($screen-md-min) {
+			margin-left: auto;
+		}
+	}
+}
+
+.ds-tabs {
+	&__list {
+		@include mng-rem(margin-top, -33px);
+		display: flex;
+		//background-color: $color-concrete;
+	}
+	&__item {
+		flex: 1;
+		@include mng-breakpoint($screen-md-min) {
+			flex: none;
+		}
+	}
+	&__link {
+		@include mng-rem(font-size, 14px);
+		@include mng-rem(padding-top, 10px);
+		@include mng-rem(padding-bottom, 10px);
+		display: block;
+    text-align: center;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 100%;
+			opacity: 0;
+			background-color: $color-bombay;
+			transition: opacity .15s ease-in-out;
+		}
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+		}
+		@include mng-breakpoint($screen-md-min) {
+			@include mng-rem(padding-left, 20px);
+			@include mng-rem(padding-right, 20px);
+		}
+	}
+	.is-active {
+		font-weight: 400;
+		pointer-events: none;
+		display: block;
+		&::after {
+			background-color: $color-black-solid;
+			opacity: 1;
+		}
+	}
+}
+
+.ds-footer {
+	@include mng-rem(margin-top, 32px);
+	@include mng-rem(padding, 18px 0);
+	border-top: 1px solid $color-black-solid;
+	p {
+		color: $color-bombay;
+		text-align: center;
+		@include mng-rem(font-size, 11px);
+		@include mng-breakpoint($screen-lg-min) {
+			text-align: right;
+		}
+	}
+}
+
+.ds-sample {
+	@include mng-rem(padding, 34px);
+	@include mng-rem(margin-top, 24px);
+	background-color: rgba($color-concrete, .5);
+	text-align: center;
+	&--inverse {
+		background-color: $color-woodsmoke;
+	}
+	&--fakes {
+		pointer-events: none;
+	}
+	+ pre {
+		margin-top: 0;
+	}
+}
+
+.ds-doDont {
+	@include mng-rem(margin-top, -62px);
+	&__wrap {
+		@include mng-rem(margin-top, 62px);
+		background-color: $color-concrete;
+		width: 100%;
+    padding-bottom: 65.8%;
+    position: relative;
+	}
+	&__img {
+		width: 100%;
+    position: absolute;
+	}
+	&__txt {
+		@include mng-rem(font-size, 12px);
+		@include mng-rem(padding-top, 16px);
+		border-top: 2px solid;
+		position: relative;
+		&--do {
+			border-color: $color-light-green;
+			.ds-doDont__check {
+				color: $color-light-green;
+			}
+		}
+		&--dont {
+			border-color: $color-pomegranate;
+			.ds-doDont__check {
+				color: $color-pomegranate;
+			}
+		}
+	}
+	&__check {
+		display: inline-block;
+		@include mng-rem(margin-right, 8px);
+		font-weight: 400;
+		&::after {
+			content: ".";
+			display: inline-block;
+		}
+	}
+}
+
+.ds-color {
+	&__item {
+		@include mng-rem(margin-top, 32px);
+	}
+	&__sample {
+		@include mng-rem(height, 160px);
+		border: 1px solid $color-iron;
+	}
+	&__info {
+		@include mng-rem(font-size, 12px);
+		@include mng-rem(margin-top, 12px);
+	}
+	&__name {
+		@include mng-rem(margin-bottom, 8px);
+		@include mng-breakpoint($screen-lg-min) {
+			margin-bottom: 0;
+		}
+	}
+	&__code {
+		font-family: "Courier New", monospace;
+		color: $color-bombay;
+	}
+}
+
+.ds-icon {
+	@include mng-rem(margin-top, 96px);
+	&__txt {
+		@include mng-rem(margin-top, 12px);
+	}
+}
+
+.ds-specimen {
+	@include mng-rem(margin-top, 24px);
+	&__sample {
+		width: 100%;
+		text-align: center;
+	}
+	&__tit {
+		@include mng-rem(font-size, 167px);
+		line-height: 1;
+	}
+	&__txt {
+		@include mng-rem(font-size, 14px);
+		margin-top: 0;
+		text-align: center;
+		@include mng-breakpoint($screen-md-min) {
+			@include mng-rem(font-size, 12px)
+		}
+	}
+	&--secondary {
+		font-family: 'Austin', Georgia, 'Times New Roman', Times, serif;
+	}
+	@include mng-breakpoint($screen-md-min) {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.ds-scaffolding {
+	@include mng-rem(margin-top, -24px);
+	@include mng-rem(padding, 32px 0);
+	border-top: 1px solid $color-iron;
+	border-bottom: 1px solid $color-iron;
+	&__tit {
+		@include mng-rem(margin-top, 32px);
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	&__txt {
+		@include mng-rem(font-size, 11px);
+		@include mng-rem(margin-top, 16px);
+		font-family: 'Courier New', monospace;
+		color: $color-bombay;
+	}
+	@include mng-breakpoint($screen-md-min) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		&__tit {
+			width: 60%;
+		}
+		&__txt {
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.ds-paginator {
+	@include mng-rem(margin-top, 120px);
+	@include mng-rem(height, 72px);
+	align-items: center;
+	position: relative;
+	&__link {
+		margin-right: auto;
+	}
+	&__wrap {
+		@include mng-rem(height, 72px);
+		display: flex;
+		align-items: center;
+	}
+	&__btn {
+		@include mng-rem(margin-left, 18px);
+		display: none;
+		@include mng-breakpoint($screen-md-min) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__label {
+		@include mng-rem(font-size, 12px);
+		color: $color-bombay;
+	}
+	&__tit {
+		@include mng-rem(font-size, 20px);
+		@include mng-rem(margin-top, 5px);
+	}
+	&::after {
+		@include mng-rem(height, 72px);
+		@include mng-rem(width, 1px);
+		content: "";
+		background-color: $color-bombay;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 0;
+	}
+	.is-right {
+		margin-left: auto;
+		margin-right: initial;
+		.ds-paginator__btn {
+			@include mng-rem(margin-left, 0);
+			@include mng-rem(margin-right, 18px);
+		}
+	}
+}
+
+.box, 
+.box-first, 
+.box-large, 
+.box-nested, 
+.box-row {
+	position: relative;
+	min-height: 1rem;
+	border: 1px dotted;
+	overflow: hidden;
+	text-align: center;
+	@include mng-breakpoint($screen-md-min) {
+		@include mng-rem(padding, 16px);
+	}
+}
+
+.box-container {
+	@include mng-rem(padding, 8px);
+}
+
+.box-row {
+	@include mng-rem(margin-bottom, 16px);
+}
+
+.box-large {
+	@include mng-rem(margin-bottom, 160px);
+}
+
+.box-first, 
+.box-nested {
+	background-color: #666;
+	border: none;
+	color: #ccc;
+}
+
+.box-nested {
+	background-color: #ccc;
+}
+
+.box-nested:nth-child(odd) {
+	background: #ddd;
+}
+
+/* PrismJS 1.14.0
+http://prismjs.com/download.html#themes=prism&languages=markup+css */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: $color-black-solid;
+	background: none;
+	text-shadow: 0 1px $color-white;
+	font-family: monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+ 
+pre[class*="language-"]::selection, 
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"]::selection {
+	text-shadow: none;
+}
+ 
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+pre[class*="language-"] {
+	@include mng-rem(padding, 24px 32px);
+	overflow: auto;
+	border: 1px solid $color-concrete;
+}
+
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+ 
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+ }
+ 
+.token.punctuation {
+	color: #999;
+}
+ 
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+ 
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+ 
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	background: hsla(0, 0%, 100%, .5);
+}
+ 
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+ 
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+ 
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+.token.important,
+.token.bold {
+	font-weight: 700;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}

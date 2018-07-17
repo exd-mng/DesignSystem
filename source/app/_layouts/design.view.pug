@@ -1,0 +1,27 @@
+extends main.view.pug
+
+block config
+	- var family = "design"
+
+block content
+	.row
+		.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+			header.ds-intro
+				p.ds-intro__family
+					| Diseño
+				h2 #{title}
+		.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+			.row
+				.col-xs.col-hd-9
+					.row
+						.ds-headLine
+							.ds-headLine__txt.col-md-10
+								block codeHead
+							p.ds-headLine__btn.u-flex
+								block codeHeadBtn
+			.row
+				.col-xs.col-hd-8
+					block codeBody
+			.row
+				.col-xs.col-hd-12
+					block paginator

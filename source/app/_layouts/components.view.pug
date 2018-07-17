@@ -1,0 +1,48 @@
+extends main.view.pug
+
+block content
+  .row
+    .col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+      header.ds-intro
+        p.ds-intro__family
+          | Componentes
+        h2 #{title}
+  .ds-tabs
+    .row
+      .col-xs-12.col-md-12.col-md-offset-0
+        ul.ds-tabs__list
+          li.ds-tabs__item
+            a.ds-tabs__link.is-active(href="#tab1")
+              | Código
+          li.ds-tabs__item
+            a.ds-tabs__link(href="#tab2")
+              | Uso
+          li.ds-tabs__item
+            a.ds-tabs__link(href="#tab4")
+              | Ejemplos
+    .row
+      .col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+        .ds-tabs__content
+          .ds-tabs__panel(id="tab1")
+            .row
+              .col-xs.col-hd-9
+                .row
+                  .ds-headLine
+                    .ds-headLine__txt.col-md-10
+                      block codeHead
+                    p.ds-headLine__btn.u-flex
+                      block codeHeadBtn
+            .row
+              .col-xs.col-hd-8
+                block codeBody
+          .ds-tabs__panel.u-hidden(id="tab2")
+            .row
+              .col-xs.col-hd-8
+                block use
+          .ds-tabs__panel.u-hidden(id="tab3")
+            .row
+              .col-xs.col-hd-8
+                block example
+        .row
+          .col-xs.col-hd-12
+            block paginator

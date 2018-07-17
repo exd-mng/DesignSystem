@@ -1,0 +1,30 @@
+{
+		"buttons": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Usar los verbos de manera consistente en diferentes acciones."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				},
+				{
+					"uso": "Correcto",
+					"info": "Utilizar la palabra Cancelar para cancelar una acción."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				},
+				{
+					"uso": "Correcto",
+					"info": "Hace que un mensaje o diálogo desaparezca sin consecuencias."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				}
+			]
+		}
+}

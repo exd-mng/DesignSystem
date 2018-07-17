@@ -1,0 +1,17 @@
+mixin mngInput(text, id, name, style)
+	.c-mngInput(class=style)
+		if (style !== "is-disabled")
+			input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+		else
+			input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+		label.c-mngInput__label.u-hidden-visually(for=id)
+			= text
+
+mixin mngInputError(text, id, name)
+	+mngInput(text, id, name, 'is-error')
+
+mixin mngInputDisabled(text, id, name)
+	+mngInput(text, id, name, 'is-disabled')
+
+mixin mngInputReverse(text, id, name)
+	+mngInput(text, id, name, 'c-mngInput--reverse')

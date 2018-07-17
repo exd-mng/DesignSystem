@@ -1,0 +1,373 @@
+{
+	"COLORS": {
+		"primary": {
+			"title": "Primarios",
+			"range": [
+				{
+					"color": "Black Solid",
+					"var": "$color-black-solid",
+					"code": "#000000"
+				},
+				{
+					"color": "Woodsmoke",
+					"var": "$color-woodsmoke",
+					"code": "#121314"
+				},
+				{
+					"color": "Shark",
+					"var": "$color-shark",
+					"code": "#323436"
+				},
+				{
+					"color": "Abbey",
+					"var": "$color-abbey",
+					"code": "#525457"
+				},
+				{
+					"color": "Nevada",
+					"var": "$color-nevada",
+					"code": "#6d6f71"
+				},
+				{
+					"color": "White",
+					"var": "$color-white",
+					"code": "#ffffff"
+				}
+			]
+		},
+		"utility": {
+			"title": "Utilidades",
+			"range": [
+				{
+					"color": "Pomegranate",
+					"var": "$color-pomegranate",
+					"code": "#f42837"
+				},
+				{
+					"color": "Marrakech",
+					"var": "$color-marrakech",
+					"code": "#ffcc33"
+				},
+				{
+					"color": "Capri",
+					"var": "$color-capri",
+					"code": "#339dff"
+				},
+				{
+					"color": "Ligt Green",
+					"var": "$color-light-green",
+					"code": "#4ca92b"
+				},
+				{
+					"color": "Bombay",
+					"var": "$color-bombay",
+					"code": "#adafb2"
+				},
+				{
+					"color": "Iron",
+					"var": "$color-iron",
+					"code": "#d7d7d8"
+				},
+				{
+					"color": "Concrete",
+					"var": "$color-concrete",
+					"code": "#f3f3f3"
+				}
+			]
+		}
+	},
+	"ICONS": {
+		"basics": {
+			"title": "Básicos",
+			"range": [
+				{
+					"icon": "plus"
+				},
+				{
+					"icon": "minus"
+				},
+				{
+					"icon": "up"
+				},
+				{
+					"icon": "down"
+				},
+				{
+					"icon": "right"
+				},
+				{
+					"icon": "left"
+				},
+				{
+					"icon": "intro"
+				},
+				{
+					"icon": "forward"
+				},
+				{
+					"icon": "back"
+				},
+				{
+					"icon": "close"
+				},
+				{
+					"icon": "session"
+				},
+				{
+					"icon": "checked"
+				}
+			]
+		},
+		"actions": {
+			"title": "Acciones",
+			"range": [
+				{
+					"icon": "edit"
+				},
+				{
+					"icon": "player"
+				},
+				{
+					"icon": "scan"
+				},
+				{
+					"icon": "connection"
+				},
+				{
+					"icon": "print"
+				},
+				{
+					"icon": "email"
+				},
+				{
+					"icon": "language"
+				},
+				{
+					"icon": "search"
+				},
+				{
+					"icon": "delete"
+				},
+				{
+					"icon": "shopping"
+				},
+				{
+					"icon": "show"
+				},
+				{
+					"icon": "hide"
+				},
+				{
+					"icon": "no-connection"
+				},
+				{
+					"icon": "add-user"
+				},
+				{
+					"icon": "delete-user"
+				},
+				{
+					"icon": "unauthorised"
+				},
+				{
+					"icon": "user"
+				},
+				{
+					"icon": "duplicate"
+				},
+				{
+					"icon": "new-order"
+				},
+				{
+					"icon": "refresh"
+				}
+			]
+		},
+		"utility": {
+			"title": "Utilidades",
+			"range": [
+				{
+					"icon": "provisional"
+				},
+				{
+					"icon": "expired"
+				},
+				{
+					"icon": "hanger"
+				},
+				{
+					"icon": "best"
+				},
+				{
+					"icon": "mother"
+				},
+				{
+					"icon": "lock"
+				},
+				{
+					"icon": "euro"
+				},
+				{
+					"icon": "help"
+				},
+				{
+					"icon": "pause"
+				},
+				{
+					"icon": "box"
+				},
+				{
+					"icon": "proposal"
+				},
+				{
+					"icon": "warning"
+				},
+				{
+					"icon": "erase"
+				},
+				{
+					"icon": "ok"
+				},
+				{
+					"icon": "ko"
+				},
+				{
+					"icon": "shop"
+				},
+				{
+					"icon": "daughter"
+				},
+				{
+					"icon": "shop-online"
+				}
+			]
+		},
+		"types": {
+			"title": "Formatos",
+			"range": [
+				{
+					"icon": "pdf"
+				},
+				{
+					"icon": "excel"
+				}
+			]
+		},
+		"custom": {
+			"title": "Propios",
+			"range": [
+				{
+					"icon": "beta-mark"
+				},
+				{
+					"icon": "nexus"
+				}
+			]
+		}
+	},
+	"STYLESCOLORS": {
+		"buttons": {
+			"type": {
+				"thead": [
+					{
+						"th": "Elemento"
+					},
+					{
+						"th": "Fuente"
+					},
+					{
+						"th": "Peso"
+					},
+					{
+						"th": "Tamaño (PX / REM)"
+					}
+				],
+				"tbody": [
+					[
+						{
+							"td": "Texto botón"
+						},
+						{
+							"td": "Mango Sans"
+						},
+						{
+							"td": "Regular (400)"
+						},
+						{
+							"td": "14 / 0.875"
+						}
+					]
+				]
+			},
+			"primary": [
+				{
+					"Estado": "Inactivo",
+					"Color Fondo": "#d7d7d8 / $color-iron",
+					"Texto": "#f3f3f3 / $color-concrete"
+				},
+				{
+					"Estado": "Reposo",
+					"Color Fondo": "#121314 / $color-woodsmoke",
+					"Texto": "#ffffff / $color-white"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Fondo": "#525457 / $color-abbey",
+					"Texto": "#ffffff / $color-white"
+				}
+			],
+			"secondary": [
+				{
+					"Estado": "Inactivo",
+					"Color borde": "#d7d7d8 / $color-iron",
+					"Tamaño borde": "1px",
+					"Texto": "#f3f3f3 / $color-concrete"
+				},
+				{
+					"Estado": "Reposo",
+					"Color borde": "#121314 / $color-woodsmoke",
+					"Tamaño borde": "1px",
+					"Texto": "#121314 / $color-woodsmoke"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Fondo": "#121314 / $color-woodsmoke",
+					"Tamaño borde": "2px",
+					"Texto": "#121314 / $color-woodsmoke"
+				}
+			],
+			"reverse": [
+				{
+					"Estado": "Inactivo",
+					"Color borde": "#323436 / $color-shark",
+					"Tamaño borde": "1px",
+					"Texto": "#323436 / $color-shark"
+				},
+				{
+					"Estado": "Reposo",
+					"Color borde": "#ffffff / $color-white",
+					"Tamaño borde": "1px",
+					"Texto": "#ffffff / $color-white"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Borde": "#ffffff / $color-white",
+					"Tamaño borde": "2px",
+					"Texto": "#ffffff / $color-white"
+				}
+			],
+			"ghost": [
+				{
+					"Estado": "Reposo",
+					"Color Fondo": "Transparente",
+					"Texto": "#d7d7d8 / $color-iron"
+				},
+				{
+					"Estado": "Reposo Hover",
+					"Color Fondo": "#f3f3f3 / $color-concrete",
+					"Texto": "#d7d7d8 / $color-iron"
+				}
+			]
+		}
+	}
+}

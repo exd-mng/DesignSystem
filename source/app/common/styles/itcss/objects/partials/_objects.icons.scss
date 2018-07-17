@@ -1,0 +1,13 @@
+.o-mngIco {
+  @include mng-rem(width, 16px);
+  @include mng-rem(height, 16px);
+  vertical-align: middle;
+  top: -1px;
+  position: relative;
+  &--mr {
+    @include mng-rem(margin-right, 8px);
+  }
+  &--ml {
+    @include mng-rem(margin-left, 8px);
+  }
+}

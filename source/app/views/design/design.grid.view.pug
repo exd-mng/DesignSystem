@@ -1,0 +1,322 @@
+extends ../../_layouts/design.view.pug
+
+block config
+	- var active = "Grid";
+	- var title = "Grid";
+	- var next = "layout";
+	- var prev = "colors";
+
+block codeHead
+	:markdown-it
+		Los sistemas de *grids* se utilizan para crear estructuras de página a través de una serie de columnas que enmarcan y delimitan el contenido.
+
+		En XXXXX trabajaremos con un sistema responsive, que nos permitirá adaptar el contenido a mostrar en cada dispositivo de manera fluida. Para ello, hemos elegido un sistema standard de grid a 12 columnas (Bootstrap) que es el que usan en la actualidad todo tipo páginas web y aplicaciones (por ejemplo Twitter).
+block codeHeadBtn
+	+a-mngBtnGhost("#")(class="ds-headLine__btn") 
+		+svg-icon("duplicate")(class="o-mngIco--mr") 
+		| Descargar librería
+
+block codeBody
+	section
+		h3 Responsive
+		:markdown-it
+			Permite especificar diferentes anchos de columnas y desplazar las mismas para los distintos anchos del viewport:
+
+		.row.u-spacer--3
+			.col-xs-12.col-md-2.col-lg-1
+				.box-row
+			.col-xs-6.col-md-8.col-lg-10
+				.box-row
+			.col-xs-6.col-md-2.col-lg-1
+				.box-row
+		.row
+			.col-xs-12.col-md-2.col-lg-1
+				.box-row
+			.col-xs-12.col-md-10.col-lg-11
+				.box-row
+		.row
+			.col-xs-10.col-md-8.col-lg-10
+				.box-row
+			.col-xs-6.col-md-4.col-lg-2
+				.box-row
+
+	section.page-section
+		h3 Fluido
+		:markdown-it
+			La anchura basada en porcentajes permite un ajuste automático de columnas y filas:
+		.row.u-spacer--3
+			.col-xs-12
+				.box-row
+		.row
+			.col-xs-1
+				.box-row
+			.col-xs-11
+				.box-row
+		.row
+			.col-xs-2
+				.box-row
+			.col-xs-10
+				.box-row
+		.row
+			.col-xs-3
+				.box-row
+			.col-xs-9
+				.box-row
+		.row
+			.col-xs-4
+				.box-row
+			.col-xs-8
+				.box-row
+		.row
+			.col-xs-5
+				.box-row
+			.col-xs-7
+				.box-row
+		.row
+			.col-xs-6
+				.box-row
+			.col-xs-6
+				.box-row
+
+	section.page-section
+		h3 Offsets
+		:markdown-it
+			Desplazamiento de columnas:
+
+		.row.u-spacer--3
+			.col-xs-offset-11.col-xs-1
+				.box-row
+		.row
+			.col-xs-offset-10.col-xs-2
+				.box-row
+		.row
+			.col-xs-offset-9.col-xs-3
+				.box-row
+		.row
+			.col-xs-offset-8.col-xs-4
+				.box-row
+		.row
+			.col-xs-offset-7.col-xs-5
+				.box-row
+		.row
+			.col-xs-offset-6.col-xs-6
+				.box-row
+		.row
+			.col-xs-offset-5.col-xs-7
+				.box-row
+		.row
+			.col-xs-offset-4.col-xs-8
+				.box-row
+		.row
+			.col-xs-offset-3.col-xs-9
+				.box-row
+		.row
+			.col-xs-offset-2.col-xs-10
+				.box-row
+		.row
+			.col-xs-offset-1.col-xs-11
+				.box-row
+
+	section.page-section
+		h3 Ancho automático
+		:markdown-it
+			Ajuste de ancho de columnas en una fila:
+		.row.u-spacer--3
+			.col-xs
+				.box-row
+			.col-xs
+				.box-row
+		.row
+			.col-xs
+				.box-row
+			.col-xs
+				.box-row
+			.col-xs
+				.box-row
+
+	section.page-section
+		h3 Anidamiento
+		:markdown-it
+			Anidamiento de columnas:
+
+		.row.u-spacer--3
+			.col-xs-7
+				.box.box-container
+					.row
+						.col-xs-9
+							.box-first.box-container
+								.row
+									.col-xs-4
+										.box-nested
+									.col-xs-8
+										.box-nested
+						.col-xs-3
+							.box-first.box-container
+								.row
+									.col-xs-12
+										.box-nested
+			.col-xs-5
+				.box.box-container
+					.row
+						.col-xs-12
+							.box-first.box-container
+								.row
+									.col-xs-6
+										.box-nested
+									.col-xs-6
+										.box-nested
+
+	section.page-section
+		h3 Alineación
+		:markdown-it
+			Haciendo uso de las clases [u-flex](/design/design.flexbox.html) se pueden alinear elementos tanto al principio como al final de una celda. Así como arriba, abajo o al centro de una columna.
+
+		h4
+			code .u-flex--justifyStart
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--justifyStart
+						.col-xs-6
+							.box-nested
+		h4
+			code .u-flex--justifyCenter
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--justifyCenter
+						.col-xs-6
+							.box-nested
+		h4
+			code .u-flex--justifyEnd
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--justifyEnd
+						.col-xs-6
+							.box-nested
+		p.u-spacer--3 Se pueden usar distintos modificadores a la vez para conseguir distintas alineaciones dependiendo de la anchura del viewport.
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--justifyCenter.u-flex-md--justifyStart.u-flex-lg--justifyEnd
+						.col-xs-6
+							.box-nested
+		h4
+			code .u-flex--alignItemsStart
+		.row.u-flex--alignItemsStart.u-spacer--4
+			.col-xs-6
+				.box-large
+			.col-xs-6
+				.box
+		h4
+			code .u-flex--alignItemsCenter
+		.row.u-flex--alignItemsCenter.u-spacer--4
+			.col-xs-6
+				.box-large
+			.col-xs-6
+				.box
+		h4
+			code .u-flex--alignItemsEnd
+		.row.u-flex--alignItemsEnd.u-spacer--4
+			.col-xs-6
+				.box-large
+			.col-xs-6
+				.box
+	section.page-section
+		h3 Distribución
+		:markdown-it
+			Clases para la distribución de contenido en una celda o columna:
+		h4
+			code .u-flex--justifyAround
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--justifyAround
+						.col-xs-2
+							.box-nested
+						.col-xs-2
+							.box-nested
+						.col-xs-2
+							.box-nested
+		h4
+			code .u-flex--justifyBetween
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--justifyBetween
+						.col-xs-2
+							.box-nested
+						.col-xs-2
+							.box-nested
+						.col-xs-2
+							.box-nested
+	section.page-section
+		h3 Reordenar
+		:markdown-it
+			Clases para reordenar columnas.
+		h4
+			code .u-flex--orderFirst
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row
+						.col-xs-2
+							.box-first 1
+						.col-xs-2
+							.box-first 2
+						.col-xs-2
+							.box-first 3
+						.col-xs-2
+							.box-first 4
+						.col-xs-2
+							.box-first 5
+						.col-xs-2.u-flex--orderFirst
+							.box-nested 6
+		h4
+			code .u-flex--orderLast
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row
+						.col-xs-2.u-flex--orderLast
+							.box-nested 1
+						.col-xs-2
+							.box-first 2
+						.col-xs-2
+							.box-first 3
+						.col-xs-2
+							.box-first 4
+						.col-xs-2
+							.box-first 5
+						.col-xs-2
+							.box-first 6
+	section.page-section
+		h3 Inverso
+		h4
+			code .u-flex--rowReverse
+		.row.u-spacer--3
+			.col-xs-12
+				.box.box-container
+					.row.u-flex--rowReverse
+						.col-xs-2
+							.box-nested 1
+						.col-xs-2
+							.box-nested 2
+						.col-xs-2
+							.box-nested 3
+						.col-xs-2
+							.box-nested 4
+						.col-xs-2
+							.box-nested 5
+						.col-xs-2
+							.box-nested 6
+block paginator
+	+paginator("paginatorOptions",[
+		{ 
+			next:"Layout",
+			prev:"Colores", 
+			familyPrev: "design", 
+			familyNext: "design" 
+		}
+	])

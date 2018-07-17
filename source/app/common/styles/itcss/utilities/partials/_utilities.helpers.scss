@@ -1,0 +1,43 @@
+// Espaciado de margin-top
+// -------------------------
+
+@for $i from 1 through 8 {
+  .u-spacer--#{$i} {
+    @include mng-rem(margin-top, $margin-spacer * $i);
+  }
+}
+
+
+// Ocultar elementos
+// -------------------------
+
+.u-hidden-visually {
+  @include mng-hidden-visually();
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+// Alineación de texto
+// -------------------------
+
+.u-txtLeft {
+	text-align: left;
+}
+
+.u-txtCenter {
+	text-align: center;
+}
+
+.u-txtRight {
+	text-align: right;
+}
+
+.u-fontRegular {
+  font-weight: 400;
+}
+
+.u-fontItalic {
+  font-style: italic;
+}

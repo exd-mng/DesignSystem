@@ -1,0 +1,29 @@
+
+//block config
+	- var nav = "tabs";
+	- var title = "Pestañas";
+
+
+	.ds-sample
+		+mngTabs(["Tab 1","Tab 2","Tab 3"],0)
+			+mngTabsPanel("0","active")
+			+mngTabsPanel("1")
+			+mngTabsPanel("2")
+	pre
+		code.language-html
+			:markdown-it
+				<nav class="c-mngTabs">
+				<ul class="c-mngTabs__list" role="tablist">
+				<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#tab0" role="tab">Tab 1</a></li>
+				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab1" role="tab">Tab 2</a></li>
+				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab2" role="tab">Tab 3</a></li>
+				</ul>
+				<div class="clearfix">
+				<div class="c-mngTabs__panel is-active" id="tab0">
+				</div>
+				<div class="c-mngTabs__panel" id="tab1">
+				</div>
+				<div class="c-mngTabs__panel" id="tab2">
+				</div>
+				</div>
+				</nav>

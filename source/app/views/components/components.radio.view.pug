@@ -1,0 +1,101 @@
+extends ../../_layouts/components.view.pug
+
+block config
+	- var active = "Radios";
+	- var title = "Radio Buttons";
+	- var prev = "links";
+	- var next = "colors";
+
+block codeHead
+	:markdown-it
+		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
+
+block codeHeadBtn
+	+a-mngBtnGhost("#")(class="ds-headLine__btn") 
+		+svg-icon("duplicate")(class="o-mngIco--mr") 
+		| Descargar librería
+
+block codeBody
+	h3 HTML
+	section
+		h4 Listado vertical
+		.ds-sample
+			ul.o-list
+				li.o-list__item
+					+mngRadio('Label 1', 'ptt', 'pink')(checked)
+				li.o-list__item
+					+mngRadio('Label 2', 'ptt2', 'pink')(disabled)
+				li.o-list__item
+					+mngRadio('Label 3', 'ptt3', 'pink')
+		pre
+			code.language-html
+				:markdown-it
+					<ul class="o-list">
+						<li class="o-list__item">
+							<div class="c-mngRadio">
+								<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt" checked="checked">
+								<label class="c-mngRadio__label" for="ptt"><span class="c-mngRadio__fake"></span>Label 1
+								</label>
+							</div>
+						</li>
+						<li class="o-list__item">
+							<div class="c-mngRadio">
+								<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt2" disabled="disabled">
+								<label class="c-mngRadio__label" for="ptt2"><span class="c-mngRadio__fake"></span>Label 2
+								</label>
+							</div>
+						</li>
+						<li class="o-list__item">
+							<div class="c-mngRadio">
+								<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt3">
+								<label class="c-mngRadio__label" for="ptt3"><span class="c-mngRadio__fake"></span>Label 3
+								</label>
+							</div>
+						</li>
+					</ul>
+	section
+		h4 Listado horizontal
+		.ds-sample
+			ul.o-list.o-list--inline
+				li.o-list__item
+					+mngRadio('Label 4','ptt4', 'red')(checked)
+				li.o-list__item
+					+mngRadio('Label 5', 'ptt5', 'red')(disabled)
+				li.o-list__item
+					+mngRadio('Label 6', 'ptt6', 'red')
+		pre
+			code.language-html
+				:markdown-it
+					<ul class="o-list o-list--inline">
+						<li class="o-list__item">
+							<div class="c-mngRadio">
+								<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt4" name="red" checked="checked">
+								<label class="c-mngRadio__label" for="ptt4"><span class="c-mngRadio__fake"></span>Label 4
+								</label>
+							</div>
+						</li>
+						<li class="o-list__item">
+							<div class="c-mngRadio">
+								<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt5" name="red" disabled="disabled">
+								<label class="c-mngRadio__label" for="ptt5"><span class="c-mngRadio__fake"></span>Label 5
+								</label>
+							</div>
+						</li>
+						<li class="o-list__item">
+							<div class="c-mngRadio">
+								<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt6" name="red">
+								<label class="c-mngRadio__label" for="ptt6"><span class="c-mngRadio__fake"></span>Label 6
+								</label>
+							</div>
+						</li>
+					</ul>
+block use
+block example
+block paginator
+	+paginator("paginatorOptions",[
+		{ next:"Colores" , 
+			prev:"Enlaces", 
+			familyPrev: "components", 
+			familyNext: "design" 
+		}
+	])

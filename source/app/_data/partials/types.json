@@ -1,0 +1,69 @@
+{
+  "display": {
+		"title": "Displays",
+    "range":
+		[
+			{
+				"title": "Giga - 76",
+				"code": "font-size: 76px (4.75rem)",
+				"class": "o-type--giga"
+			},
+			{
+				"title": "Mega - 54",
+				"code": "font-size: 54px (3.375rem)",
+				"class": "o-type--mega"
+			}
+		]
+    
+  },
+  "header": {
+    "title": "Headers",
+    "range":[
+			{
+				"title": "Alpha - 36",
+				"code": "font-size: 36px (2.25rem)",
+				"class": "o-type--alpha"
+			},
+			{
+				"title": "Beta - 28",
+				"code": "font-size: 28px (1.75rem)",
+				"class": "o-type--beta"
+			},
+			{
+				"title": "Gamma - 20",
+				"code": "font-size: 20px (1.25rem)",
+				"class": "o-type--gamma"
+			},
+			{
+				"title": "Delta - 18",
+				"code": "font-size: 54px (3.375rem)",
+				"class": "o-type--delta"
+			}
+			]
+	},
+  "basic": {
+    "title": "Basics",
+    "range":[
+			{
+				"title": "Epsilon - 16",
+				"code": "font-size: 16px (1rem)",
+				"class": "o-type--epsilon"
+			},
+			{
+				"title": "Zeta - 14",
+				"code": "font-size: 14px (.875rem)",
+				"class": "o-type--zeta"
+			},
+			{
+				"title": "Caption - 12",
+				"code": "font-size: 12px (.75rem)",
+				"class": "o-type--caption"
+			},
+			{
+				"title": "Legal - 11",
+				"code": "font-size: 11px (.6875rem)",
+				"class": "o-type--legal"
+			}
+			]
+  }
+}

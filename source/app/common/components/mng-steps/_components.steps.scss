@@ -1,0 +1,75 @@
+$module: $c-prefix + 'Steps';
+
+.#{$module} {
+	@include mng-typescale(zeta);
+	counter-reset: steps;
+	width: 100%;
+	position: relative;
+	color: $color-bombay;
+	display: inline-flex;
+	&__item {
+		flex: 1;
+		text-align: center;
+	}
+	&__link {
+		display: block;
+		pointer-events: none;
+		position: relative;
+		&::before {
+			@include mng-rem(width, 24px);
+			@include mng-rem(height, 24px);
+			@include mng-rem(line-height, 24px);
+			@include mng-rem(margin-bottom, 8px);
+			counter-increment: steps;
+			content: counter(steps);
+			background-color: $color-white;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 50%;
+			border: 1px solid;
+			display: block;
+			box-shadow: 0 0 0 6px $color-white;
+		}
+		&::after {
+			@include mng-rem(height, 1px);
+			width: 100%;
+			content: "";
+			background-color: $color-woodsmoke;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform .15s linear;
+			z-index: -1;
+		}
+	}
+	&::before {
+		@include mng-rem(height, 1px);
+		content: "";
+		width: 65%;
+		top: 20%;
+		left: calc(35% / 2);
+		background-color: $color-bombay;
+		position: absolute;
+		z-index: -1;
+	}
+	.is-complete {
+		.#{$module}__link {
+			color: $color-woodsmoke;
+			pointer-events: auto;
+			&::after {
+				transform: scaleX(1);
+			}
+		}
+	}
+	.is-active {
+		.#{$module}__link {
+			color: $color-woodsmoke;
+			&::before {
+				background-color: $color-woodsmoke;
+				color: $color-white;
+			}
+		}
+	}
+}

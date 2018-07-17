@@ -1,0 +1,15 @@
+
+.o-list {
+	@include mng-rem(margin-top, 32px);
+	@include mng-rem(margin-bottom, 24px);
+	&__item {
+		@include mng-rem(padding, 8px);
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	&--inline {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

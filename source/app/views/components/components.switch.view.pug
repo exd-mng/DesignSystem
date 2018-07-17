@@ -1,0 +1,18 @@
+
+
+//block config
+	- var nav = "switch"
+	- var title = "Switch";
+	- var desc = "";
+
+
+	.ds-sample
+		+mngSwitch("switchOptions",[{caption:"Button 1"},{caption:"Button 2"},{caption:"Button 3"}],0)
+	pre
+		code.language-html
+			:markdown-it
+				<div class="c-mngSwitch">
+					<button class="c-mngSwitch__btn is-active">First section</button>
+					<button class="c-mngSwitch__btn">Second section</button>
+					<button class="c-mngSwitch__btn">Third section</button>
+				</div>

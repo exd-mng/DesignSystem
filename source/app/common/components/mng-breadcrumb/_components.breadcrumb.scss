@@ -1,0 +1,19 @@
+$module: $c-prefix + 'BreadCrumb';
+
+.#{$module} {
+	display: inline-flex;
+	&__item {
+		@include mng-rem(margin-right, 16px);
+		flex: none;
+		 &::after {
+			@include mng-rem(margin-left, 16px);
+			 content: "\005C";
+		 }
+		 &:last-child {
+			 margin-right: 0;
+			 &::after {
+				 display: none;
+			}
+		}
+	}
+}

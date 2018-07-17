@@ -1,0 +1,189 @@
+{
+	"basics": {
+		"title": "Básicos",
+		"range": [
+			{
+				"icon": "plus"
+			},
+			{
+				"icon": "minus"
+			},
+			{
+				"icon": "up"
+			},
+			{
+				"icon": "down"
+			},
+			{
+				"icon": "right"
+			},
+			{
+				"icon": "left"
+			},
+			{
+				"icon": "intro"
+			},
+			{
+				"icon": "forward"
+			},
+			{
+				"icon": "back"
+			},
+			{
+				"icon": "close"
+			},
+			{
+				"icon": "session"
+			},
+			{
+				"icon": "checked"
+			}
+		]
+	},
+	"actions": {
+		"title": "Acciones",
+		"range": [
+			{
+				"icon": "edit"
+			},
+			{
+				"icon": "player"
+			},
+			{
+				"icon": "scan"
+			},
+			{
+				"icon": "connection"
+			},
+			{
+				"icon": "print"
+			},
+			{
+				"icon": "email"
+			},
+			{
+				"icon": "language"
+			},
+			{
+				"icon": "search"
+			},
+			{
+				"icon": "delete"
+			},
+			{
+				"icon": "shopping"
+			},
+			{
+				"icon": "show"
+			},
+			{
+				"icon": "hide"
+			},
+			{
+				"icon": "no-connection"
+			},
+			{
+				"icon": "add-user"
+			},
+			{
+				"icon": "delete-user"
+			},
+			{
+				"icon": "unauthorised"
+			},
+			{
+				"icon": "user"
+			},
+			{
+				"icon": "duplicate"
+			},
+			{
+				"icon": "new-order"
+			},
+			{
+				"icon": "refresh"
+			}
+		]
+	},
+	"utility": {
+		"title": "Utilidades",
+		"range": [
+			{
+				"icon": "provisional"
+			},
+			{
+				"icon": "expired"
+			},
+			{
+				"icon": "hanger"
+			},
+			{
+				"icon": "best"
+			},
+			{
+				"icon": "mother"
+			},
+			{
+				"icon": "lock"
+			},
+			{
+				"icon": "euro"
+			},
+			{
+				"icon": "help"
+			},
+			{
+				"icon": "pause"
+			},
+			{
+				"icon": "box"
+			},
+			{
+				"icon": "proposal"
+			},
+			{
+				"icon": "warning"
+			},
+			{
+				"icon": "erase"
+			},
+			{
+				"icon": "ok"
+			},
+			{
+				"icon": "ko"
+			},
+			{
+				"icon": "shop"
+			},
+			{
+				"icon": "daughter"
+			},
+			{
+				"icon": "shop-online"
+			}
+		]
+	},
+	"types": {
+		"title": "Formatos",
+		"range": [
+			{
+				"icon": "pdf"
+			},
+			{
+				"icon": "excel"
+			}
+		]
+	},
+	"custom": {
+		"title": "Propios",
+		"range": [
+			{
+				"icon": "beta-mark"
+			},
+			{
+				"icon": "nexus"
+			}
+		]
+	}
+}

@@ -1,0 +1,109 @@
+{
+  "buttons": {
+    "type": {
+			"thead": [
+				{
+					"th": "Elemento"
+				},
+				{
+					"th": "Fuente"
+				},
+				{
+					"th": "Peso"
+				},
+				{
+					"th": "Tamaño (PX / REM)"
+				}
+			],
+			"tbody" : [
+				[
+					{
+						"td": "Texto botón"
+					},
+					{
+						"td": "Mango Sans"
+					},
+					{
+						"td": "Regular (400)"
+					},
+					{
+						"td": "14 / 0.875"
+					}
+				]			
+			]
+		},
+    "primary":
+		[
+			{
+				"Estado": "Inactivo",
+				"Color Fondo": "#d7d7d8 / $color-iron",
+				"Texto": "#f3f3f3 / $color-concrete"
+			},
+			{
+				"Estado": "Reposo",
+				"Color Fondo": "#121314 / $color-woodsmoke",
+				"Texto": "#ffffff / $color-white"
+			},
+			{
+				"Estado": "Reposo Hover",
+				"Color Fondo": "#525457 / $color-abbey",
+				"Texto": "#ffffff / $color-white"
+			}
+		],
+    "secondary":
+		[
+			{
+				"Estado": "Inactivo",
+				"Color borde": "#d7d7d8 / $color-iron",
+				"Tamaño borde": "1px",
+				"Texto": "#f3f3f3 / $color-concrete"
+			},
+			{
+				"Estado": "Reposo",
+				"Color borde": "#121314 / $color-woodsmoke",
+				"Tamaño borde": "1px",
+				"Texto": "#121314 / $color-woodsmoke"
+			},
+			{
+				"Estado": "Reposo Hover",
+				"Color Fondo": "#121314 / $color-woodsmoke",
+				"Tamaño borde": "2px",
+				"Texto": "#121314 / $color-woodsmoke"
+			}
+		],
+    "reverse":
+		[
+			{
+				"Estado": "Inactivo",
+				"Color borde": "#323436 / $color-shark",
+				"Tamaño borde": "1px",
+				"Texto": "#323436 / $color-shark"
+			},
+			{
+				"Estado": "Reposo",
+				"Color borde": "#ffffff / $color-white",
+				"Tamaño borde": "1px",
+				"Texto": "#ffffff / $color-white"
+			},
+			{
+				"Estado": "Reposo Hover",
+				"Color Borde": "#ffffff / $color-white",
+				"Tamaño borde": "2px",
+				"Texto": "#ffffff / $color-white"
+			}
+		],
+    "ghost":
+		[
+			{
+				"Estado": "Reposo",
+				"Color Fondo": "Transparente",
+				"Texto": "#d7d7d8 / $color-iron"
+			},
+			{
+				"Estado": "Reposo Hover",
+				"Color Fondo": "#f3f3f3 / $color-concrete",
+				"Texto": "#d7d7d8 / $color-iron"
+			}
+		]
+  }
+}

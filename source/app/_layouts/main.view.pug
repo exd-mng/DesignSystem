@@ -1,0 +1,40 @@
+block config
+	- var title;
+	- var desc;
+	- var active;
+	- var next;
+	- var prev;
+
+
+include ../_includes/icons
+include ../_includes/pagination
+
+// components
+include ../common/components/mng-alert/components.alert.pug
+include ../common/components/mng-accordion/components.accordion.pug
+include ../common/components/mng-breadcrumb/components.breadcrumb.pug
+include ../common/components/mng-input/components.input.pug
+include ../common/components/mng-checkbox/components.checkbox.pug
+include ../common/components/mng-radio/components.radio.pug
+include ../common/components/mng-link/components.link.pug
+include ../common/components/mng-button/components.button.pug
+include ../common/components/mng-steps/components.steps.pug
+include ../common/components/mng-switch/components.switch.pug
+include ../common/components/mng-toggle/components.toggle.pug
+include ../common/components/mng-tabs/components.tabs.pug
+include ../common/components/mng-pagination/components.pagination.pug
+include ../common/components/mng-dropdown/components.dropdown.pug
+
+doctype html
+html(lang='es')
+	include ../_includes/head
+	body
+		.container
+			include ../_includes/header
+			.row
+				.col-xs-12.col-md-offset-1.col-md-11.col-lg-offset-4.col-lg-8.col-hd-offset-3.col-hd-9
+					main
+						article
+							block content
+					include ../_includes/footer
+		include ../_includes/scripts

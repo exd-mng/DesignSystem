@@ -1,0 +1,10 @@
+mixin mngToggle(id, txt, txt2)
+	.c-mngToggle
+		input.c-mngToggle__checkbox.u-hidden-visually(id=id, type='checkbox')
+		label.c-mngToggle__label(for=id)
+			span.c-mngToggle__txt.c-mngToggle__txt--left
+				= txt
+			span.c-mngToggle__toggle
+			if (txt2)
+				span.c-mngToggle__txt.c-mngToggle__txt--right
+					= txt2

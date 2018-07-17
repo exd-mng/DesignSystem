@@ -1,0 +1,24 @@
+$module: $c-prefix + 'Switch';
+
+ .#{$module} {
+	@include mng-typescale(zeta);
+	display: inline-flex;
+	&__btn {
+		@include mng-rem(height, 48px);
+		@include mng-rem(padding, 0 32px);
+		@include mng-rem(min-width, 128px);
+		border: 1px solid $color-woodsmoke;
+		border-right: 0;
+		color: $color-woodsmoke;
+		background-color: $color-white;
+		transition: background-color 167ms ease-in;
+		&:last-child {
+			border-right: 1px solid $color-woodsmoke;
+		}
+	}
+	.is-active {
+		background-color: $color-woodsmoke;
+		color: $color-white;
+		pointer-events: none;
+	}
+}

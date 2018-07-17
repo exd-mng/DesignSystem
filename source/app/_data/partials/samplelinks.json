@@ -1,0 +1,49 @@
+{
+		"links": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Usar solo texto para enlaces."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "No usar gráficos o iconos para los enlaces."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Los enlaces deben ser de tres palabras o menos, de esta forma evitaremos los links con dos líneas en dispositivos móviles."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Evitar los literales largos y que contengan más de un concepto o idea."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Utilizar los links necesarios para la usabilidad de la página."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Los literales deben estar directamente relacionados con el contenido al que hacen referencia."
+				},
+				{
+					"uso": "Correcto",
+					"info": "El texto que describe un enlace debe ser entendible claramente por los usuarios."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Evitar el uso directo de la URL del contenido que vas a enlazar."
+				},
+				{
+					"uso": "Correcto",
+					"info": "El texto debe ser coherente con el título del destino previsto."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Para indicar una acción es preferible usar un <a href=\"/app/views/components/components.button.view.html#ghost\" class=\"c-mngLink\">Ghost Button</a> en lugar de un enlace."
+				}
+			]
+
+		}
+
+
+}
