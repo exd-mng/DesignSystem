@@ -467,6 +467,7 @@ pre {
 			@include mng-rem(font-size, 210px);
 		}
 		.ds-specimen__txt {
+			@include mng-rem(font-size, 16px);
 			@include mng-breakpoint($screen-md-min) {
 				@include mng-rem(font-size, 14px)
 			}
