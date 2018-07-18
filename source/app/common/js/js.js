@@ -3,11 +3,18 @@
 
 
 
-$('.ds-mainHeader__btn').click(function(e){
-	e.stopPropagation();
+
+$('.ds-mainHeader__btn').on('click', function(e) {
 	$('body').toggleClass("nav-open")
 });
 
+$('.ds-overlay').on('click', function (e) {
+  $('body').removeClass("nav-open")
+});
+
+$('.ds-mainNav').on('click', function (e) {
+  e.stopPropagation();
+});
 
 $(".ds-tabs").on("click", ".ds-tabs__link", sistemaTabs);
 var $todosLosSection = $(".ds-tabs__panel");

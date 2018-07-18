@@ -85,7 +85,7 @@ h3 {
 
 h4 {
 	@include mng-rem(font-size, 14px);
-	@include mng-rem(margin-top, 64px);
+	@include mng-rem(margin-top, 40px);
 	@include mng-rem(margin-bottom, 24px);
 }
 
@@ -152,6 +152,7 @@ pre {
 	@include mng-breakpoint($screen-md-min) {
 		@include mng-rem(height, 72px);
 		&__btn {
+			@include mng-rem(top, 4px);
 			@include mng-rem(left, 48px);
 		}
 	}
@@ -163,9 +164,6 @@ pre {
 			display: none;
 		}
 	}
-	&--open {
-
-	}
 }
 
 .ds-mainNav {
@@ -175,7 +173,7 @@ pre {
 	background-color: $color-white;
 	top: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	opacity: 0;
 	z-index: 2;
 	transform: translateY(-100%);
@@ -225,8 +223,6 @@ pre {
 	}
 	@include mng-breakpoint($screen-md-min) {
 		@include mng-rem(width, 264px);
-		left: 0;
-		position: fixed;
 		&__tit,
 		&__link {
 			@include mng-rem(padding-left, 40px);
@@ -296,6 +292,10 @@ pre {
 	&__txt {
 		@include mng-rem(font-size, 16px);
 		font-weight: 400;
+		text-align: center;
+		@include mng-breakpoint($screen-md-min) {
+			text-align: left;
+		}
 	}
 	&__btn {
 		@include mng-rem(margin-top, 24px);
@@ -448,29 +448,33 @@ pre {
 
 .ds-scaffolding {
 	@include mng-rem(margin-top, -18px);
-	@include mng-rem(padding, 16px 0 32px);
+	@include mng-rem(padding, 40px 0);
 	border-top: 1px solid $color-iron;
 	border-bottom: 1px solid $color-iron;
 	&__tit {
-		@include mng-rem(margin-top, 32px);
+		@include mng-rem(margin-top, 40px);
 		&:first-of-type {
 			margin-top: 0;
+		}
+		span {
+			line-height: 1;
 		}
 	}
 	&__txt {
 		@include mng-rem(font-size, 11px);
 		@include mng-rem(margin-top, 16px);
+		line-height: 1.5;
 		font-family: 'Courier New', monospace;
 		color: $color-nevada;
 	}
 	@include mng-breakpoint($screen-md-min) {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
 		&__tit {
 			width: 60%;
 		}
 		&__txt {
+			@include mng-rem(margin-top, 40px);
 			&:first-of-type {
 				margin-top: 0;
 			}
@@ -607,7 +611,24 @@ pre {
 	}
 	@include mng-breakpoint($screen-lg-min) {
 		@include mng-rem(margin-top, 144px);
-		text-align: left;
+		p {
+			text-align: left;
+		}
+	}
+}
+
+.ds-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	z-index: -200;
+	transition: opacity .2s ease-in .2s;
+	background-color: rgba($color-white, .8);
+	@include mng-breakpoint($screen-lg-min) {
+		display: none;
 	}
 }
 
@@ -782,6 +803,8 @@ pre[class*="language-"] {
 }
 
 .nav-open {
+	@include mng-rem(padding-right, 17px);
+	overflow: hidden;
 	.ds-mainHeader__btnLine {
 		background-color: transparent;
 		&::before, 
@@ -799,5 +822,9 @@ pre[class*="language-"] {
 		opacity: 1;
 		transform: translateY(0);
 		transition: opacity .2s cubic-bezier(0.645, 0.045, 0.355, 1.000) .2s , transform .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+	.ds-overlay {
+		opacity: 1;
+		z-index: auto;
 	}
 }
