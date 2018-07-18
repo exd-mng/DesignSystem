@@ -11,50 +11,51 @@ block codeHead
 		La tipografía se utiliza para crear jerarquías claras, organizaciones y alineaciones útiles que guíen a los usuarios a través del producto. Es la estructura central de cualquier interfaz bien diseñada.
 
 block codeBody
-	h3 Tipografía corporativa
-	:markdown-it
-		Nuestras aplicaciones usan XXX XXX, una fuente sin serifas, actual, de formas amables y orgánicas, cuidadosamente diseñada para XXXX y que refleja nuestro espíritu, ideales y principios.
-	.ds-specimen
-		.ds-specimen__sample
-			p.ds-specimen__tit Aa
-			p.ds-specimen__txt XXXX light
-		.ds-specimen__sample.u-fontRegular
-			p.ds-specimen__tit.ds-specimen__tit Aa
-			p.ds-specimen__txt XXXX Sans Regular
-	pre.u-spacer--5
-		code.language-css
-			:markdown-it
-				font-family: xxxx, Helvetica, Verdana, sans-serif
-
-	h3 Tipografía secundaria
-	:markdown-it
-		En casos de titulares de 54px a 76px se ha escogido una fuente serifa, para crear contraste entre textos. 
-	.ds-specimen.ds-specimen--secondary
-		.ds-specimen__sample
-			p.ds-specimen__tit Aa
-			p.ds-specimen__txt Austin Light
-		.ds-specimen__sample
-			p.ds-specimen__tit.u-fontItalic Aa
-			p.ds-specimen__txt Austin Light Italic
-	pre.u-spacer--5
-		code.language-css
-			:markdown-it
-				font-family: xxxx, Helvetica, Verdana, sans-serif
-
-	h3 Escala tipográfica
-	each type in TYPES
-		h4= type.title
-		dl.ds-scaffolding
-			- for (var i = 0; i < type.range.length; i++)
-				dt.ds-scaffolding__tit
-					span(class= type.range[i].class)= type.range[i].title
-				dd.ds-scaffolding__txt
-					= type.range[i].code
-					br
-					= type.range[i].class
-
-	h3 Caracteres por línea
-	img(alt="", src='/assets/img/design/type/line-lenght.png')
+	section
+		h3 Tipografía corporativa
+		:markdown-it
+			Nuestras aplicaciones usan XXX XXX, una fuente sin serifas, actual, de formas amables y orgánicas, cuidadosamente diseñada para XXXX y que refleja nuestro espíritu, ideales y principios.
+		.ds-specimen
+			.ds-specimen__sample
+				p.ds-specimen__tit Aa
+				p.ds-specimen__txt XXXX light
+			.ds-specimen__sample.u-fontRegular
+				p.ds-specimen__tit.ds-specimen__tit Aa
+				p.ds-specimen__txt XXXX Sans Regular
+		pre.u-spacer--5
+			code.language-css
+				:markdown-it
+					font-family: xxxx, Helvetica, Verdana, sans-serif
+	section
+		h3 Tipografía secundaria
+		:markdown-it
+			En casos de titulares de 54px a 76px se ha escogido una fuente serifa, para crear contraste entre textos. 
+		.ds-specimen.ds-specimen--secondary
+			.ds-specimen__sample
+				p.ds-specimen__tit Aa
+				p.ds-specimen__txt Austin Light
+			.ds-specimen__sample
+				p.ds-specimen__tit.u-fontItalic Aa
+				p.ds-specimen__txt Austin Light Italic
+		pre.u-spacer--5
+			code.language-css
+				:markdown-it
+					font-family: xxxx, Helvetica, Verdana, sans-serif
+	section
+		h3 Escala tipográfica
+		each type in TYPES
+			h4= type.title
+			dl.ds-scaffolding
+				- for (var i = 0; i < type.range.length; i++)
+					dt.ds-scaffolding__tit
+						span(class= type.range[i].class)= type.range[i].title
+					dd.ds-scaffolding__txt
+						= type.range[i].code
+						br
+						= type.range[i].class
+	section
+		h3 Caracteres por línea
+		img(alt="", src='/assets/img/design/type/line-lenght.png')
 block paginator
 	+paginator("paginatorOptions",[
 		{ 

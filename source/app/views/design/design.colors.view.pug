@@ -13,14 +13,15 @@ block codeHead
 
 block codeBody
 	each color in COLORS
-		h3= color.title
-		ul.ds-color.row
-			- for (var i = 0; i < color.range.length; i++)
-				li.ds-color__item.col-xs-6.col-md-3
-					div(style='background-color:' + color.range[i].code).ds-color__sample
-					.ds-color__info.u-lg-flex.u-lg-flex--justifyBetween
-						.ds-color__name= color.range[i].color
-						.ds-color__code= color.range[i].code
+		section
+			h3= color.title
+			ul.ds-color.row
+				- for (var i = 0; i < color.range.length; i++)
+					li.ds-color__item.col-xs-6.col-md-3
+						div(style='background-color:' + color.range[i].code).ds-color__sample
+						.ds-color__info.u-lg-flex.u-lg-flex--justifyBetween
+							.ds-color__name= color.range[i].color
+							.ds-color__code= color.range[i].code
 block paginator
 	+paginator("paginatorOptions",[
 		{ 

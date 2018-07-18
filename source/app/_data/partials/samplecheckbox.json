@@ -1,0 +1,30 @@
+{
+	"checkbox": {
+		"info": [
+			{
+				"uso": "Correcto",
+				"info": "Utiliza checkbox para seleccionar uno o más elementos de la lista."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "No usar checkbox cuando solo se puede seleccionar un elemento de la lista. Utiliza un <a href=\"/app/views/components/components.radio.view.html\" class=\"c-mngLink\">Radio Button</a>."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Usar un checkbox principal para agrupar una lista con múltiples opciones. Eso permite seleccionar o deseleccionar fácilmente todos los elementos."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Cuando el check principal está desmarcado, todas los checkbox secundarias estarán desmarcadas."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Cuando el check principal está marcado, todas los checkbox secundarias estarán marcadas."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Si se algunos checks secundarios, pero no todos, el check principal se convierte en una casilla indeterminada."
+			}
+		]
+	}
+}

@@ -11,48 +11,50 @@ block codeHead
 		Los enlaces se usan principalmente como elementos de navegación.
 
 block codeBody
-	h3 HTML
 	section
-		h4 Listado horizontal
-		.ds-sample
-			ul.o-list.o-list--inline
-				li.o-list__item
-					+mngLink()
-				li.o-list__item
-					+mngLink()
-				li.o-list__item
-					+mngLink()
-		pre
-			code.language-html
-				:markdown-it
-					<ul class="o-list o-list--item">
-						<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
-						</li>
-						<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
-						</li>
-						<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
-						</li>
-					</ul>
-		h4 Listado vertical
-		.ds-sample
-			ul.o-list
-				li.o-list__item
-					+mngLink()
-				li.o-list__item
-					+mngLink()
-				li.o-list__item
-					+mngLink()
-		pre
-			code.language-html
-				:markdown-it
-					<ul class="o-list">
-						<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
-						</li>
-						<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
-						</li>
-						<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
-						</li>
-					</ul>
+		h3 HTML
+		section
+			h4 Listado horizontal
+			.ds-sample
+				ul.o-list.o-list--inline
+					li.o-list__item
+						+mngLink()
+					li.o-list__item
+						+mngLink()
+					li.o-list__item
+						+mngLink()
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list o-list--item">
+							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
+							</li>
+							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
+							</li>
+							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
+							</li>
+						</ul>
+		section
+			h4 Listado vertical
+			.ds-sample
+				ul.o-list
+					li.o-list__item
+						+mngLink()
+					li.o-list__item
+						+mngLink()
+					li.o-list__item
+						+mngLink()
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list">
+							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
+							</li>
+							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
+							</li>
+							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
+							</li>
+						</ul>
 	section
 		h3 Especificaciones
 		ul.row.ds-specs
@@ -61,21 +63,23 @@ block codeBody
 					img(src="/assets/img/components/links/specs/" + val + ".png", alt="")
 
 block use
-	h3 Descripción funcional
-	:markdown-it
-		Los enlaces són principalmente un elemento de navegación que envian al usario en un sitio en concreto de la aplicación o incluso a páginas/contenidos externos a esta. No existe el enlace deshabilitado, si no se puede realizar la acción o vínculo el enlace no aparecerá.
-	h3 Recomendaciones
-	.ds-doDont
-		each dodont in SAMPLELINKS
-			.row
-				- for (var i = 0; i < dodont.info.length; i++)
-					.col-xs-12.col-md-6.ds-doDont__box
-						.ds-doDont__wrap
-							img(alt="", src='/assets/img/components/links/dodont/' + i + '.png').ds-doDont__img
-						.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
-							p
-								span.ds-doDont__check= dodont.info[i].uso
-								!= dodont.info[i].info
+	section
+		h3 Descripción funcional
+		:markdown-it
+			Los enlaces són principalmente un elemento de navegación que envian al usario en un sitio en concreto de la aplicación o incluso a páginas/contenidos externos a esta. No existe el enlace deshabilitado, si no se puede realizar la acción o vínculo el enlace no aparecerá.
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLELINKS
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='/assets/img/components/links/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
 
 block paginator
 	+paginator("paginatorOptions",[

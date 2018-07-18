@@ -11,44 +11,45 @@ block codeHead
 		Cuando hablamos de *layout* nos referimos al esquema que usaremos para distribuir los elementos y formas dentro de un diseño. Creando armonía entre componentes y dotando al diseño de ritmo, consistencia y coherencia entre sus páginas.
 
 block codeBody
-	h3 8px grid
 	section
-		h4 Principios básicos
-		:markdown-it
-			Para generar la base del diseño, hemos optado por este concepto que empezó a definir Bryn Jackson, un *designer/developer* de San Francisco.
+		h3 8px grid
+		section
+			h4 Principios básicos
+			:markdown-it
+				Para generar la base del diseño, hemos optado por este concepto que empezó a definir Bryn Jackson, un *designer/developer* de San Francisco.
 
-			A grandes rasgos, todos los elementos que componen una página están posicionados en incrementos de 8px entre ellos. De esta manera el alto, el ancho, los márgenes y paddings, serán múltiplos de 8.
-	section
-		h4 ¿Por qué 8px y no 6 o 10?
-		:markdown-it
-			La variedad de tamaños y densidad en píxeles de los dispositivos han ido en aumento, haciendo así la generación de assets cada vez más complicada para los diseñadores. Utilizar un número par para espaciar contenido y elementos, hace que el escalar el contenido para los diferentes dispositivos sea más fácil y consistente.
+				A grandes rasgos, todos los elementos que componen una página están posicionados en incrementos de 8px entre ellos. De esta manera el alto, el ancho, los márgenes y paddings, serán múltiplos de 8.
+		section
+			h4 ¿Por qué 8px y no 6 o 10?
+			:markdown-it
+				La variedad de tamaños y densidad en píxeles de los dispositivos han ido en aumento, haciendo así la generación de assets cada vez más complicada para los diseñadores. Utilizar un número par para espaciar contenido y elementos, hace que el escalar el contenido para los diferentes dispositivos sea más fácil y consistente.
 
-			La mayoría de tamaños populares de dispositivos son divisibles entre 8. Escalar en incrementos de 8 te ofrece una gran variedad de opciones, sin sobrecargar (lo que sucedería si dividimos entre 6) o limitar (si dividimos entre 10).
-	section
-		h4 ¿Qué beneficios tiene?
-		ul.ds-list
-			li.ds-list__item
-				:markdown-it
-					**Para diseñadores:** Mayor eficiencia, menor toma de decisiones al tiempo que se mantiene la calidad del ritmo entre elementos.
-			li.ds-list__item
-				:markdown-it
-					**Para el equipo:** Sistema fácil de comunicación entre diseñadores y desarrolladores (no existen medios píxeles).
-			li.ds-list__item
-				:markdown-it
-					**Para los usuarios:** Estética consistente dentro de la identidad de marca y contenido nítido en cualquier dispositivo.
-	section
-		h4 ¿Cómo contar los filetes en el sistema de 8px?
-		:markdown-it
-			Básicamente nos referimos a los botones secundarios (no contienen relleno, solo filete). El píxel del filete formará parte de los 32px que se dejan en este caso, de márgenes internos para el botón.
-		ul.ds-list
-			li.ds-list__item
-				:markdown-it
-					**A nivel funcional:** Los espacios vacíos de contenido, también conocidos como espacios negativos o en blanco son igual de importantes que las áreas de contenido. Nos sirven para dividir secciones, para ayudar a focalizar la atención en ciertos elementos dentro de una página.
+				La mayoría de tamaños populares de dispositivos son divisibles entre 8. Escalar en incrementos de 8 te ofrece una gran variedad de opciones, sin sobrecargar (lo que sucedería si dividimos entre 6) o limitar (si dividimos entre 10).
+		section
+			h4 ¿Qué beneficios tiene?
+			ul.ds-list
+				li.ds-list__item
+					:markdown-it
+						**Para diseñadores:** Mayor eficiencia, menor toma de decisiones al tiempo que se mantiene la calidad del ritmo entre elementos.
+				li.ds-list__item
+					:markdown-it
+						**Para el equipo:** Sistema fácil de comunicación entre diseñadores y desarrolladores (no existen medios píxeles).
+				li.ds-list__item
+					:markdown-it
+						**Para los usuarios:** Estética consistente dentro de la identidad de marca y contenido nítido en cualquier dispositivo.
+		section
+			h4 ¿Cómo contar los filetes en el sistema de 8px?
+			:markdown-it
+				Básicamente nos referimos a los botones secundarios (no contienen relleno, solo filete). El píxel del filete formará parte de los 32px que se dejan en este caso, de márgenes internos para el botón.
+			ul.ds-list
+				li.ds-list__item
+					:markdown-it
+						**A nivel funcional:** Los espacios vacíos de contenido, también conocidos como espacios negativos o en blanco son igual de importantes que las áreas de contenido. Nos sirven para dividir secciones, para ayudar a focalizar la atención en ciertos elementos dentro de una página.
 
-					Los espacios en blanco, ayudan al usuario a procesar la información, si ésta es densa. También ofrecen un descanso a la vista.
-			li.ds-list__item
-				:markdown-it
-					**A nivel de branding:** Es esencial la presencia y predominancia de espacios en blanco, para dar sensación de sobriedad, elegancia.  Acuñando la frase de Mies Van der Rohe: “Less is more”, cuanto menos información/diseño superficial añadamos, mejor será el resultado. El contenido en las páginas tiene que respirar, no se debe saturar las páginas de información. La relación porcentual entre espacio en blanco y contenido seria de 60-40.
+						Los espacios en blanco, ayudan al usuario a procesar la información, si ésta es densa. También ofrecen un descanso a la vista.
+				li.ds-list__item
+					:markdown-it
+						**A nivel de branding:** Es esencial la presencia y predominancia de espacios en blanco, para dar sensación de sobriedad, elegancia.  Acuñando la frase de Mies Van der Rohe: “Less is more”, cuanto menos información/diseño superficial añadamos, mejor será el resultado. El contenido en las páginas tiene que respirar, no se debe saturar las páginas de información. La relación porcentual entre espacio en blanco y contenido seria de 60-40.
 block paginator
 	+paginator("paginatorOptions",[
 		{ 

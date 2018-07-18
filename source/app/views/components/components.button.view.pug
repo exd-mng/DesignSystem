@@ -11,122 +11,129 @@ block codeHead
 		Los botones principalmente indican al usuario acciones a realizar, ya sea en primer o segundo nivel del flujo de navegación.
 
 block codeBody
-	h3 HTML
 	section
-		h4 Botón primario
-		.ds-sample
-			+mngBtnPrimary()(disabled)
-				| Inactivo
-			+mngBtnPrimary()
-				| Reposo
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--primary" type="button" disabled>Inactivo</button>
-					<button class="c-mngBtn c-mngBtn--primary" type="button">Reposo</button>
-		.ds-sample
-			+mngBtnPrimary()(class="c-mngBtn--sm" disabled)
-				| Inactivo pequeño
-			+mngBtnPrimary()(class="c-mngBtn--sm")
-				| Reposo pequeño
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--primary c-mngBtn--sm" type="button" disabled>Inactivo pequeño</button>
-					<button class="c-mngBtn c-mngBtn--primary c-mngBtn--sm" type="button">Reposo pequeño</button>
-	section
-		h4 Botón secundario
-		.ds-sample
-			+mngBtnSecondary()(disabled)
-				| Inactivo
-			+mngBtnSecondary()
-				| Reposo
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--secondary" type="button" disabled>Inactivo</button>
-					<button class="c-mngBtn c-mngBtn--secondary" type="button">Reposo</button>
-		.ds-sample
-			+mngBtnSecondary()(class="c-mngBtn--sm" disabled)
-				| Inactivo pequeño
-			+mngBtnSecondary()(class="c-mngBtn--sm")
-				| Reposo pequeño
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--sm" type="button" disabled>Inactivo pequeño</button>
-					<button class="c-mngBtn c-mngBtn--secondary c-mnBtn--sm" type="button">Reposo pequeño</button>
-		.ds-sample.ds-sample--inverse
-			+mngBtnSecondaryReverse()(disabled)
-				| Inactivo
-			+mngBtnSecondaryReverse()
-				| Reposo
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse" type="button" disabled>Inactivo</button>
-					<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse" type="button">Reposo</button>
-		.ds-sample.ds-sample--inverse
-			+mngBtnSecondaryReverse()(class="c-mngBtn--sm" disabled)
-				| Inactivo pequeño
-			+mngBtnSecondaryReverse()(class="c-mngBtn--sm")
-				| Reposo pequeño
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse c-mngBtn--sm" type="button" disabled>Inactivo pequeño</button>
-					<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse c-mngBtn--sm" type="button">Reposo pequeño</button>
-	section#ghost
-		h4 Ghost Button
-		.ds-sample
-			+mngBtnGhost()
-				| Reposo
-				+svg-icon("right")(class="o-mngIco--ml")
-			+mngBtnGhost()
-				+svg-icon("plus")(class="o-mngIco--mr") 
-				| Reposo
-		pre
-			code.language-html
-				:markdown-it
-					<button class="c-mngBtn c-mngBtn--ghost" type="button">Reposo
-						<svg class="o-mngIco o-mngIco--right o-mngIco--ml">
-							<use xlink:href="/icons/sprite.svg#right"></use>
-						</svg>
-					</button>
-					<button class="c-mngBtn c-mngBtn--ghost" type="button">
-						<svg class="o-mngIco o-mngIco--plus o-mngIco--mr">
-							<use xlink:href="/icons/sprite.svg#plus"></use>
-						</svg>Reposo
-					</button>
+		h3 HTML
+		section
+			h4 Botón primario
+			.ds-sample
+				+mngBtnPrimary()(disabled)
+					| Inactivo
+				+mngBtnPrimary()
+					| Reposo
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--primary" type="button" disabled>Inactivo</button>
+						<button class="c-mngBtn c-mngBtn--primary" type="button">Reposo</button>
+			.ds-sample
+				+mngBtnPrimary()(class="c-mngBtn--sm" disabled)
+					| Inactivo pequeño
+				+mngBtnPrimary()(class="c-mngBtn--sm")
+					| Reposo pequeño
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--primary c-mngBtn--sm" type="button" disabled>Inactivo pequeño</button>
+						<button class="c-mngBtn c-mngBtn--primary c-mngBtn--sm" type="button">Reposo pequeño</button>
+		section
+			h4 Botón secundario
+			.ds-sample
+				+mngBtnSecondary()(disabled)
+					| Inactivo
+				+mngBtnSecondary()
+					| Reposo
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--secondary" type="button" disabled>Inactivo</button>
+						<button class="c-mngBtn c-mngBtn--secondary" type="button">Reposo</button>
+			.ds-sample
+				+mngBtnSecondary()(class="c-mngBtn--sm" disabled)
+					| Inactivo pequeño
+				+mngBtnSecondary()(class="c-mngBtn--sm")
+					| Reposo pequeño
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--sm" type="button" disabled>Inactivo pequeño</button>
+						<button class="c-mngBtn c-mngBtn--secondary c-mnBtn--sm" type="button">Reposo pequeño</button>
+			.ds-sample.ds-sample--inverse
+				+mngBtnSecondaryReverse()(disabled)
+					| Inactivo
+				+mngBtnSecondaryReverse()
+					| Reposo
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse" type="button" disabled>Inactivo</button>
+						<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse" type="button">Reposo</button>
+			.ds-sample.ds-sample--inverse
+				+mngBtnSecondaryReverse()(class="c-mngBtn--sm" disabled)
+					| Inactivo pequeño
+				+mngBtnSecondaryReverse()(class="c-mngBtn--sm")
+					| Reposo pequeño
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse c-mngBtn--sm" type="button" disabled>Inactivo pequeño</button>
+						<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse c-mngBtn--sm" type="button">Reposo pequeño</button>
+		section#ghost
+			h4 Ghost Button
+			.ds-sample
+				+mngBtnGhost()
+					| Reposo
+					+svg-icon("right")(class="o-mngIco--ml")
+				+mngBtnGhost()
+					+svg-icon("plus")(class="o-mngIco--mr") 
+					| Reposo
+			pre
+				code.language-html
+					:markdown-it
+						<button class="c-mngBtn c-mngBtn--ghost" type="button">Reposo
+							<svg class="o-mngIco o-mngIco--right o-mngIco--ml">
+								<use xlink:href="/icons/sprite.svg#right"></use>
+							</svg>
+						</button>
+						<button class="c-mngBtn c-mngBtn--ghost" type="button">
+							<svg class="o-mngIco o-mngIco--plus o-mngIco--mr">
+								<use xlink:href="/icons/sprite.svg#plus"></use>
+							</svg>Reposo
+						</button>
 	section
 		h3 Especificaciones
-		h4 General
-		ul.ds-specs.row
-			each val in [1, 2, 3, 4, 5, 6, 7, 8]
-				li.ds-specs__list.col-xs-12.col-md-6
-					img(src="/assets/img/components/buttons/specs/general/" + val + ".png", alt="")
-		h4 Mobile
-		ul.ds-specs.row
-			each val in [1, 2, 3, 4]
-				li.ds-specs__list.col-xs-12.col-md-6
-					img(src="/assets/img/components/buttons/specs/mobile/" + val + ".png", alt="")
+		section
+			h4 General
+			ul.ds-specs.row
+				each val in [1, 2, 3, 4, 5, 6, 7, 8]
+					li.ds-specs__list.col-xs-12.col-md-6
+						img(src="/assets/img/components/buttons/specs/general/" + val + ".png", alt="")
+		section
+			h4 Mobile
+			ul.ds-specs.row
+				each val in [1, 2, 3, 4]
+					li.ds-specs__list.col-xs-12.col-md-6
+						img(src="/assets/img/components/buttons/specs/mobile/" + val + ".png", alt="")
 block use
 	section
 		h3 Descripción funcional
-		h4 Botón primario
-		:markdown-it
-			Alberga la principal acción sobre la página.
-		h4 Botón secundario
-		:markdown-it
-			La acción sobre él no es la principal en la página. Un botón secundario siempre va asociado a un botón primario y ambos conviven en la misma página. En el caso de que haya dos opciones de la misma importancia (no hay una acción principal), convivirán dos botones secundarios.
-		h4 Ghost Button
-		:markdown-it
-			Este botón se utiliza para indicar acciones que puedes ejercer en todo momento dentro de la página independientemente de cual sea la acción principal. El ghost button siempre va acompañado de un icono.
+		section
+			h4 Botón primario
+			:markdown-it
+				Alberga la principal acción sobre la página.
+		section
+			h4 Botón secundario
+			:markdown-it
+				La acción sobre él no es la principal en la página. Un botón secundario siempre va asociado a un botón primario y ambos conviven en la misma página. En el caso de que haya dos opciones de la misma importancia (no hay una acción principal), convivirán dos botones secundarios.
+		section
+			h4 Ghost Button
+			:markdown-it
+				Este botón se utiliza para indicar acciones que puedes ejercer en todo momento dentro de la página independientemente de cual sea la acción principal. El ghost button siempre va acompañado de un icono.
 
-			Solamente se incorporan iconos en los ghost button. La posición del icono variará según la función del botón:
-		ul.ds-list
-			li.ds-list__item Indica flujo: se colocará a la derecha del texto (ej: siguiente)
-			li.ds-list__item Indica acción: se colocará a la izquierda del texto (ej: borrar, eliminar, añadir)
+				Solamente se incorporan iconos en los ghost button. La posición del icono variará según la función del botón:
+			ul.ds-list
+				li.ds-list__item Indica flujo: se colocará a la derecha del texto (ej: siguiente)
+				li.ds-list__item Indica acción: se colocará a la izquierda del texto (ej: borrar, eliminar, añadir)
+	section
 		h3 Recomendaciones
 		.ds-doDont
 			each dodont in SAMPLEBUTTONS
@@ -138,7 +145,7 @@ block use
 							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
 								p
 									span.ds-doDont__check= dodont.info[i].uso
-									= dodont.info[i].info
+									!= dodont.info[i].info
 block paginator
 	+paginator("paginatorOptions",[
 		{ 
