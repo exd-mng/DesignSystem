@@ -8,83 +8,109 @@ block config
 
 block codeHead
 	:markdown-it
-		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
+		Los radio buttons se usan cuando una lista de dos o más opciones son excluyentes, lo que significa que el usuario debe seleccionar solo una opción.
 
 block codeBody
-	h3 HTML
 	section
-		h4 Listado vertical
-		.ds-sample
-			ul.o-list
-				li.o-list__item
-					+mngRadio('Label 1', 'ptt', 'pink')(checked)
-				li.o-list__item
-					+mngRadio('Label 2', 'ptt2', 'pink')(disabled)
-				li.o-list__item
-					+mngRadio('Label 3', 'ptt3', 'pink')
-		pre
-			code.language-html
-				:markdown-it
-					<ul class="o-list">
-						<li class="o-list__item">
-							<div class="c-mngRadio">
-								<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt" checked="checked">
-								<label class="c-mngRadio__label" for="ptt"><span class="c-mngRadio__fake"></span>Label 1
-								</label>
-							</div>
-						</li>
-						<li class="o-list__item">
-							<div class="c-mngRadio">
-								<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt2" disabled="disabled">
-								<label class="c-mngRadio__label" for="ptt2"><span class="c-mngRadio__fake"></span>Label 2
-								</label>
-							</div>
-						</li>
-						<li class="o-list__item">
-							<div class="c-mngRadio">
-								<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt3">
-								<label class="c-mngRadio__label" for="ptt3"><span class="c-mngRadio__fake"></span>Label 3
-								</label>
-							</div>
-						</li>
-					</ul>
+		h3 HTML
+		section
+			h4 Listado vertical
+			.ds-sample
+				ul.o-list
+					li.o-list__item
+						+mngRadio('Label 1', 'ptt', 'pink')(checked)
+					li.o-list__item
+						+mngRadio('Label 2', 'ptt2', 'pink')(disabled)
+					li.o-list__item
+						+mngRadio('Label 3', 'ptt3', 'pink')
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list">
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt" checked="checked">
+									<label class="c-mngRadio__label" for="ptt"><span class="c-mngRadio__fake"></span>Label 1
+									</label>
+								</div>
+							</li>
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt2" disabled="disabled">
+									<label class="c-mngRadio__label" for="ptt2"><span class="c-mngRadio__fake"></span>Label 2
+									</label>
+								</div>
+							</li>
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt3">
+									<label class="c-mngRadio__label" for="ptt3"><span class="c-mngRadio__fake"></span>Label 3
+									</label>
+								</div>
+							</li>
+						</ul>
+		section
+			h4 Listado horizontal
+			.ds-sample
+				ul.o-list.o-list--inline
+					li.o-list__item
+						+mngRadio('Label 4','ptt4', 'red')(checked)
+					li.o-list__item
+						+mngRadio('Label 5', 'ptt5', 'red')(disabled)
+					li.o-list__item
+						+mngRadio('Label 6', 'ptt6', 'red')
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list o-list--inline">
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt4" name="red" checked="checked">
+									<label class="c-mngRadio__label" for="ptt4"><span class="c-mngRadio__fake"></span>Label 4
+									</label>
+								</div>
+							</li>
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt5" name="red" disabled="disabled">
+									<label class="c-mngRadio__label" for="ptt5"><span class="c-mngRadio__fake"></span>Label 5
+									</label>
+								</div>
+							</li>
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt6" name="red">
+									<label class="c-mngRadio__label" for="ptt6"><span class="c-mngRadio__fake"></span>Label 6
+									</label>
+								</div>
+							</li>
+						</ul>
 	section
-		h4 Listado horizontal
-		.ds-sample
-			ul.o-list.o-list--inline
-				li.o-list__item
-					+mngRadio('Label 4','ptt4', 'red')(checked)
-				li.o-list__item
-					+mngRadio('Label 5', 'ptt5', 'red')(disabled)
-				li.o-list__item
-					+mngRadio('Label 6', 'ptt6', 'red')
-		pre
-			code.language-html
-				:markdown-it
-					<ul class="o-list o-list--inline">
-						<li class="o-list__item">
-							<div class="c-mngRadio">
-								<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt4" name="red" checked="checked">
-								<label class="c-mngRadio__label" for="ptt4"><span class="c-mngRadio__fake"></span>Label 4
-								</label>
-							</div>
-						</li>
-						<li class="o-list__item">
-							<div class="c-mngRadio">
-								<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt5" name="red" disabled="disabled">
-								<label class="c-mngRadio__label" for="ptt5"><span class="c-mngRadio__fake"></span>Label 5
-								</label>
-							</div>
-						</li>
-						<li class="o-list__item">
-							<div class="c-mngRadio">
-								<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt6" name="red">
-								<label class="c-mngRadio__label" for="ptt6"><span class="c-mngRadio__fake"></span>Label 6
-								</label>
-							</div>
-						</li>
-					</ul>
+		h3 Especificaciones
+		ul.ds-specs.row
+			each val in [1, 2, 3, 4]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="/assets/img/components/radio/specs/" + val + ".png", alt="")
 block use
+	section
+		h3 Descripción funcional
+		:markdown-it
+			Los radio buttons permiten al usuario seleccionar una opción de un conjunto. Use los botones de opción cuando el usuario necesite ver todas las opciones disponibles. Si las opciones disponibles se pueden contraer, considere usar un menú desplegable porque usa menos espacio.
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLERADIO
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='/assets/img/components/radio/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
+
+
 block paginator
 	+paginator("paginatorOptions",[
 		{ next:"Colores" , 

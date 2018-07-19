@@ -1,0 +1,27 @@
+{
+	"checkbox": {
+		"info": [
+			{
+				"uso": "Correcto",
+				"info": "Usar radio buttons si solo se puede seleccionar una opción de la lista (elementos excluyentes)."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "No utilizar radio buttons cuando se puede seleccionar más de un elemento de la lista. Utiliza  <a href=\"/app/views/components/components.checkbox.view.html\" class=\"c-mngLink\">Checkbox</a>."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Mostrar a primera vista todas las opciones disponibles de un radio button."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "No esconder opciones de la lista de radio buttons, ya que al tratarse de una lista excluyente es necesario ver todas las opciones. Si a simple vista no es posible, poner todo el listado en un Dropdown."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "No utilizar los radio buttons para opciones de on/off - activo/desactivo. Se recomienda usar Toggles."
+			}
+		]
+	}
+}
+
