@@ -300,27 +300,27 @@
 			"info": [
 				{
 					"uso": "Correcto",
-					"info": "Utiliza checkbox para seleccionar uno o más elementos de la lista."
+					"info": "Utiliza checkbox para permitir seleccionar más de un elemento de la lista."
 				},
 				{
 					"uso": "Incorrecto",
-					"info": "No usar checkbox cuando solo se puede seleccionar un elemento de la lista. Utiliza un <a href=\"/app/views/components/components.radio.view.html\" class=\"c-mngLink\">Radio Button</a>."
+					"info": "Si solo se puede seleccionar un solo elemento de la lista usar <a href=\"/app/views/components/components.radio.view.html\" class=\"c-mngLink\">Radio Button</a>."
 				},
 				{
 					"uso": "Correcto",
-					"info": "Usar un checkbox principal para agrupar una lista con múltiples opciones. Eso permite seleccionar o deseleccionar fácilmente todos los elementos."
+					"info": "Usar un checkbox principal para agrupar una lista con múltiples opciones. Esto permitirá seleccionar o deseleccionar fácilmente todos los elementos."
 				},
 				{
 					"uso": "Correcto",
-					"info": "Cuando el check principal está desmarcado, todas los checkbox secundarias estarán desmarcadas."
+					"info": "Cuando el check principal esté desmarcado, todos los checkbox secundarios estarán desmarcados."
 				},
 				{
 					"uso": "Correcto",
-					"info": "Cuando el check principal está marcado, todas los checkbox secundarias estarán marcadas."
+					"info": "Cuando el check principal esté marcado, todos los checkbox secundarios estarán marcados."
 				},
 				{
 					"uso": "Correcto",
-					"info": "Si se algunos checks secundarios, pero no todos, el check principal se convierte en una casilla indeterminada."
+					"info": "Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada."
 				}
 			]
 		}
