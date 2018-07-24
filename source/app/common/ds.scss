@@ -287,7 +287,6 @@ pre {
 }
 
 .ds-headLine {
-	@include mng-rem(font-size, 14px);
 	@include mng-rem(padding-top, 32px);
 	font-weight: 400;
 }
