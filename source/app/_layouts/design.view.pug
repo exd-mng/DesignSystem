@@ -4,24 +4,23 @@ block config
 	- var family = "design"
 
 block content
-	.row
-		.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
-			header.ds-intro
-				p.ds-intro__family
-					| Diseño
-				h2 #{title}
-		.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+	header.ds-intro
+		.container
 			.row
-				.col-xs.col-hd-9
+				.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0.col-lg-offset-4.col-lg-8.col-hd-offset-3.col-hd-9
+					p.ds-intro__family
+						| Diseño
+					h2 #{title}
 					.row
-						.ds-headLine
-							.ds-headLine__txt.col-md-10
+						.col-xs.col-lg-9.col-hd-6
+							.ds-headLine
 								block codeHead
-							// p.ds-headLine__btn.u-flex
-								block codeHeadBtn
-			.row
-				.col-xs.col-hd-8
-					block codeBody
-			.row
-				.col-xs.col-hd-12
-					block paginator
+	.container
+		.row
+			.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0.col-lg-offset-4.col-lg-8.col-hd-offset-3.col-hd-9
+				.row
+					.col-xs.col-lg-11.col-hd-8
+						block codeBody
+		.row
+			.col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+				block paginator

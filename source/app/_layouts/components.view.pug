@@ -1,38 +1,48 @@
 extends main.view.pug
 
 block content
-  .row
-    .col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
-      header.ds-intro
-        p.ds-intro__family
-          | Componentes
-        h2 #{title}
-  .ds-tabs
+  header.ds-intro
+    .container
+      .row
+        .col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0.col-lg-offset-4.col-lg-8.col-hd-offset-3.col-hd-9
+          p.ds-intro__family
+            | Componentes
+          h2 #{title}
+          .row
+            .col-xs.col-lg-9.col-hd-6
+              .ds-headLine
+                block codeHead
+  .container
     .row
-      .col-xs-12.col-md-12.col-md-offset-0
-        ul.ds-tabs__list
-          li.ds-tabs__item
-            a.ds-tabs__link.is-active(href="#tab1")
-              | Código
-          li.ds-tabs__item
-            a.ds-tabs__link(href="#tab2")
-              | Uso
+      .col-xs.col-lg-offset-4.col-lg-8.col-hd-offset-3.col-hd-9
+        .ds-tabs
+          .row
+            .col-xs-12.col-md-12.col-md-offset-0
+              ul.ds-tabs__list
+                li.ds-tabs__item
+                  a.ds-tabs__link.is-active(href="#tab1")
+                    | Código
+                li.ds-tabs__item
+                  a.ds-tabs__link(href="#tab2")
+                    | Especificaciones
+                li.ds-tabs__item
+                  a.ds-tabs__link(href="#tab3")
+                    | Recomendaciones
+          .row
+            .col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
+              .ds-tabs__content
+                .ds-tabs__panel(id="tab1")
+                  .row
+                    .col-xs.col-lg-11.col-hd-8
+                      block codeBody
+                .ds-tabs__panel.u-hidden(id="tab2")
+                  .row
+                    .col-xs.col-lg-11.col-hd-8
+                      block specification
+                .ds-tabs__panel.u-hidden(id="tab3")
+                  .row
+                    .col-xs.col-lg-11.col-hd-8
+                      block advice
     .row
       .col-xs-offset-1.col-xs-10.col-md-12.col-md-offset-0
-        .ds-tabs__content
-          .ds-tabs__panel(id="tab1")
-            .row
-              .col-xs.col-lg-9.col-hd-6
-                .ds-headLine
-                  .ds-headLine__txt
-                    block codeHead
-            .row
-              .col-xs.col-lg-11.col-hd-8
-                block codeBody
-          .ds-tabs__panel.u-hidden(id="tab2")
-            .row
-              .col-xs.col-lg-11.col-hd-8
-                block use
-        .row
-          .col-xs
-            block paginator
+        block paginator

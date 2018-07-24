@@ -7,6 +7,10 @@ $mngRadio-fake-disabled-border: $color-iron !default;
 $mngRadio-fake-border: $color-bombay !default;
 $mngRadio-fake-background: $color-white !default;
 $mngRadio-reverse-label-color: $color-white !default;
+$mngRadio-reverse-fake-border: $color-white !default;
+$mngRadio-reverse-label-disabled-color: $color-shark !default;
+$mngRadio-reverse-fake-disabled-border: $color-shark !default;
+$mngRadio-reverse-label-color: $color-white !default;
 
 .#{$module} {
 	@include mng-typescale(zeta);
@@ -69,8 +73,35 @@ $mngRadio-reverse-label-color: $color-white !default;
 		border-radius: 50%;
 	}
 	&--reverse {
+		.#{$module}__radio {
+			&:checked {
+				+ {
+					.#{$module}__label {
+						.#{$module}__fake {
+							border-color: $mngRadio-reverse-fake-border;
+							&::before {
+								background-color: $mngRadio-reverse-fake-border;
+							}
+						}
+					}
+				}
+			}
+			&:disabled {
+				+ {
+					.#{$module}__label { 
+						color: $mngRadio-reverse-label-disabled-color;
+						.#{$module}__fake {
+							border-color: $mngRadio-reverse-fake-disabled-border;
+						}
+					}
+				}
+			}
+		}
 		.#{$module}__label {
 			color: $mngRadio-reverse-label-color;
+		}
+		.#{$module}__fake {
+			background-color: transparent;
 		}
 	}
  }

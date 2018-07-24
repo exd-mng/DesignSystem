@@ -15,6 +15,8 @@ block codeBody
 		h3 HTML
 		section
 			h4 Botón primario
+			:markdown-it
+				Alberga la principal acción sobre la página.
 			.ds-sample
 				+mngBtnPrimary()(disabled)
 					| Inactivo
@@ -37,6 +39,8 @@ block codeBody
 						<button class="c-mngBtn c-mngBtn--primary c-mngBtn--sm" type="button">Reposo pequeño</button>
 		section
 			h4 Botón secundario
+			:markdown-it
+				La acción sobre él no es la principal en la página. Un botón secundario siempre va asociado a un botón primario y ambos conviven en la misma página. En el caso de que haya dos opciones de la misma importancia (no hay una acción principal), convivirán dos botones secundarios.
 			.ds-sample
 				+mngBtnSecondary()(disabled)
 					| Inactivo
@@ -79,6 +83,13 @@ block codeBody
 						<button class="c-mngBtn c-mngBtn--secondary c-mngBtn--reverse c-mngBtn--sm" type="button">Reposo pequeño</button>
 		section#ghost
 			h4 Ghost Button
+			:markdown-it
+				Este botón se utiliza para indicar acciones que puedes ejercer en todo momento dentro de la página independientemente de cual sea la acción principal. El ghost button siempre va acompañado de un icono.
+
+				Solamente se incorporan iconos en los ghost button. La posición del icono variará según la función del botón:
+			ul.ds-list
+				li.ds-list__item Indica flujo: se colocará a la derecha del texto (ej: siguiente)
+				li.ds-list__item Indica acción: se colocará a la izquierda del texto (ej: borrar, eliminar, añadir)
 			.ds-sample
 				+mngBtnGhost()
 					| Reposo
@@ -99,40 +110,20 @@ block codeBody
 								<use xlink:href="/icons/sprite.svg#plus"></use>
 							</svg>Reposo
 						</button>
+block specification
 	section
-		h3 Especificaciones
-		section
-			h4 General
-			ul.ds-specs.row
-				each val in [1, 2, 3, 4, 5, 6, 7, 8]
-					li.ds-specs__list.col-xs-12.col-md-6
-						img(src="/assets/img/components/buttons/specs/general/" + val + ".png", alt="")
-		section
-			h4 Mobile
-			ul.ds-specs.row
-				each val in [1, 2, 3, 4]
-					li.ds-specs__list.col-xs-12.col-md-6
-						img(src="/assets/img/components/buttons/specs/mobile/" + val + ".png", alt="")
-block use
+		h3 Desktop - Tablet
+		ul.ds-specs.row
+			each val in [1, 2, 3, 4, 5, 6, 7, 8]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="/assets/img/components/buttons/specs/general/" + val + ".png", alt="")
 	section
-		h3 Descripción funcional
-		section
-			h4 Botón primario
-			:markdown-it
-				Alberga la principal acción sobre la página.
-		section
-			h4 Botón secundario
-			:markdown-it
-				La acción sobre él no es la principal en la página. Un botón secundario siempre va asociado a un botón primario y ambos conviven en la misma página. En el caso de que haya dos opciones de la misma importancia (no hay una acción principal), convivirán dos botones secundarios.
-		section
-			h4 Ghost Button
-			:markdown-it
-				Este botón se utiliza para indicar acciones que puedes ejercer en todo momento dentro de la página independientemente de cual sea la acción principal. El ghost button siempre va acompañado de un icono.
-
-				Solamente se incorporan iconos en los ghost button. La posición del icono variará según la función del botón:
-			ul.ds-list
-				li.ds-list__item Indica flujo: se colocará a la derecha del texto (ej: siguiente)
-				li.ds-list__item Indica acción: se colocará a la izquierda del texto (ej: borrar, eliminar, añadir)
+		h3 Mobile
+		ul.ds-specs.row
+			each val in [1, 2, 3, 4]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="/assets/img/components/buttons/specs/mobile/" + val + ".png", alt="")
+block advice
 	section
 		h3 Recomendaciones
 		.ds-doDont

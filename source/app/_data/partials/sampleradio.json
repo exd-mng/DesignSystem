@@ -20,6 +20,26 @@
 			{
 				"uso": "Incorrecto",
 				"info": "No utilizar los radio buttons para opciones de on/off - activo/desactivo. Se recomienda usar Toggles."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Solo la inicial de la primera palabra o la de nombres propios debe estar en mayúsculas."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Si es necesario, pueden tener un título que aporte más información sobre el contenido de la lista."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Las etiquetas de texto deben aparecer a la derecha de los radios."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Los títulos de las etiquetas tienen que ser cortos (no más de 3 palabras) y bien definidos facilitando al usuario la toma de decisión."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Por defecto, se debe mostrar siempre un valor preseleccionado."
 			}
 		]
 	}

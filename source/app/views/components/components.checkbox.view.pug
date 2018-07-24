@@ -19,11 +19,11 @@ block codeBody
 			.ds-sample
 				ul.o-list
 					li.o-list__item
-						+mngCheck('Label 1','ptt', 'rr')
+						+mngCheck('Checkbox','ptt', 'rr')
 					li.o-list__item
-						+mngCheck('Label 2', 'ptt2', 'rr')(disabled)
+						+mngCheck('Checkbox', 'ptt2', 'rr')(disabled)
 					li.o-list__item
-						+mngCheck('Label 3','ptt3', 'rr', '', 'c-mngCheck__fake--indeterminate')
+						+mngCheck('Checkbox','ptt3', 'rr', '', 'c-mngCheck__fake--indeterminate')
 			pre
 				code.language-html
 					:markdown-it
@@ -31,21 +31,55 @@ block codeBody
 						<li class="o-list__item">
 						<div class="c-mngCheck">
 						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt"><span class="c-mngCheck__fake"></span>Label 1
+						<label class="c-mngCheck__label" for="ptt"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck">
 						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt2" type="checkbox" name="rr" disabled="disabled">
-						<label class="c-mngCheck__label" for="ptt2"><span class="c-mngCheck__fake"></span>Label 2
+						<label class="c-mngCheck__label" for="ptt2"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck">
 						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt3" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt3"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Label 3
+						<label class="c-mngCheck__label" for="ptt3"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
+						</label>
+						</div>
+						</li>
+						</ul>
+			.ds-sample.ds-sample--inverse
+				ul.o-list
+					li.o-list__item
+						+mngCheck('Checkbox','ptt7', 'rrr', 'c-mngCheck--reverse')
+					li.o-list__item
+						+mngCheck('Checkbox', 'ptt8', 'rrr', 'c-mngCheck--reverse')(disabled)
+					li.o-list__item
+						+mngCheck('Checkbox','ptt9', 'rrr', 'c-mngCheck--reverse', 'c-mngCheck__fake--indeterminate')
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list">
+						<li class="o-list__item">
+						<div class="c-mngCheck c-mngCheck--reverse">
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt7" type="checkbox" name="rrr">
+						<label class="c-mngCheck__label" for="ptt7"><span class="c-mngCheck__fake"></span>Checkbox
+						</label>
+						</div>
+						</li>
+						<li class="o-list__item">
+						<div class="c-mngCheck c-mngCheck--reverse">
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt8" type="checkbox" name="rrr" disabled="disabled">
+						<label class="c-mngCheck__label" for="ptt8"><span class="c-mngCheck__fake"></span>Checkbox
+						</label>
+						</div>
+						</li>
+						<li class="o-list__item">
+						<div class="c-mngCheck c-mngCheck--reverse">
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt9" type="checkbox" name="rrr">
+						<label class="c-mngCheck__label" for="ptt9"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
 						</label>
 						</div>
 						</li>
@@ -55,11 +89,11 @@ block codeBody
 			.ds-sample
 				ul.o-list.o-list--inline
 					li.o-list__item
-						+mngCheck('Label 4','ptt4', 'rr')
+						+mngCheck('Checkbox','ptt4', 'rr')
 					li.o-list__item
-						+mngCheck('Label 5', 'ptt5', 'rr')(disabled)
+						+mngCheck('Checkbox', 'ptt5', 'rr')(disabled)
 					li.o-list__item
-						+mngCheck('Label 6','ptt6', 'rr', '', 'c-mngCheck__fake--indeterminate')
+						+mngCheck('Checkbox','ptt6', 'rr', '', 'c-mngCheck__fake--indeterminate')
 			pre
 				code.language-html
 					:markdown-it
@@ -67,72 +101,68 @@ block codeBody
 						<li class="o-list__item">
 						<div class="c-mngCheck">
 						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt4" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt4"><span class="c-mngCheck__fake"></span>Label 4
+						<label class="c-mngCheck__label" for="ptt4"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck">
 						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt5" type="checkbox" name="rr" disabled="disabled">
-						<label class="c-mngCheck__label" for="ptt5"><span class="c-mngCheck__fake"></span>Label 5
+						<label class="c-mngCheck__label" for="ptt5"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck">
 						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt6" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt6"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Label 6
+						<label class="c-mngCheck__label" for="ptt6"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						</ul>
-		section
-			h4 Conjunto de checkbox (inverso)
 			.ds-sample.ds-sample--inverse
-				ul.o-list
+				ul.o-list.o-list--inline
 					li.o-list__item
-						+mngCheck('Label 7','ptt7', 'rrr', 'c-mngCheck--reverse')
+						+mngCheck('Checkbox','ptt4', 'rr', 'c-mngCheck--reverse')
 					li.o-list__item
-						+mngCheck('Label 8', 'ptt8', 'rrr', 'c-mngCheck--reverse')(disabled)
+						+mngCheck('Checkbox', 'ptt5', 'rr', 'c-mngCheck--reverse')(disabled)
 					li.o-list__item
-						+mngCheck('Label 9','ptt9', 'rrr', 'c-mngCheck--reverse', 'c-mngCheck__fake--indeterminate')
+						+mngCheck('Checkbox','ptt6', 'rr', 'c-mngCheck--reverse', 'c-mngCheck__fake--indeterminate')
 			pre
 				code.language-html
 					:markdown-it
-						<ul class="o-list">
+						<ul class="o-list o-list--inline">
 						<li class="o-list__item">
 						<div class="c-mngCheck c-mngCheck--reverse">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt7" type="checkbox" name="rrr">
-						<label class="c-mngCheck__label" for="ptt7"><span class="c-mngCheck__fake"></span>Label 7
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt4" type="checkbox" name="rr">
+						<label class="c-mngCheck__label" for="ptt4"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck c-mngCheck--reverse">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt8" type="checkbox" name="rrr" disabled="disabled">
-						<label class="c-mngCheck__label" for="ptt8"><span class="c-mngCheck__fake"></span>Label 8
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt5" type="checkbox" name="rr" disabled="disabled">
+						<label class="c-mngCheck__label" for="ptt5"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck c-mngCheck--reverse">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt9" type="checkbox" name="rrr">
-						<label class="c-mngCheck__label" for="ptt9"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Label 9
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt6" type="checkbox" name="rr">
+						<label class="c-mngCheck__label" for="ptt6"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						</ul>
+
+block specification
 	section
-		h3 Especificaciones
+		h3 Desktop - Tablet
 		ul.ds-specs.row
 			each val in [1, 2, 3, 4]
 				li.ds-specs__list.col-xs-12.col-md-6
 					img(src="/assets/img/components/checkbox/specs/" + val + ".png", alt="")
-block use
-	section
-		h3 Descripción funcional
-		:markdown-it
-			Los checkbox permiten a los usuarios completar tareas que implican tomar decisiones como seleccionar varias opciones. Se encuentran en pantallas dónde el usuario debe tomar decisiones, modificar preferencias, configuraciones o diálogos.
+block advice
 	section
 		h3 Recomendaciones
 		.ds-doDont

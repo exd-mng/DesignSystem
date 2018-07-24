@@ -120,8 +120,4 @@ $mngCheck-reverse-indeterminate-border: $color-white !default;
 			}
 		}
 	}
-	&--inline {
-		@include mng-rem(margin-right, 16px);
-		display: inline-flex;
-	}
 }

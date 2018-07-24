@@ -24,6 +24,30 @@
 			{
 				"uso": "Correcto",
 				"info": "Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Si es necesario, pueden tener un título que aporte más información sobre el contenido de la lista."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Las etiquetas de texto deben aparecer a la derecha del checkbox."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Los títulos de las etiquetas tienen que ser cortos (no más de 3 palabras) y bien definidos facilitando al usuario la toma de decisión."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Por defecto, no debemos mostrar ningún valor preseleccionado."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Solo la inicial de la primera palabra o la de nombres propios debe estar en mayúsculas."
 			}
 		]
 	}

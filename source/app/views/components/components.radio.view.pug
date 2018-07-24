@@ -8,7 +8,7 @@ block config
 
 block codeHead
 	:markdown-it
-		Los radio buttons se usan cuando una lista de dos o más opciones son excluyentes, lo que significa que el usuario debe seleccionar solo una opción.
+		Los radio buttons se usan cuando el usuario tiene que seleccionar una sola opción de una lista.
 
 block codeBody
 	section
@@ -18,11 +18,11 @@ block codeBody
 			.ds-sample
 				ul.o-list
 					li.o-list__item
-						+mngRadio('Label 1', 'ptt', 'pink')(checked)
+						+mngRadio('Radio Button', 'ptt', 'pink')(checked)
 					li.o-list__item
-						+mngRadio('Label 2', 'ptt2', 'pink')(disabled)
+						+mngRadio('Radio Button', 'ptt2', 'pink')(disabled)
 					li.o-list__item
-						+mngRadio('Label 3', 'ptt3', 'pink')
+						+mngRadio('Radio Button', 'ptt3', 'pink')
 			pre
 				code.language-html
 					:markdown-it
@@ -30,21 +30,55 @@ block codeBody
 							<li class="o-list__item">
 								<div class="c-mngRadio">
 									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt" checked="checked">
-									<label class="c-mngRadio__label" for="ptt"><span class="c-mngRadio__fake"></span>Label 1
+									<label class="c-mngRadio__label" for="ptt"><span class="c-mngRadio__fake"></span>Radio Button
 									</label>
 								</div>
 							</li>
 							<li class="o-list__item">
 								<div class="c-mngRadio">
 									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt2" disabled="disabled">
-									<label class="c-mngRadio__label" for="ptt2"><span class="c-mngRadio__fake"></span>Label 2
+									<label class="c-mngRadio__label" for="ptt2"><span class="c-mngRadio__fake"></span>Radio Button
 									</label>
 								</div>
 							</li>
 							<li class="o-list__item">
 								<div class="c-mngRadio">
 									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt3">
-									<label class="c-mngRadio__label" for="ptt3"><span class="c-mngRadio__fake"></span>Label 3
+									<label class="c-mngRadio__label" for="ptt3"><span class="c-mngRadio__fake"></span>Radio Button
+									</label>
+								</div>
+							</li>
+						</ul>
+			.ds-sample.ds-sample--inverse
+				ul.o-list
+					li.o-list__item
+						+mngRadio('Radio Button', 'ptt10', 'green', 'c-mngRadio--reverse')(checked)
+					li.o-list__item
+						+mngRadio('Radio Button', 'ptt11', 'green', 'c-mngRadio--reverse')(disabled)
+					li.o-list__item
+						+mngRadio('Radio Button', 'ptt12', 'green', 'c-mngRadio--reverse')
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list">
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt" checked="checked">
+									<label class="c-mngRadio__label" for="ptt"><span class="c-mngRadio__fake"></span>Radio Button
+									</label>
+								</div>
+							</li>
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt2" disabled="disabled">
+									<label class="c-mngRadio__label" for="ptt2"><span class="c-mngRadio__fake"></span>Radio Button
+									</label>
+								</div>
+							</li>
+							<li class="o-list__item">
+								<div class="c-mngRadio">
+									<input class="c-mngRadio__radio u-hidden-visually" type="radio" value="red" name="radio" id="ptt3">
+									<label class="c-mngRadio__label" for="ptt3"><span class="c-mngRadio__fake"></span>Radio Button
 									</label>
 								</div>
 							</li>
@@ -54,11 +88,11 @@ block codeBody
 			.ds-sample
 				ul.o-list.o-list--inline
 					li.o-list__item
-						+mngRadio('Label 4','ptt4', 'red')(checked)
+						+mngRadio('Radio Button','ptt4', 'red')(checked)
 					li.o-list__item
-						+mngRadio('Label 5', 'ptt5', 'red')(disabled)
+						+mngRadio('Radio Button', 'ptt5', 'red')(disabled)
 					li.o-list__item
-						+mngRadio('Label 6', 'ptt6', 'red')
+						+mngRadio('Radio Button', 'ptt6', 'red')
 			pre
 				code.language-html
 					:markdown-it
@@ -66,36 +100,67 @@ block codeBody
 							<li class="o-list__item">
 								<div class="c-mngRadio">
 									<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt4" name="red" checked="checked">
-									<label class="c-mngRadio__label" for="ptt4"><span class="c-mngRadio__fake"></span>Label 4
+									<label class="c-mngRadio__label" for="ptt4"><span class="c-mngRadio__fake"></span>Radio Button
 									</label>
 								</div>
 							</li>
 							<li class="o-list__item">
 								<div class="c-mngRadio">
 									<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt5" name="red" disabled="disabled">
-									<label class="c-mngRadio__label" for="ptt5"><span class="c-mngRadio__fake"></span>Label 5
+									<label class="c-mngRadio__label" for="ptt5"><span class="c-mngRadio__fake"></span>Radio Button
 									</label>
 								</div>
 							</li>
 							<li class="o-list__item">
 								<div class="c-mngRadio">
 									<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt6" name="red">
-									<label class="c-mngRadio__label" for="ptt6"><span class="c-mngRadio__fake"></span>Label 6
+									<label class="c-mngRadio__label" for="ptt6"><span class="c-mngRadio__fake"></span>Radio Button
 									</label>
 								</div>
 							</li>
 						</ul>
+			.ds-sample.ds-sample--inverse
+				ul.o-list.o-list--inline
+					li.o-list__item
+						+mngRadio('Radio Button','ptt7', 'violet', 'c-mngRadio--reverse')(checked)
+					li.o-list__item
+						+mngRadio('Radio Button', 'ptt8', 'violet', 'c-mngRadio--reverse')(disabled)
+					li.o-list__item
+						+mngRadio('Radio Button', 'ptt9', 'violet', 'c-mngRadio--reverse')
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list o-list--inline">
+						<li class="o-list__item">
+						<div class="c-mngRadio c-mngRadio--reverse">
+						<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt7" name="red" checked="checked">
+						<label class="c-mngRadio__label" for="ptt7"><span class="c-mngRadio__fake"></span>Radio Button
+						</label>
+						</div>
+						</li>
+						<li class="o-list__item">
+						<div class="c-mngRadio c-mngRadio--reverse">
+						<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt8" name="red" disabled="disabled">
+						<label class="c-mngRadio__label" for="ptt8"><span class="c-mngRadio__fake"></span>Radio Button
+						</label>
+						</div>
+						</li>
+						<li class="o-list__item">
+						<div class="c-mngRadio c-mngRadio--reverse">
+						<input class="c-mngRadio__radio u-hidden-visually" type="radio" id="ptt9" name="red">
+						<label class="c-mngRadio__label" for="ptt9"><span class="c-mngRadio__fake"></span>Radio Button
+						</label>
+						</div>
+						</li>
+						</ul>
+block specification
 	section
-		h3 Especificaciones
+		h3 Desktop - Tablet
 		ul.ds-specs.row
 			each val in [1, 2, 3, 4]
 				li.ds-specs__list.col-xs-12.col-md-6
 					img(src="/assets/img/components/radio/specs/" + val + ".png", alt="")
-block use
-	section
-		h3 Descripción funcional
-		:markdown-it
-			Los radio buttons permiten al usuario seleccionar una opción de un conjunto. Use los botones de opción cuando el usuario necesite ver todas las opciones disponibles. Si las opciones disponibles se pueden contraer, considere usar un menú desplegable porque usa menos espacio.
+block advice
 	section
 		h3 Recomendaciones
 		.ds-doDont

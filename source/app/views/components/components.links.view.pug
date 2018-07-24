@@ -8,7 +8,7 @@ block config
 
 block codeHead
 	:markdown-it
-		Los enlaces se usan principalmente como elementos de navegación.
+		Deberemos usar los enlaces siempre que enviemos al usuario a páginas externas o contenidos que se encuentren fuera de la aplicación
 
 block codeBody
 	section
@@ -55,18 +55,15 @@ block codeBody
 							<li class="o-list__item"><a class="c-mngLink" href="#">Link</a>
 							</li>
 						</ul>
+block specification
 	section
-		h3 Especificaciones
+		h3 Desktop - Tablet - Mobile
 		ul.row.ds-specs
 			each val in [1, 2]
 				li.col-xs-12.col-md-6.ds-specs__list
 					img(src="/assets/img/components/links/specs/" + val + ".png", alt="")
 
-block use
-	section
-		h3 Descripción funcional
-		:markdown-it
-			Los enlaces són principalmente un elemento de navegación que envian al usario en un sitio en concreto de la aplicación o incluso a páginas/contenidos externos a esta. No existe el enlace deshabilitado, si no se puede realizar la acción o vínculo el enlace no aparecerá.
+block advice
 	section
 		h3 Recomendaciones
 		.ds-doDont
