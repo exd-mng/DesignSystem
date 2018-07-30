@@ -308,27 +308,7 @@
 				},
 				{
 					"uso": "Correcto",
-					"info": "Usar un checkbox principal para agrupar una lista con múltiples opciones. Esto permitirá seleccionar o deseleccionar fácilmente todos los elementos."
-				},
-				{
-					"uso": "Correcto",
-					"info": "Cuando el check principal esté desmarcado, todos los checkbox secundarios estarán desmarcados."
-				},
-				{
-					"uso": "Correcto",
-					"info": "Cuando el check principal esté marcado, todos los checkbox secundarios estarán marcados."
-				},
-				{
-					"uso": "Correcto",
-					"info": "Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada."
-				},
-				{
-					"uso": "Correcto",
-					"info": "Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada."
-				},
-				{
-					"uso": "Correcto",
-					"info": "Si es necesario, pueden tener un título que aporte más información sobre el contenido de la lista."
+					"info": "Por defecto, no debemos mostrar ningún valor preseleccionado."
 				},
 				{
 					"uso": "Incorrecto",
@@ -336,15 +316,19 @@
 				},
 				{
 					"uso": "Correcto",
+					"info": "Usar un checkbox principal para agrupar una lista con múltiples opciones. Esto permitirá seleccionar o deseleccionar fácilmente todos los elementos."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Cuando el check principal esté desmarcado, todas los checkbox secundarias estarán desmarcadas."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada."
+				},
+				{
+					"uso": "Correcto",
 					"info": "Los títulos de las etiquetas tienen que ser cortos (no más de 3 palabras) y bien definidos facilitando al usuario la toma de decisión."
-				},
-				{
-					"uso": "Incorrecto",
-					"info": "Por defecto, no debemos mostrar ningún valor preseleccionado."
-				},
-				{
-					"uso": "Incorrecto",
-					"info": "Solo la inicial de la primera palabra o la de nombres propios debe estar en mayúsculas."
 				}
 			]
 		}
@@ -396,7 +380,7 @@
 		}
 	},
 	"SAMPLERADIO": {
-		"checkbox": {
+		"radio": {
 			"info": [
 				{
 					"uso": "Correcto",
@@ -408,23 +392,7 @@
 				},
 				{
 					"uso": "Correcto",
-					"info": "Mostrar a primera vista todas las opciones disponibles de un radio button."
-				},
-				{
-					"uso": "Incorrecto",
-					"info": "No esconder opciones de la lista de radio buttons, ya que al tratarse de una lista excluyente es necesario ver todas las opciones. Si a simple vista no es posible, poner todo el listado en un Dropdown."
-				},
-				{
-					"uso": "Incorrecto",
-					"info": "No utilizar los radio buttons para opciones de on/off - activo/desactivo. Se recomienda usar Toggles."
-				},
-				{
-					"uso": "Incorrecto",
-					"info": "Solo la inicial de la primera palabra o la de nombres propios debe estar en mayúsculas."
-				},
-				{
-					"uso": "Correcto",
-					"info": "Si es necesario, pueden tener un título que aporte más información sobre el contenido de la lista."
+					"info": "Por defecto, se debe mostrar siempre un valor preseleccionado."
 				},
 				{
 					"uso": "Incorrecto",
@@ -432,11 +400,19 @@
 				},
 				{
 					"uso": "Correcto",
+					"info": "Todas las opciones deben estar visibles."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Si no tenemos espacio y podemos dejar de mostrar las opciones, es mejor que uses un dropdrown."
+				},
+				{
+					"uso": "Correcto",
 					"info": "Los títulos de las etiquetas tienen que ser cortos (no más de 3 palabras) y bien definidos facilitando al usuario la toma de decisión."
 				},
 				{
 					"uso": "Incorrecto",
-					"info": "Por defecto, se debe mostrar siempre un valor preseleccionado."
+					"info": "No uses los radio buttons para opciones dobles como on/off, activo/inactivo. En estos casos se recomienda usar toggles."
 				}
 			]
 		}
