@@ -1,11 +1,8 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Tabs" ;
-	- var title = "Tabs";
-	- var desc = "";
-	- var next = "colors";
-	- var prev = "radio";
+	- var active = "Tabs";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -75,9 +72,12 @@ block advice
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
-	+paginator("paginatorOptions",[
-		{ next:"Enlaces" , 
-			prev:"Botones", 
+	- var next = "colors";
+	- var prev = "radio";
+	+paginatorNav("paginatorOptions",[
+		{ 
+			titPrev:"Botones",
+			titNext:"Enlaces",  
 			familyPrev: "components", 
 			familyNext: "design" 
 		}

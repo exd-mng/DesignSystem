@@ -2,9 +2,7 @@ extends ../../_layouts/design.view.pug
 
 block config
 	- var active = "Tipografía";
-	- var title = "Tipografía";
-	- var prev = "layout";
-	- var next = "button";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -57,10 +55,12 @@ block codeBody
 		h3 Caracteres por línea
 		img(alt="", src='/assets/img/design/type/line-lenght.png')
 block paginator
-	+paginator("paginatorOptions",[
+	- var prev = "layout";
+	- var next = "button";
+	+paginatorNav("paginatorOptions",[
 		{ 
-			next:"Buttons", 
-			prev:"Layout", 
+			titPrev:"Layout",
+			titNext:"Buttons",  
 			familyPrev: "design", 
 			familyNext: "components"
 		}

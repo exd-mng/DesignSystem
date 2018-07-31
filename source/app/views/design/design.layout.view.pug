@@ -3,8 +3,6 @@ extends ../../_layouts/design.view.pug
 block config
 	- var active = "Layout";
 	- var title = "Layout + Spacing";
-	- var next = "type";
-	- var prev = "grid";
 
 block codeHead
 	:markdown-it
@@ -51,10 +49,12 @@ block codeBody
 					:markdown-it
 						**A nivel de branding:** Es esencial la presencia y predominancia de espacios en blanco, para dar sensación de sobriedad, elegancia.  Acuñando la frase de Mies Van der Rohe: “Less is more”, cuanto menos información/diseño superficial añadamos, mejor será el resultado. El contenido en las páginas tiene que respirar, no se debe saturar las páginas de información. La relación porcentual entre espacio en blanco y contenido seria de 60-40.
 block paginator
-	+paginator("paginatorOptions",[
-		{ 
-			next:"Tipografía",
-			prev:"Grid", 
+	- var next = "type";
+	- var prev = "grid";
+	+paginatorNav("paginatorOptions",[
+		{
+			titPrev:"Grid",
+			titNext:"Tipografía", 
 			familyPrev: "design", 
 			familyNext: "design" 
 		}
