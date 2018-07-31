@@ -1,29 +1,112 @@
+extends ../../_layouts/components.view.pug
 
-//block config
-	- var nav = "tabs";
-	- var title = "Pestañas";
+block config
+	- var active = "Tabs" ;
+	- var title = "Tabs";
+	- var desc = "";
+	- var next = "colors";
+	- var prev = "radio";
+
+block codeHead
+	:markdown-it
+		LLamamos Tabs al componente visual que vincula 2 o másopciones dispuestas de manera horizontal. Por defecto, siempreaparece una seleccionada.
+
+block codeBody
+	section
+		h3 HTML
+		section
+			h4 Con 2 estados: activo e inactivo
+			.ds-sample
+				ul.o-list
+					li.o-list__item
+						+mngTabs(["Reposo","Seleccionado"],1)
+							+mngTabsPanel("Uno",true)
+								p Bloque 1
+							+mngTabsPanel("Dos",true)
+								p Bloque 2
+
+			pre
+				code.language-html
+					:markdown-it
+						<ul class="o-list">
+						<li class="o-list__item">
+						<div class="c-mngCheck">
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt" type="checkbox" name="rr">
+						<label class="c-mngCheck__label" for="ptt"><span class="c-mngCheck__fake"></span>Checkbox
+						</label>
+						</div>
+						</li>
+						<li class="o-list__item">
+						<div class="c-mngCheck">
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt2" type="checkbox" name="rr" disabled="disabled">
+						<label class="c-mngCheck__label" for="ptt2"><span class="c-mngCheck__fake"></span>Checkbox
+						</label>
+						</div>
+						</li>
+						<li class="o-list__item">
+						<div class="c-mngCheck">
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt3" type="checkbox" name="rr">
+						<label class="c-mngCheck__label" for="ptt3"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
+						</label>
+						</div>
+						</li>
+						</ul>
 
 
-	.ds-sample
-		+mngTabs(["Tab 1","Tab 2","Tab 3"],0)
-			+mngTabsPanel("0","active")
-			+mngTabsPanel("1")
-			+mngTabsPanel("2")
-	pre
-		code.language-html
-			:markdown-it
-				<nav class="c-mngTabs">
-				<ul class="c-mngTabs__list" role="tablist">
-				<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#tab0" role="tab">Tab 1</a></li>
-				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab1" role="tab">Tab 2</a></li>
-				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab2" role="tab">Tab 3</a></li>
-				</ul>
-				<div class="clearfix">
-				<div class="c-mngTabs__panel is-active" id="tab0">
-				</div>
-				<div class="c-mngTabs__panel" id="tab1">
-				</div>
-				<div class="c-mngTabs__panel" id="tab2">
-				</div>
-				</div>
-				</nav>
+block specification
+	section
+		h3 Desktop - Tablet
+		ul.ds-specs.row
+			each val in [1, 2, 3, 4]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="/assets/img/components/checkbox/specs/" + val + ".png", alt="")
+block advice
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLECHECKBOX
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='/assets/img/components/checkbox/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
+block paginator
+	+paginator("paginatorOptions",[
+		{ next:"Enlaces" , 
+			prev:"Botones", 
+			familyPrev: "components", 
+			familyNext: "design" 
+		}
+	])
+//- block config
+//- 	- var nav = "tabs";
+//- 	- var title = "Pestañas";
+
+
+//- 	.ds-sample
+//- 		+mngTabs(["Tab 1","Tab 2","Tab 3"],0)
+//- 			+mngTabsPanel("0","active")
+//- 			+mngTabsPanel("1")
+//- 			+mngTabsPanel("2")
+//- 	pre
+//- 		code.language-html
+//- 			:markdown-it
+//- 				<nav class="c-mngTabs">
+//- 				<ul class="c-mngTabs__list" role="tablist">
+//- 				<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#tab0" role="tab">Tab 1</a></li>
+//- 				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab1" role="tab">Tab 2</a></li>
+//- 				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab2" role="tab">Tab 3</a></li>
+//- 				</ul>
+//- 				<div class="clearfix">
+//- 				<div class="c-mngTabs__panel is-active" id="tab0">
+//- 				</div>
+//- 				<div class="c-mngTabs__panel" id="tab1">
+//- 				</div>
+//- 				<div class="c-mngTabs__panel" id="tab2">
+//- 				</div>
+//- 				</div>
+//- 				</nav>
