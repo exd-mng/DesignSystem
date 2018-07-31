@@ -1,24 +1,44 @@
+extends ../../_layouts/components.view.pug
 
+block config
+	- var active = "Paginador";
+	- var title = active;
 
-// block config
-	- var nav = "pagination";
-	- var title = "Paginación";
+block codeHead
+	:markdown-it
+		La paginación se usa para organizar contenidos muy extensos o gran cantidad de datos.
 
+block codeBody
+	section
+		h3 HTML
+		.ds-sample
+			+mngPagination()
+		pre
+			code
+				:markdown-it
+					<ul class="c-mngPagination">
+					<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&lt;</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">1</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">2</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">3</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">4</a></li>
+					<li class="c-mngPagination__item is-active"><a class="c-mngPagination__link" href="">5</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">6</a></li>
+					<li class="c-mngPagination__item c-mngPagination__item--gap">...</li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">102</a></li>
+					<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&gt;</a></li>
+					</ul>
+block specification
+block advice
 
-	.ds-sample
-		+mngPagination()
-	pre
-		code.language-html
-			:markdown-it
-				<ul class="c-mngPagination">
-				<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&lt;</a></li>
-				<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">1</a></li>
-				<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">2</a></li>
-				<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">3</a></li>
-				<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">4</a></li>
-				<li class="c-mngPagination__item is-active"><a class="c-mngPagination__link" href="">5</a></li>
-				<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">6</a></li>
-				<li class="c-mngPagination__item c-mngPagination__item--gap">...</li>
-				<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">102</a></li>
-				<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&gt;</a></li>
-				</ul>
+block paginator
+	- var next = "radio";
+	- var prev = "input";
+	+paginator("paginatorOptions",[
+		{ 
+			next:"Radio Buttons",
+			prev:"Input", 
+			familyPrev: "components", 
+			familyNext: "components" 
+		}
+	])

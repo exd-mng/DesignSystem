@@ -2,9 +2,7 @@ extends ../../_layouts/components.view.pug
 
 block config
 	- var active = "Input"
-	- var title = "Input";
-	- var next = "radio";
-	- var prev = "links";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -59,9 +57,11 @@ block codeBody
 block specification
 block advice
 block paginator
+	- var next = "pagination";
+	- var prev = "links";
 	+paginator("paginatorOptions",[
 		{ 
-			next:"Radio Buttons",
+			next:"Paginador",
 			prev:"Enlaces", 
 			familyPrev: "components", 
 			familyNext: "components" 

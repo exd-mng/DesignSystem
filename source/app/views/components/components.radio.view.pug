@@ -1,10 +1,8 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Radios";
-	- var title = "Radio Buttons";
-	- var prev = "links";
-	- var next = "colors";
+	- var active = "Radio Buttons";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -177,9 +175,11 @@ block advice
 
 
 block paginator
+	- var prev = "pagination";
+	- var next = "colors";
 	+paginator("paginatorOptions",[
-		{ next:"Colores" , 
-			prev:"Enlaces", 
+		{ next: "Colores" , 
+			prev: "Paginador", 
 			familyPrev: "components", 
 			familyNext: "design" 
 		}

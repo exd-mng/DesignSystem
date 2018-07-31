@@ -1,11 +1,8 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Checkbox" ;
-	- var title = "Checkbox";
-	- var desc = "";
-	- var next = "links";
-	- var prev = "button";
+	- var active = "Checkbox";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -177,6 +174,8 @@ block advice
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
+	- var next = "links";
+	- var prev = "button";
 	+paginator("paginatorOptions",[
 		{ next:"Enlaces" , 
 			prev:"Botones", 

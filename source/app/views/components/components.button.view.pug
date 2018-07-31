@@ -2,9 +2,7 @@ extends ../../_layouts/components.view.pug
 
 block config
 	- var active = "Botones";
-	- var title = "Botones";
-	- var next = "checkbox";
-	- var prev = "type";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -138,6 +136,8 @@ block advice
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
+	- var next = "checkbox";
+	- var prev = "type";
 	+paginator("paginatorOptions",[
 		{ 
 			prev: "Tipografía",

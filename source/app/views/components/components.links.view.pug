@@ -2,9 +2,7 @@ extends ../../_layouts/components.view.pug
 
 block config
 	- var active = "Enlaces";
-	- var title = "Enlaces";
-	- var next = "input";
-	- var prev = "checkbox";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -79,6 +77,8 @@ block advice
 									!= dodont.info[i].info
 
 block paginator
+	- var next = "input";
+	- var prev = "checkbox";
 	+paginator("paginatorOptions",[
 		{ 
 			next:"Input",
