@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     prefix = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    jshint = require("gulp-jshint"),
     uglify = require("gulp-uglify"),
     del = require('del'),
     fs = require("fs"),
@@ -15,12 +14,12 @@ var gulp = require('gulp'),
     svgsprite = require('gulp-svg-sprite'),
     bs = require('browser-sync').create();
 
-  gulp.task('browser-sync', function() {
-    bs.init({
-        server: {
-            baseDir: "dist"
-        }
-    });
+gulp.task('browser-sync', function() {
+  bs.init({
+      server: {
+          baseDir: "dist"
+      }
+  });
 });
 
 var autoprefixerOptions = {
@@ -67,14 +66,7 @@ gulp.task('styles', function () {
     .pipe(bs.reload({stream: true}));
 });
 
-gulp.task('jshint', function () {
-  return gulp
-    .src('source/app/common/js/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter());
-});
-
-gulp.task('scripts', ['jshint'], function () {
+gulp.task('scripts', function () {
   return gulp
     .src('source/app/common/js/**/*.js')
     .pipe(uglify())
@@ -93,7 +85,6 @@ gulp.task('fonts', function() {
     .src(['source/app/common/styles/typo/*.*'])
     .pipe(gulp.dest('dist/app/common/styles/typo'));
 });
-
 
 var svgSpriteConfig = {
   mode: {
@@ -119,14 +110,14 @@ gulp.task('clean', function() {
   return del(['dist', , 'source/assets/icons/sprite/*.svg' ]);
 });
 
-gulp.task('default', ['clean'], function() {
-  gulp.start('svg', 'html', 'styles', 'scripts', 'fonts', 'images');
-});
-
-gulp.task('watch', ['default', 'browser-sync'], function() {
+gulp.task('watch', function() {
   gulp.watch('source/**/*.pug', ['html']);
   gulp.watch('source/app/common/**/**/*.scss', ['styles']);
   gulp.watch('source/app/common/js/**/*.js', ['scripts']);
   gulp.watch('source/assets/img/**/*', ['images']);
   gulp.watch('source/assets/img/**/*', ['svg']);
+});
+
+gulp.task('default', ['svg', 'html', 'styles', 'scripts', 'fonts', 'images', 'watch'], function() {
+  gulp.start('browser-sync');
 });
