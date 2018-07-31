@@ -2,9 +2,7 @@ extends ../../_layouts/design.view.pug
 
 block config
 	- var active = "Grid";
-	- var title = "Grid";
-	- var next = "layout";
-	- var prev = "colors";
+	- var title = active;
 
 block codeHead
 	:markdown-it
@@ -310,10 +308,12 @@ block codeBody
 						.col-xs-2
 							.box-nested 6
 block paginator
-	+paginator("paginatorOptions",[
+	- var next = "layout";
+	- var prev = "colors";
+	+paginatorNav("paginatorOptions",[
 		{ 
-			next:"Layout",
-			prev:"Colores", 
+			titPrev:"Colores",
+			titNext:"Layout", 
 			familyPrev: "design", 
 			familyNext: "design" 
 		}

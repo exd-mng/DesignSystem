@@ -1,17 +1,17 @@
-mixin paginator(name,items)
+mixin paginatorNav(name,items)
 	.ds-paginator.u-flex
 		each item, i in items
-			if(item.prev)
+			if(item.titPrev)
 				a.ds-paginator__link(href="/app/views/" + item.familyPrev + "/" + item.familyPrev + "." + prev + ".view.html")
 					.ds-paginator__wrap
 						img(src='/assets/img/btn-prev.png', alt='')
 						.ds-paginator__btn
 							span.ds-paginator__label Anterior
-							span.ds-paginator__tit #{item.prev}
-			if(item.next)
+							span.ds-paginator__tit #{item.titPrev}
+			if(item.titNext)
 				a.ds-paginator__link.is-right(href="/app/views/" + item.familyNext + "/" + item.familyNext + "." + next + ".view.html")
 					.ds-paginator__wrap
 						.ds-paginator__btn
 							span.ds-paginator__label Siguiente
-							span.ds-paginator__tit #{item.next}
+							span.ds-paginator__tit #{item.titNext}
 						img(src='/assets/img/btn-next.png', alt='')

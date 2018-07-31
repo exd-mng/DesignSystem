@@ -20,10 +20,12 @@ block codeBody
 							.ds-color__name= color.range[i].color
 							.ds-color__code= color.range[i].code
 block paginator
-	+paginator("paginatorOptions",[
+	- var next = "grid";
+	- var prev = "tabs";
+	+paginatorNav("paginatorOptions",[
 		{ 
-			next:"Grid", 
-			prev: "Tabs",
+			titPrev: "Radio Buttons",
+			titNext:"Grid", 
 			familyNext: "design" ,
 			familyPrev: "components"
 		}

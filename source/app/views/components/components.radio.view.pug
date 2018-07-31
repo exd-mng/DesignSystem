@@ -176,10 +176,11 @@ block advice
 
 block paginator
 	- var prev = "pagination";
-	- var next = "tabs";
-	+paginator("paginatorOptions",[
-		{ next: "Colores" , 
-			prev: "Paginador", 
+	- var next = "colors";
+	+paginatorNav("paginatorOptions",[
+		{
+			titPrev: "Paginador",
+			titNext: "Colores",
 			familyPrev: "components", 
 			familyNext: "components" 
 		}

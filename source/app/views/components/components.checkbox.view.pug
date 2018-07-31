@@ -176,9 +176,10 @@ block advice
 block paginator
 	- var next = "links";
 	- var prev = "button";
-	+paginator("paginatorOptions",[
-		{ next:"Enlaces" , 
-			prev:"Botones", 
+	+paginatorNav("paginatorOptions",[
+		{
+			titPrev:"Botones", 
+			titNext:"Enlaces", 
 			familyPrev: "components", 
 			familyNext: "components" 
 		}
