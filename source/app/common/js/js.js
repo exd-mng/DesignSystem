@@ -1,9 +1,3 @@
-
-
-
-
-
-
 $('.ds-mainHeader__btn').on('click', function(e) {
 	$('body').toggleClass("nav-open")
 });
@@ -41,8 +35,10 @@ $('.c-mngSwitch__btn').on('click', function(e) {
 
 //tabs
 $('.c-mngTabs__link').on('click', function(e) {
-	e.preventDefault();
+	e.preventDefault();	
 	$(this).addClass('is-active').parent().siblings().find(".c-mngTabs__link").removeClass('is-active');
+	$(this).parentsUntil('.c-mngTabs').siblings().find('.c-mngTabs__panel').addClass('u-hidden');
+	$(this).parentsUntil('.c-mngTabs').siblings().find($(this).attr("href")).removeClass('u-hidden');
 });
 
 //dropdown
@@ -50,7 +46,3 @@ $('.c-mngDrop__btn').on('click', function(e) {
 	e.preventDefault();
 	$(this).parent().toggleClass('is-open');
 });
-
-
-
-

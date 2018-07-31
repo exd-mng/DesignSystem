@@ -1,20 +1,20 @@
-mixin mngTabs(tabs,active)
+mixin mngTabs(name,tabs,active)
 	.c-mngTabs
 		ul.c-mngTabs__list(role="tablist")
 			each item,index in tabs
 				if (index === active)
 					li.c-mngTabs__item
-						a.c-mngTabs__link.is-active(href="#tab"+index, role="tab")= item
+						a.c-mngTabs__link.is-active(href="#"+name+"-"+index, role="tab")= item
 				else
 					li.c-mngTabs__item
-						a.c-mngTabs__link(href="#tab"+index, role="tab")= item
+						a.c-mngTabs__link(href="#"+name+"-"+index, role="tab")= item
 		.c-mngTabs__content
 			block
 
-mixin mngTabsPanel(id,active)
+mixin mngTabsPanel(name,id,active)
 	if(active)
-		.c-mngTabs__panel(id="tab"+id)
+		.c-mngTabs__panel(id=name+"-"+id)
 			block
 	else
-		.c-mngTabs__panel.u-hidden(id="tab"+id)
+		.c-mngTabs__panel.u-hidden(id=name+"-"+id)
 			block

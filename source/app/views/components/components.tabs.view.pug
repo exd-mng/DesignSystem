@@ -3,9 +3,6 @@ extends ../../_layouts/components.view.pug
 block config
 	- var active = "Tabs" ;
 	- var title = "Tabs";
-	- var desc = "";
-	- var next = "colors";
-	- var prev = "radio";
 
 block codeHead
 	:markdown-it
@@ -19,38 +16,63 @@ block codeBody
 			.ds-sample
 				ul.o-list
 					li.o-list__item
-						+mngTabs(["Reposo","Seleccionado"],1)
-							+mngTabsPanel("Uno",true)
-								p Bloque 1
-							+mngTabsPanel("Dos",true)
-								p Bloque 2
+						+mngTabs('set2Tabs',["Tab 1","Tab 2"],0)
+							+mngTabsPanel('set2Tabs',0,true)
+								p Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.
+							+mngTabsPanel('set2Tabs',1,false)
+								p Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.
 
 			pre
 				code.language-html
 					:markdown-it
-						<ul class="o-list">
-						<li class="o-list__item">
-						<div class="c-mngCheck">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt"><span class="c-mngCheck__fake"></span>Checkbox
-						</label>
-						</div>
-						</li>
-						<li class="o-list__item">
-						<div class="c-mngCheck">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt2" type="checkbox" name="rr" disabled="disabled">
-						<label class="c-mngCheck__label" for="ptt2"><span class="c-mngCheck__fake"></span>Checkbox
-						</label>
-						</div>
-						</li>
-						<li class="o-list__item">
-						<div class="c-mngCheck">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt3" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt3"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
-						</label>
-						</div>
-						</li>
+						<div class="c-mngTabs">
+						<ul class="c-mngTabs__list" role="tablist">
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#set2Tabs-0" role="tab">Tab 1</a></li>
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#set2Tabs-1" role="tab">Tab 2</a></li>
 						</ul>
+						<div class="c-mngTabs__content">
+						<div class="c-mngTabs__panel" id="set2Tabs-0">
+						<p>Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.</p>
+						</div>
+						<div class="c-mngTabs__panel u-hidden" id="set2Tabs-1">
+						<p>Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.</p>
+						</div>
+						</div>
+						</div>
+		section
+			h4 Con 3 o más estados: activo e inactivo
+			.ds-sample
+				ul.o-list
+					li.o-list__item
+						+mngTabs('set3Tabs',["Tab 1","Tab 2","Tab 3"],0)
+							+mngTabsPanel('set3Tabs',0,true)
+								p Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.
+							+mngTabsPanel('set3Tabs',1,false)
+								p Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.
+							+mngTabsPanel('set3Tabs',2,false)
+								p Reprehenderit officia aliquip deserunt anim minim eu voluptate sunt.
+
+			pre
+				code.language-html
+					:markdown-it
+						<div class="c-mngTabs">
+						<ul class="c-mngTabs__list" role="tablist">
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#set3Tabs-0" role="tab">Tab 1</a></li>
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#set3Tabs-1" role="tab">Tab 2</a></li>
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#set3Tabs-2" role="tab">Tab 3</a></li>
+						</ul>
+						<div class="c-mngTabs__content">
+						<div class="c-mngTabs__panel" id="set3Tabs-0">
+						<p>Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.</p>
+						</div>
+						<div class="c-mngTabs__panel u-hidden" id="set3Tabs-1">
+						<p>Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.</p>
+						</div>
+						<div class="c-mngTabs__panel u-hidden" id="set3Tabs-2">
+						<p>Reprehenderit officia aliquip deserunt anim minim eu voluptate sunt.</p>
+						</div>
+						</div>
+						</div>
 
 
 block specification
@@ -75,38 +97,13 @@ block advice
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
+	- var next = "colors";
+	- var prev = "radio";
 	+paginator("paginatorOptions",[
-		{ next:"Enlaces" , 
-			prev:"Botones", 
+		{ 
+			titPrev:"Botones",
+			titNext:"Enlaces",  
 			familyPrev: "components", 
 			familyNext: "design" 
 		}
 	])
-//- block config
-//- 	- var nav = "tabs";
-//- 	- var title = "Pestañas";
-
-
-//- 	.ds-sample
-//- 		+mngTabs(["Tab 1","Tab 2","Tab 3"],0)
-//- 			+mngTabsPanel("0","active")
-//- 			+mngTabsPanel("1")
-//- 			+mngTabsPanel("2")
-//- 	pre
-//- 		code.language-html
-//- 			:markdown-it
-//- 				<nav class="c-mngTabs">
-//- 				<ul class="c-mngTabs__list" role="tablist">
-//- 				<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#tab0" role="tab">Tab 1</a></li>
-//- 				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab1" role="tab">Tab 2</a></li>
-//- 				<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#tab2" role="tab">Tab 3</a></li>
-//- 				</ul>
-//- 				<div class="clearfix">
-//- 				<div class="c-mngTabs__panel is-active" id="tab0">
-//- 				</div>
-//- 				<div class="c-mngTabs__panel" id="tab1">
-//- 				</div>
-//- 				<div class="c-mngTabs__panel" id="tab2">
-//- 				</div>
-//- 				</div>
-//- 				</nav>

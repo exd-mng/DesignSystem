@@ -118,6 +118,6 @@ gulp.task('watch', function() {
   gulp.watch('source/assets/img/**/*', ['svg']);
 });
 
-gulp.task('default', ['svg', 'html', 'styles', 'scripts', 'fonts', 'images', 'watch'], function() {
+gulp.task('default', ['svg', 'images', 'fonts', 'html', 'styles', 'scripts', 'watch'], function() {
   gulp.start('browser-sync');
 });

@@ -1,11 +1,8 @@
 extends ../../_layouts/design.view.pug
 
 block config
-	- var nav = "colors";
 	- var title = "Colores";
 	- var active = 'Colores';
-	- var next = "grid";
-	- var prev = "tabs";
 
 block codeHead
 	:markdown-it
@@ -26,7 +23,7 @@ block paginator
 	+paginator("paginatorOptions",[
 		{ 
 			next:"Grid", 
-			prev: "Radio Buttons",
+			prev: "Tabs",
 			familyNext: "design" ,
 			familyPrev: "components"
 		}
