@@ -1,0 +1,30 @@
+{
+    "breadcrumb": {
+        "info": [
+            {
+                "uso": "Correcto",
+                "info": "Colocar siempre los breadcrumb en la parte superior de la página."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "No se pueden colocar bajo ningún concepto en otro lugar que no sea en la parte superior."
+            },
+            {
+                "uso": "Correcto",
+                "info": "Mantener los títulos de breadcrumbs cortos y descriptivos."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": ""
+            },
+            {
+                "uso": "Correcto",
+                "info": "Mostrar la página actual, pero no enlazarla a ella."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "La página actual no es clicable."
+            }
+        ]
+    }
+}

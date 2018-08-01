@@ -4,6 +4,7 @@ block config
 	- var active = "Input"
 	- var title = active;
 
+
 block codeHead
 	:markdown-it
 		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus, non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
@@ -54,6 +55,28 @@ block codeBody
 						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
 						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
 					</div>
+	section
+		h4 Inverso Error
+		.ds-sample.ds-sample--inverse
+			+mngInputReverseError('Texto label','ptt','ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput c-mngInput--reverse is-error">
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+					</div>
+	section
+		h4 Inverso Deshabilitado
+		.ds-sample.ds-sample--inverse
+			+mngInputReverseDisabled('Texto label','ptt','ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput c-mngInput--reverse is-disabled">
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+					</div>
 block specification
 block advice
 block paginator
@@ -62,7 +85,7 @@ block paginator
 	+paginatorNav("paginatorOptions",[
 		{ 
 			titPrev:"Enlaces",
-			titNext:"Paginador",
+			titNext:"Radios",
 			familyPrev: "components", 
 			familyNext: "components" 
 		}

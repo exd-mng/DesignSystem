@@ -15,3 +15,9 @@ mixin mngInputDisabled(text, id, name)
 
 mixin mngInputReverse(text, id, name)
 	+mngInput(text, id, name, 'c-mngInput--reverse')
+
+mixin mngInputReverseError(text, id, name)
+	+mngInput(text, id, name, 'c-mngInput--reverse is-error')
+
+mixin mngInputReverseDisabled(text, id, name)
+	+mngInput(text, id, name, 'c-mngInput--reverse is-disabled')

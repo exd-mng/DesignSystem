@@ -3,11 +3,11 @@ $module: $c-prefix + 'BreadCrumb';
 .#{$module} {
 	display: inline-flex;
 	&__item {
-		@include mng-rem(margin-right, 16px);
+		@include mng-rem(margin-right, 8px); //16px
 		flex: none;
 		 &::after {
-			@include mng-rem(margin-left, 16px);
-			 content: "\005C";
+			@include mng-rem(margin-left, 8px); //16px
+			 content: "\002F";
 		 }
 		 &:last-child {
 			 margin-right: 0;

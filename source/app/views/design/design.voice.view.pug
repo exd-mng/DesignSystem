@@ -1,7 +1,7 @@
-extends ../../_layouts/design.view.pug
+extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Tipografía";
+	- var active = "Voz y tono";
 	- var title = active;
 
 block codeHead
@@ -56,11 +56,11 @@ block codeBody
 		img(alt="", src='/assets/img/design/type/line-lenght.png')
 
 block paginator
-	- var prev = "layout";
+	- var prev = "type";
 	- var next = "button";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Layout",
+			titPrev:"Tipografía",
 			titNext:"Buttons",  
 			familyPrev: "design", 
 			familyNext: "components"

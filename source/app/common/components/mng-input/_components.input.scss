@@ -28,6 +28,10 @@ $mngInput-disabled-border: $color-bombay !default;
 	}
 	&--reverse {
 		border-color: $mngInput-reverse-border;
+		input{
+			color: $color-white;	
+		}
+		
 	}
 	&.is-error {
 		border-color: $mngInput-error-border;
