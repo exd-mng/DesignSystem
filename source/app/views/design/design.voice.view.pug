@@ -1,68 +1,393 @@
-extends ../../_layouts/components.view.pug
+extends ../../_layouts/design-tabs.view.pug
 
 block config
-	- var active = "Voz y tono";
-	- var title = active;
+    - var active = "Voz y tono";
+    - var title = active;
 
 block codeHead
-	:markdown-it
-		La tipografía se utiliza para crear jerarquías claras, organizaciones y alineaciones útiles que guíen a los usuarios a través del producto. Es la estructura central de cualquier interfaz bien diseñada.
+    :markdown-it
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, tempora? Facilis aperiam sunt obcaecati ut tenetur itaque impedit fuga laudantium perferendis totam doloremque consequatur dolorem velit, sequi aut! Odio, totam?
 
-block codeBody
-	section
-		h3 Tipografía corporativa
-		:markdown-it
-			Nuestras aplicaciones usan XXX XXX, una fuente sin serifas, actual, de formas amables y orgánicas, cuidadosamente diseñada para XXXX y que refleja nuestro espíritu, ideales y principios.
-		.ds-specimen
-			.ds-specimen__sample
-				p.ds-specimen__tit Aa
-				p.ds-specimen__txt XXXX light
-			.ds-specimen__sample.u-fontRegular
-				p.ds-specimen__tit.ds-specimen__tit Aa
-				p.ds-specimen__txt XXXX Sans Regular
-		pre.u-spacer--5
-			code.language-css
-				:markdown-it
-					font-family: xxxx, Helvetica, Verdana, sans-serif
-	section
-		h3 Tipografía secundaria
-		:markdown-it
-			En casos de titulares de 54px a 76px se ha escogido una fuente serifa, para crear contraste entre textos. 
-		.ds-specimen.ds-specimen--secondary
-			.ds-specimen__sample
-				p.ds-specimen__tit Aa
-				p.ds-specimen__txt Austin Light
-			.ds-specimen__sample
-				p.ds-specimen__tit.u-fontItalic Aa
-				p.ds-specimen__txt Austin Light Italic
-		pre.u-spacer--5
-			code.language-css
-				:markdown-it
-					font-family: xxxx, Helvetica, Verdana, sans-serif
-	section
-		h3 Escala tipográfica
-		each type in TYPES
-			h4= type.title
-			dl.ds-scaffolding
-				- for (var i = 0; i < type.range.length; i++)
-					dt.ds-scaffolding__tit
-						span(class= type.range[i].class)= type.range[i].title
-					dd.ds-scaffolding__txt
-						= type.range[i].code
-						br
-						= type.range[i].class
-	section
-		h3 Caracteres por línea
-		img(alt="", src='/assets/img/design/type/line-lenght.png')
+block general
+    section
+        p(style="margin-top: 4rem") El texto debe ser comprensible para cualquiera, en cualquier lugar, independientemente de su cultura o idioma. Para conseguirlo te damos una serie de buenas prácticas:
+        h3 Escribe de manera clara, precisa y concisa
+        p   Así las interfaces seran más utilizables y crea confianza. Para ello usa la:
+            ul.ds-list
+                li.ds-list__item
+                    p 
+                        strong Segunda persona ("tu" o "tus“) 
+                        |en la mayoría de las situaciones, como si la aplicación estuviera hablando directamente al usuario.
+                    img(src='/assets/img/design/voice/general/modal2pers.png', alt='En segunda persona').ds-img
+                li.ds-list__item
+                    p
+                        strong Primera persona ("yo" o "mi“) solo cuando quieras 
+                        |enfatizar la propiedad del usuario sobre el contenido o las acciones.
+                    img(src='/assets/img/no-image.png', alt='Sé conciso').ds-img(style="width:50%;")
+        p Evita mezclar "mí" / "mi" con "usted" / "su". Puede causar confusión ver ambas formas de dirigirse al usuario en el mismo contexto.
+
+        h3 Evita el pronombre "nosotros"
+        p Concéntrate en el usuario y en lo éste puede hacer con la aplicación, en lugar de lo que tú o la aplicación estáis haciendo por el usuario.
+        p Excepcionalmente podemos usarlo  cuando una persona realiza una acción para un usuario, como por ejemplo responder a una sugerencia. Aquí, el uso de "nosotros" es apropiado.
+        img(src='/assets/img/design/voice/general/pronombrenosotros.png', alt='Evita el pronombre nosotros').ds-img
+
+        h3 Sé conciso
+        p Los textos deben ser cortos, escaneables y segmentados para facilitar la navegación.
+            img(src='/assets/img/design/voice/general/conciso.png', alt='Sé conciso').ds-img
+
+        h3 Escribe simple y directamente
+        p Usa un lenguaje simple y directo que sea fácil de entender por los usuarios.
+            br 
+            |Las frases introductorias comunes pueden omitirse.
+        img(src='/assets/img/no-image.png', alt='Sé conciso').ds-img(style="width:50%;")
+
+        h3 Escribe para lectores de todos los niveles
+        p Usa palabras habituales, que sean fácilmente entendibles por nuestros usuarios. Evita terminología técnica demasiado específica.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Preparando video
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Buffering
+        p.u-spacer--5 Las acciones deben recomendarse indicando el nombre de los literales que aparecen en la interfaz, no el tipo de elemento (como menú o botón).
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Haz clic en continuar
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Haz clic en el botón continuar
+
+        h3 Usa los verbos de manera consistente en diferentes acciones
+        p Si usas un verbo en concreto continúa usándolo en diferentes situaciones. 
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Eliminar foto
+                                br 
+                                |¿Eliminar foto?
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Borrar foto
+                                br 
+                                |¿Eliminar foto de la página?
+
+        h3 Género y número
+        p No combines opciones de género o número como "él/ella" o "él/ella", producto/s, etc. En general, opta siempre que sea posible por el masculino plural.
+        p Por ejemplo: Los productos se han añadido correctamente al carrito.
+
+        h3 Empieza con el objetivo
+        p Si una oración describe tanto un objetivo como la acción necesaria para lograr ese objetivo, comienza la oración con el objetivo
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Para eliminar una foto de este álbum, arrástrala a la papelera
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Arrastra una foto a la papelera para eliminarla de este álbum.
+
+        h3 Ve revelando los detalles según la necesidad
+        p No es necesario dar todos los detalles al principio, es mejor ir dando los detalles a medida que el usuario navega y va necesitando más información.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span ¿Eliminar el archivo descargado? 
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span ¿Estás seguro de eliminar el archivo que has descargado? No podrás recuperarlo a menos que estés en línea.
+
+        h3 Nunca digas "nunca"
+        p Evita la palabra “nunca” y usa otras alternativas.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Tus datos no serán compartidos 
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Nunca compartiremos tus datos
+
+block tone
+    section
+        h3 Sé amigable, respetuoso y focalízate en el usuario.
+        p El texto de una aplicación debe complementar su diseño: debe ser intuitivo, eficiente, casual y confiable.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span XXX no responde ¿Quieres cerrarla?
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span ¡Lo sentimos!
+                                br 
+                                |La actividad en YYYY no responde.
+
+        h3 Sé humilde
+        p Revela lo que hace la funcionalidad, sin alardear mucho o ser demasiado prometedor. 
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Todos tus pedidos en un solo lugar.
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Absolutamente todo lo que hagas en un sitio que te encantará.
+        
+        h3 Sé positivo
+        p Presenta la información de manera positiva: es tranquilizador.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Inténtalo de nuevo.
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span La acción ha fallado.
+
+        h3 Sé esencial
+        p Comunica solo los detalles esenciales para que los usuarios puedan enfocarse en sus propias tareas. A veces, la interfaz de usuario más efectiva no contiene ningún texto.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Iniciando sesión...Estamos conectando con el servidor. El proceso puede tardar hasta cinco minutos.
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Iniciando sesión...La aplicación tiene que  comunicarse con nuestros servidores para poder iniciar sesión correctamente. Ten paciencia, el proceso puede tardar hasta cinco minutos.
+
+        h3 Tiempos verbales
+        p Usa la voz activa como norma, te ayudará a conseguir implicar al usuario directamente en la decisión.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Usa la voz activa como norma, te ayudará a conseguir implicar al usuario directamente en la decisión.
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Se han introducido más de 99 unidades, ¿el proceso debe continuarse?  
+        p.u-spacer--3 La voz pasiva, en cambio, es muy útil cuando no queremos culpar al usuario o evitar sonar sentenciosos.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span El valor introducido no es correcto.
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Has introducido un valor incorrecto.
+
+block ortotype
+    section
+        h3 "1, 2, 3” en vez de  “uno, dos, tres"
+        p Excepto cuando se dan diferentes usos a los números en una misma frase. Por ejemplo, Introduce dos de los 3.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Tienes 3 mensajes
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span Tienes tres mensajes
+
+        h3 Mayúsculas y minúsculas.
+        p Los títulos, encabezados, etiquetas y elementos de menú deben tener la inicial en mayúsculas y el resto del texto en minúsculas (a no ser que haya un nombre propio, en cuyo caso pondremos la inicial también en mayúsculas).
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span Mi tienda
+                                br 
+                                |Mi agenda
+                                br 
+                                |Mis solicitudes
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span MI TIENDA
+
+        h3 Días de la semana, meses y estaciones.
+        p Siempre en minúsculas (excepto si van al comienzo de frase o después de un punto)
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                            span El archivo se enviará todos los lunes
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='/assets/img/no-image.png').ds-doDont__img
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+                            span El archivo se enviará todos los Lunes.
+
 
 block paginator
-	- var prev = "type";
-	- var next = "button";
-	+paginatorNav("paginatorOptions",[
-		{ 
-			titPrev:"Tipografía",
-			titNext:"Buttons",  
-			familyPrev: "design", 
-			familyNext: "components"
-		}
-	])
+    - var prev = "type";
+    - var next = "button";
+    +paginatorNav("paginatorOptions",[
+        { 
+            titPrev:"Tipografía",
+            titNext:"Buttons",  
+            familyPrev: "design", 
+            familyNext: "components"
+        }
+    ])

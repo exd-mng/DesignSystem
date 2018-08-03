@@ -271,6 +271,10 @@ pre {
 	line-height: 1.5;
 	&__item {
 		@include mng-rem(padding, 12px 12px 12px 0);
+		&:last-child{
+			@include mng-rem(padding-bottom, 0);
+			@include mng-rem(margin-bottom, 24px);
+		}
 	}
 }
 
@@ -641,6 +645,11 @@ pre {
 	@include mng-breakpoint($screen-lg-min) {
 		display: none;
 	}
+}
+
+.ds-img{
+	display: block;
+	margin: 1.5rem auto 0;
 }
 
 .box, 
