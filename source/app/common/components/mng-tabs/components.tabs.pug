@@ -1,5 +1,5 @@
-mixin mngTabs(name,tabs,active)
-	.c-mngTabs
+mixin mngTabs(name,tabs,active,style)
+	.c-mngTabs(class=style)
 		ul.c-mngTabs__list(role="tablist")
 			each item,index in tabs
 				if (index === active)
@@ -11,10 +11,11 @@ mixin mngTabs(name,tabs,active)
 		.c-mngTabs__content
 			block
 
-mixin mngTabsPanel(name,id,active)
+mixin mngTabsPanel(name,id,active,style)
 	if(active)
-		.c-mngTabs__panel(id=name+"-"+id)
+		.c-mngTabs__panel(id=name+"-"+id,class=style)
 			block
 	else
-		.c-mngTabs__panel.u-hidden(id=name+"-"+id)
+		.c-mngTabs__panel.u-hidden(id=name+"-"+id,class=style)
 			block
+

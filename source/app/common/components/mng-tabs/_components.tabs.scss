@@ -29,12 +29,28 @@ $module: $c-prefix + 'Tabs';
 			}
 		}
 	}
+	&__panel {
+		text-align: left;
+	}
 	.is-active {
 		font-weight: 400;
 		pointer-events: none;
 		&::after {
 			border-color: $color-woodsmoke;
 			border-top-width: 2px;
+		}
+	}
+	&--reverse {
+		.#{$module} {
+			&__link, &__content {
+				color: $color-bombay;
+			}
+		}
+		.is-active {
+			color: $color-white;
+			&::after {
+				border-top-color: $color-white;
+			}
 		}
 	}
 }

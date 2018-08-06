@@ -18,9 +18,9 @@ block codeBody
 					li.o-list__item
 						+mngTabs('set2Tabs',["Tab 1","Tab 2"],0)
 							+mngTabsPanel('set2Tabs',0,true)
-								p Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.
+								p Dolore fugiat cupidatat ad qui est. Irure aliquip et incididunt veniam. Ut voluptate non elit sint laboris deserunt sunt voluptate. Officia minim mollit proident consequat non culpa magna mollit voluptate.
 							+mngTabsPanel('set2Tabs',1,false)
-								p Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.
+								p Esse incididunt aliquip nostrud sit non laborum eu laboris enim. Pariatur aliquip duis reprehenderit aute. Consectetur ad esse laboris ea. Sit deserunt officia quis pariatur qui adipisicing nisi do occaecat incididunt pariatur incididunt. Ex non elit adipisicing velit enim consectetur ea anim duis quis duis. In non mollit nostrud deserunt id proident nostrud dolore velit.
 
 			pre
 				code.language-html
@@ -32,10 +32,10 @@ block codeBody
 						</ul>
 						<div class="c-mngTabs__content">
 						<div class="c-mngTabs__panel" id="set2Tabs-0">
-						<p>Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.</p>
+						<p>Dolore fugiat cupidatat ad qui est. Irure aliquip et incididunt veniam. Ut voluptate non elit sint laboris deserunt sunt voluptate. Officia minim mollit proident consequat non culpa magna mollit voluptate.</p>
 						</div>
 						<div class="c-mngTabs__panel u-hidden" id="set2Tabs-1">
-						<p>Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.</p>
+						<p>Esse incididunt aliquip nostrud sit non laborum eu laboris enim. Pariatur aliquip duis reprehenderit aute. Consectetur ad esse laboris ea. Sit deserunt officia quis pariatur qui adipisicing nisi do occaecat incididunt pariatur incididunt. Ex non elit adipisicing velit enim consectetur ea anim duis quis duis. In non mollit nostrud deserunt id proident nostrud dolore velit.</p>
 						</div>
 						</div>
 						</div>
@@ -46,11 +46,11 @@ block codeBody
 					li.o-list__item
 						+mngTabs('set3Tabs',["Tab 1","Tab 2","Tab 3"],0)
 							+mngTabsPanel('set3Tabs',0,true)
-								p Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.
+								p Aliqua nulla officia eiusmod pariatur ut. Velit deserunt proident ipsum nulla consequat nulla ea et aliquip id consectetur. Nisi consectetur ex aute velit anim laboris enim veniam commodo. Velit dolore ex tempor sunt sit proident id esse tempor sint dolore. Voluptate mollit magna non enim culpa quis labore et proident.
 							+mngTabsPanel('set3Tabs',1,false)
-								p Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.
+								p Laboris pariatur in ipsum voluptate elit enim consectetur non voluptate esse laboris. Lorem elit incididunt anim amet. Tempor commodo in magna sunt laboris qui anim cupidatat fugiat aliquip elit. Aliqua adipisicing dolor eiusmod dolore culpa.
 							+mngTabsPanel('set3Tabs',2,false)
-								p Reprehenderit officia aliquip deserunt anim minim eu voluptate sunt.
+								p Laboris sint in et ea laboris quis veniam velit. Occaecat ipsum nulla est qui ad exercitation aliqua. Et quis commodo qui non id ea consectetur. Est consectetur minim cillum dolore mollit dolor sunt pariatur.
 
 			pre
 				code.language-html
@@ -63,18 +63,78 @@ block codeBody
 						</ul>
 						<div class="c-mngTabs__content">
 						<div class="c-mngTabs__panel" id="set3Tabs-0">
-						<p>Culpa laboris sit aute ad aliquip elit deserunt non et ut deserunt minim.</p>
+						<p>Aliqua nulla officia eiusmod pariatur ut. Velit deserunt proident ipsum nulla consequat nulla ea et aliquip id consectetur. Nisi consectetur ex aute velit anim laboris enim veniam commodo. Velit dolore ex tempor sunt sit proident id esse tempor sint dolore. Voluptate mollit magna non enim culpa quis labore et proident.</p>
 						</div>
 						<div class="c-mngTabs__panel u-hidden" id="set3Tabs-1">
-						<p>Minim deserunt culpa enim nostrud adipisicing aliqua voluptate eiusmod aliquip anim.</p>
+						<p>Laboris pariatur in ipsum voluptate elit enim consectetur non voluptate esse laboris. Lorem elit incididunt anim amet. Tempor commodo in magna sunt laboris qui anim cupidatat fugiat aliquip elit. Aliqua adipisicing dolor eiusmod dolore culpa.</p>
 						</div>
 						<div class="c-mngTabs__panel u-hidden" id="set3Tabs-2">
-						<p>Reprehenderit officia aliquip deserunt anim minim eu voluptate sunt.</p>
+						<p>Consequat ipsum dolor exercitation commodo et. Ut reprehenderit pariatur ut culpa labore duis nisi magna nostrud cillum laborum cillum sit. Pariatur Lorem adipisicing exercitation anim elit Lorem et. Et nisi et sit tempor laboris tempor ut ad officia sint et. Enim magna id ut dolor non ipsum nostrud. Lorem aliqua exercitation adipisicing magna magna. Aliquip ea ut mollit occaecat incididunt occaecat esse sunt voluptate sit sunt sit dolor nulla.</p>
 						</div>
 						</div>
 						</div>
+		section
+			h4 Con 2 estados: activo e inactivo
+			.ds-sample.ds-sample--inverse
+				ul.o-list
+					li.o-list__item
+						+mngTabs('set2TabsInv',["Tab 1","Tab 2"],0,'c-mngTabs--reverse')
+							+mngTabsPanel('set2TabsInv',0,true,'c-mngTabs--reverse')
+								p Dolore fugiat cupidatat ad qui est. Irure aliquip et incididunt veniam. Ut voluptate non elit sint laboris deserunt sunt voluptate. Officia minim mollit proident consequat non culpa magna mollit voluptate.
+							+mngTabsPanel('set2TabsInv',1,false,'c-mngTabs--reverse')
+								p Esse incididunt aliquip nostrud sit non laborum eu laboris enim. Pariatur aliquip duis reprehenderit aute. Consectetur ad esse laboris ea. Sit deserunt officia quis pariatur qui adipisicing nisi do occaecat incididunt pariatur incididunt. Ex non elit adipisicing velit enim consectetur ea anim duis quis duis. In non mollit nostrud deserunt id proident nostrud dolore velit.
 
+			pre
+				code.language-html
+					:markdown-it
+						<div class="c-mngTabs c-mngTabs--reverse">
+						<ul class="c-mngTabs__list" role="tablist">
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#set2Tabs-0" role="tab">Tab 1</a></li>
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#set2Tabs-1" role="tab">Tab 2</a></li>
+						</ul>
+						<div class="c-mngTabs__content">
+						<div class="c-mngTabs__panel c-mngTabs--reverse" id="set2Tabs-0">
+						<p>Dolore fugiat cupidatat ad qui est. Irure aliquip et incididunt veniam. Ut voluptate non elit sint laboris deserunt sunt voluptate. Officia minim mollit proident consequat non culpa magna mollit voluptate.</p>
+						</div>
+						<div class="c-mngTabs__panel c-mngTabs--reverse u-hidden" id="set2Tabs-1">
+						<p>Esse incididunt aliquip nostrud sit non laborum eu laboris enim. Pariatur aliquip duis reprehenderit aute. Consectetur ad esse laboris ea. Sit deserunt officia quis pariatur qui adipisicing nisi do occaecat incididunt pariatur incididunt. Ex non elit adipisicing velit enim consectetur ea anim duis quis duis. In non mollit nostrud deserunt id proident nostrud dolore velit.</p>
+						</div>
+						</div>
+						</div>
+		section
+			h4 Con 3 o más estados: activo e inactivo
+			.ds-sample.ds-sample--inverse
+				ul.o-list
+					li.o-list__item
+						+mngTabs('set3TabsInv',["Tab 1","Tab 2","Tab 3"],0,'c-mngTabs--reverse')
+							+mngTabsPanel('set3TabsInv',0,true,'c-mngTabs--reverse')
+								p Ut aute duis eiusmod cupidatat fugiat est dolore deserunt sunt. Exercitation duis sint nostrud culpa. Commodo culpa proident labore elit officia tempor aliquip velit. Amet eiusmod exercitation irure ad cupidatat commodo qui ut. Occaecat in exercitation aliqua irure nulla excepteur velit non ad labore tempor id anim aute.
+							+mngTabsPanel('set3TabsInv',1,false,'c-mngTabs--reverse')
+								p Esse sint nisi irure labore laboris anim aute cillum labore officia elit eu. Nulla laborum sint esse laborum enim ullamco Lorem aliquip culpa magna laboris exercitation aliqua commodo. Ipsum Lorem qui ipsum dolor et enim aliqua. Eiusmod dolore amet amet adipisicing non fugiat occaecat excepteur laboris officia duis. Elit labore aliquip dolor anim adipisicing sint nostrud pariatur incididunt reprehenderit non qui qui. Veniam cillum nisi esse magna exercitation cillum nostrud tempor excepteur minim reprehenderit.
+							+mngTabsPanel('set3TabsInv',2,false,'c-mngTabs--reverse')
+								p Minim eu nulla anim officia reprehenderit amet culpa do sint nisi. Aliquip deserunt incididunt excepteur eu anim do cupidatat labore Lorem tempor ea. Aliquip esse elit eiusmod proident elit amet fugiat dolor occaecat dolor voluptate. Tempor est Lorem consectetur nostrud occaecat aliqua fugiat et minim nisi minim enim mollit aute.
 
+			pre
+				code.language-html
+					:markdown-it
+						<div class="c-mngTabs c-mngTabs--reverse">
+						<ul class="c-mngTabs__list" role="tablist">
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#set3TabsInv-0" role="tab">Tab 1</a></li>
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link is-active" href="#set3TabsInv-1" role="tab">Tab 2</a></li>
+						<li class="c-mngTabs__item"><a class="c-mngTabs__link" href="#set3TabsInv-2" role="tab">Tab 3</a></li>
+						</ul>
+						<div class="c-mngTabs__content">
+						<div class="c-mngTabs__panel c-mngTabs--reverse u-hidden" id="set3TabsInv-0">
+						<p>Ut aute duis eiusmod cupidatat fugiat est dolore deserunt sunt. Exercitation duis sint nostrud culpa. Commodo culpa proident labore elit officia tempor aliquip velit. Amet eiusmod exercitation irure ad cupidatat commodo qui ut. Occaecat in exercitation aliqua irure nulla excepteur velit non ad labore tempor id anim aute.</p>
+						</div>
+						<div class="c-mngTabs__panel c-mngTabs--reverse" id="set3TabsInv-1">
+						<p>Esse sint nisi irure labore laboris anim aute cillum labore officia elit eu. Nulla laborum sint esse laborum enim ullamco Lorem aliquip culpa magna laboris exercitation aliqua commodo. Ipsum Lorem qui ipsum dolor et enim aliqua. Eiusmod dolore amet amet adipisicing non fugiat occaecat excepteur laboris officia duis. Elit labore aliquip dolor anim adipisicing sint nostrud pariatur incididunt reprehenderit non qui qui. Veniam cillum nisi esse magna exercitation cillum nostrud tempor excepteur minim reprehenderit.</p>
+						</div>
+						<div class="c-mngTabs__panel c-mngTabs--reverse u-hidden" id="set3TabsInv-2">
+						<p>Minim eu nulla anim officia reprehenderit amet culpa do sint nisi. Aliquip deserunt incididunt excepteur eu anim do cupidatat labore Lorem tempor ea. Aliquip esse elit eiusmod proident elit amet fugiat dolor occaecat dolor voluptate. Tempor est Lorem consectetur nostrud occaecat aliqua fugiat et minim nisi minim enim mollit aute.</p>
+						</div>
+						</div>
+						</div>
 block specification
 	section
 		h3 Desktop - Tablet
