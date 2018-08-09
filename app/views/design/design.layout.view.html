@@ -1,0 +1,138 @@
+
+<!-- components-->
+<!-- BUTTONS-->
+<!-- LINKS--><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Layout + Spacing - Design System?</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/app/common/styles/css.css">
+    <link rel="stylesheet" href="/app/common/ds.css">
+  </head>
+  <body>
+    <header class="ds-mainHeader">
+      <h1></h1>
+      <button class="ds-mainHeader__btn"><span class="ds-mainHeader__btnLine"></span></button>
+      <nav class="ds-mainNav">
+        <ul class="ds-mainNav__list">
+          <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
+              <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.colors.view.html">Colores</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="/app/views/design/design.layout.view.html">Layout</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.type.view.html">Tipografía</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.voice.view.html">Voz y tono</a></li>
+            </ul>
+          </li>
+          <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.button.view.html">Botones</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.checkbox.view.html">Checkbox</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.links.view.html">Enlaces</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.input.view.html">Input</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.radio.view.html">Radios</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.tabs.view.html">Tabs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header class="ds-intro">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+                <p class="ds-intro__family">Diseño</p>
+                <h2>Layout + Spacing</h2>
+                <div class="row">
+                  <div class="col-xs col-lg-9 col-hd-6">
+                    <div class="ds-headLine"><p>Cuando hablamos de layout nos referimos al esquema que usaremos para distribuir los elementos y formas dentro de un diseño. Creando armonía entre componentes y dotando al diseño de ritmo, consistencia y coherencia entre sus páginas.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+              <div class="row">
+                <div class="col-xs col-lg-11 col-hd-8">
+                  <section>
+                    <h3>8px grid</h3>
+                    <section>
+                      <h4>Principios básicos</h4><p>Para generar la base del diseño, hemos optado por este concepto que empezó a definir Bryn Jackson, un <em>designer/developer</em> de San Francisco.</p>
+<p>A grandes rasgos, todos los elementos que componen una página están posicionados en incrementos de 8px entre ellos. De esta manera el alto, el ancho, los márgenes y paddings, serán múltiplos de 8.</p>
+
+                    </section>
+                    <section>
+                      <h4>¿Por qué 8px y no 6 o 10?</h4><p>La variedad de tamaños y densidad en píxeles de los dispositivos han ido en aumento, haciendo así la generación de assets cada vez más complicada para los diseñadores. Utilizar un número par para espaciar contenido y elementos, hace que el escalar el contenido para los diferentes dispositivos sea más fácil y consistente.</p>
+<p>La mayoría de tamaños populares de dispositivos son divisibles entre 8. Escalar en incrementos de 8 te ofrece una gran variedad de opciones, sin sobrecargar (lo que sucedería si dividimos entre 6) o limitar (si dividimos entre 10).</p>
+
+                    </section>
+                    <section>
+                      <h4>¿Qué beneficios tiene?</h4>
+                      <ul class="ds-list">
+                        <li class="ds-list__item"><p><strong>Para diseñadores:</strong> Mayor eficiencia, menor toma de decisiones al tiempo que se mantiene la calidad del ritmo entre elementos.</p>
+
+                        </li>
+                        <li class="ds-list__item"><p><strong>Para el equipo:</strong> Sistema fácil de comunicación entre diseñadores y desarrolladores (no existen medios píxeles).</p>
+
+                        </li>
+                        <li class="ds-list__item"><p><strong>Para los usuarios:</strong> Estética consistente dentro de la identidad de marca y contenido nítido en cualquier dispositivo.</p>
+
+                        </li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h4>¿Cómo contar los filetes en el sistema de 8px?</h4><p>Básicamente nos referimos a los botones secundarios (no contienen relleno, solo filete). El píxel del filete formará parte de los 32px que se dejan en este caso, de márgenes internos para el botón.</p>
+
+                      <ul class="ds-list">
+                        <li class="ds-list__item"><p><strong>A nivel funcional:</strong> Los espacios vacíos de contenido, también conocidos como espacios negativos o en blanco son igual de importantes que las áreas de contenido. Nos sirven para dividir secciones, para ayudar a focalizar la atención en ciertos elementos dentro de una página.</p>
+<p>Los espacios en blanco, ayudan al usuario a procesar la información, si ésta es densa. También ofrecen un descanso a la vista.</p>
+
+                        </li>
+                        <li class="ds-list__item"><p><strong>A nivel de branding:</strong> Es esencial la presencia y predominancia de espacios en blanco, para dar sensación de sobriedad, elegancia.  Acuñando la frase de Mies Van der Rohe: “Less is more”, cuanto menos información/diseño superficial añadamos, mejor será el resultado. El contenido en las páginas tiene que respirar, no se debe saturar las páginas de información. La relación porcentual entre espacio en blanco y contenido seria de 60-40.</p>
+
+                        </li>
+                      </ul>
+                    </section>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/design/design.grid.view.html">
+                  <div class="ds-paginator__wrap"><img src="/assets/img/btn-prev.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Grid</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/design/design.type.view.html">
+                  <div class="ds-paginator__wrap">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Tipografía</span></div><img src="/assets/img/btn-next.png" alt=""/>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer class="ds-footer">
+        <!--p © 2018 XXXXX Todos los derechos reservados-->
+      </footer>
+    </main>
+    <div class="ds-overlay"></div>
+    <script src="/app/common/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="/app/common/js/js.js"></script>
+  </body>
+</html>
