@@ -1,0 +1,527 @@
+
+<!-- components-->
+<!-- BUTTONS-->
+<!-- LINKS--><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Grid - Design System?</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/app/common/styles/css.css">
+    <link rel="stylesheet" href="/app/common/ds.css">
+  </head>
+  <body>
+    <header class="ds-mainHeader">
+      <h1></h1>
+      <button class="ds-mainHeader__btn"><span class="ds-mainHeader__btnLine"></span></button>
+      <nav class="ds-mainNav">
+        <ul class="ds-mainNav__list">
+          <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
+              <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.colors.view.html">Colores</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="/app/views/design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.layout.view.html">Layout</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.type.view.html">Tipografía</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/design/design.voice.view.html">Voz y tono</a></li>
+            </ul>
+          </li>
+          <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.button.view.html">Botones</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.checkbox.view.html">Checkbox</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.links.view.html">Enlaces</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.input.view.html">Input</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.radio.view.html">Radios</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="/app/views/components/components.tabs.view.html">Tabs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header class="ds-intro">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+                <p class="ds-intro__family">Diseño</p>
+                <h2>Grid</h2>
+                <div class="row">
+                  <div class="col-xs col-lg-9 col-hd-6">
+                    <div class="ds-headLine"><p>Los sistemas de grids se utilizan para crear estructuras de página a través de una serie de columnas que enmarcan y delimitan el contenido.</p>
+
+                      <p>En XXXXX trabajaremos con un sistema responsive, que nos permitirá adaptar el contenido a mostrar en cada dispositivo de manera fluida. Para ello, <a class="c-mngLink" href="http://flexboxgrid.com" target="_blank">hemos elegido Flexboxgrid</a>, un sistema standard de grid a 12 columnas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+              <div class="row">
+                <div class="col-xs col-lg-11 col-hd-8">
+                  <section>
+                    <h3>Responsive</h3><p>Permite especificar diferentes anchos de columnas y desplazar las mismas para los distintos anchos del viewport:</p>
+
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12 col-md-2 col-lg-1">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6 col-md-8 col-lg-10">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6 col-md-2 col-lg-1">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-md-2 col-lg-1">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-12 col-md-10 col-lg-11">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-10 col-md-8 col-lg-10">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6 col-md-4 col-lg-2">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Fluido</h3><p>La anchura basada en porcentajes permite un ajuste automático de columnas y filas:</p>
+
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-11">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-10">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-9">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-7">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Offsets</h3><p>Desplazamiento de columnas:</p>
+
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-offset-11 col-xs-1">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-10 col-xs-2">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-9 col-xs-3">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-8 col-xs-4">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-7 col-xs-5">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-6 col-xs-6">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-5 col-xs-7">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-4 col-xs-8">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-3 col-xs-9">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-2 col-xs-10">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-offset-1 col-xs-11">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Ancho automático</h3><p>Ajuste de ancho de columnas en una fila:</p>
+
+                    <div class="row u-spacer--3">
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Anidamiento</h3><p>Anidamiento de columnas:</p>
+
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-7">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-9">
+                              <div class="box-first box-container">
+                                <div class="row">
+                                  <div class="col-xs-4">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                  <div class="col-xs-8">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="box-first box-container">
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-5">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <div class="box-first box-container">
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Alineación</h3><p>Haciendo uso de las clases <a href="/design/design.flexbox.html">u-flex</a> se pueden alinear elementos tanto al principio como al final de una celda. Así como arriba, abajo o al centro de una columna.</p>
+
+                    <h4><code>.u-flex--justifyStart</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--justifyStart">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--justifyCenter</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--justifyCenter">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--justifyEnd</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--justifyEnd">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="u-spacer--3">Se pueden usar distintos modificadores a la vez para conseguir distintas alineaciones dependiendo de la anchura del viewport.</p>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--justifyCenter u-flex-md--justifyStart u-flex-lg--justifyEnd">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--alignItemsStart</code></h4>
+                    <div class="row u-flex--alignItemsStart u-spacer--4">
+                      <div class="col-xs-6">
+                        <div class="box-large"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box"></div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--alignItemsCenter</code></h4>
+                    <div class="row u-flex--alignItemsCenter u-spacer--4">
+                      <div class="col-xs-6">
+                        <div class="box-large"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box"></div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--alignItemsEnd</code></h4>
+                    <div class="row u-flex--alignItemsEnd u-spacer--4">
+                      <div class="col-xs-6">
+                        <div class="box-large"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box"></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Distribución</h3><p>Clases para la distribución de contenido en una celda o columna:</p>
+
+                    <h4><code>.u-flex--justifyAround</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--justifyAround">
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--justifyBetween</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--justifyBetween">
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Reordenar</h3><p>Clases para reordenar columnas.</p>
+
+                    <h4><code>.u-flex--orderFirst</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-2">
+                              <div class="box-first">1</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">2</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">3</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">4</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">5</div>
+                            </div>
+                            <div class="col-xs-2 u-flex--orderFirst">
+                              <div class="box-nested">6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><code>.u-flex--orderLast</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-2 u-flex--orderLast">
+                              <div class="box-nested">1</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">2</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">3</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">4</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">5</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="page-section">
+                    <h3>Inverso</h3>
+                    <h4><code>.u-flex--rowReverse</code></h4>
+                    <div class="row u-spacer--3">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row u-flex--rowReverse">
+                            <div class="col-xs-2">
+                              <div class="box-nested">1</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">2</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">3</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">4</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">5</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/design/design.colors.view.html">
+                  <div class="ds-paginator__wrap"><img src="/assets/img/btn-prev.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Colores</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/design/design.layout.view.html">
+                  <div class="ds-paginator__wrap">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Layout</span></div><img src="/assets/img/btn-next.png" alt=""/>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer class="ds-footer">
+        <!--p © 2018 XXXXX Todos los derechos reservados-->
+      </footer>
+    </main>
+    <div class="ds-overlay"></div>
+    <script src="/app/common/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="/app/common/js/js.js"></script>
+  </body>
+</html>

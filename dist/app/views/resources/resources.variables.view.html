@@ -1,0 +1,96 @@
+
+<!--
+extends ../../_layouts/design.view.pug
+
+block config
+	- var nav = "variables";
+	- var title = "Variables Sass";
+	- var desc = ""
+
+block code
+	section
+		h3.tit.tit--h3 Colores
+		.u-spacer--3
+			pre
+				code.language-css
+					:markdown-it
+						.elemento {
+							background-color: $color-light-green;
+						}
+		:markdown-it
+			La galería completa de colores puede verse [aquí](/design/design.colors.html).
+	section
+		h3.tit.tit--h3 Tipografía
+		h4.tit.tit--h4 Escala tipográfica
+		.u-spacer--3
+			pre
+				code.language-css
+					:markdown-it
+						$typescale-map: (
+							'giga' : 4.75rem,
+							'mega' : 3.375rem,
+							'alpha' : 2.25rem,
+							'beta' : 1.75rem,
+							'gamma' : 1.25rem,
+							'delta' : 1.125rem,
+							'epsilon' : 1rem,
+							'zeta' : .875rem,
+							'omega' : .75rem,
+							'caption' : .75rem,
+							'legal' : .6875rem
+						);
+		h4.tit.tit--h4 Interlineados
+		.u-spacer--3
+			pre
+				code.language-css
+					:markdown-it
+						$lead-heading: 1.25;
+						$lead-body: 1.5;
+		.u-spacer--3
+			:markdown-it
+				Tanto la escala tipográfica como el interlineado funcionan conjuntamente con los mixin **mng-typescale** y **mng-line-height**. Toda la información respecto a tipografías está disponible en [la sección correspondiente](/design/design.typo.html).
+		.u-spacer--4
+			pre
+				code.language-css
+					:markdown-it
+						.elemento {
+							@include mng-typescale(gamma);
+							@include mng-line-height(body);
+						}
+		section
+			h3.tit.tit--h3 Layout
+			h4.tit.tit--h4 Espaciado
+			.u-spacer--3
+				:markdown-it
+					Exiten 8 clases **u-spacer** que generan distintos tamaños de espaciados para los márgenes superiores de los elementos, siempre múltiples de 8. El rango disponible es de 8 a 64px. 
+			.u-spacer--3
+				pre
+					code.language-css
+						:markdown-it
+							@for $i from 1 through 8 {
+								.u-spacer-- {
+									@include mng-rem(margin-top, $margin-spacer * $i);
+								}
+							}
+			.u-spacer--3
+				pre
+					code.language-css
+						:markdown-it
+							.u-spacer--1
+							.u-spacer--2
+							.u-spacer--3
+							.u-spacer--4
+							.u-spacer--5
+							.u-spacer--6
+							.u-spacer--7
+							.u-spacer--8
+			.u-spacer--3
+				pre
+					code.language-css
+						:markdown-it
+							.elemento.u-spacer--4 {	
+								// en este caso el elemento tiene un margen superior de 32px (4*8)
+							}
+block use
+block example
+-->
