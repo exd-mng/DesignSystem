@@ -514,12 +514,12 @@ pre {
 	&__wrap {
 		background-color: $color-concrete;
 		width: 100%;
-    padding-bottom: 65.8%;
+    	padding-bottom: 65.8%;
 		position: relative;
 	}
 	&__img {
 		width: 100%;
-    position: absolute;
+    	position: absolute;
 	}
 	&__txt {
 		@include mng-rem(font-size, 14px);
@@ -650,6 +650,7 @@ pre {
 .ds-img{
 	display: block;
 	margin: 1.5rem auto 0;
+	border: 1px solid $color-concrete;
 }
 
 .box, 
