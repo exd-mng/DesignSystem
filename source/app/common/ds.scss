@@ -733,3 +733,37 @@ pre {
 		z-index: auto;
 	}
 }
+.ds-table {
+	@include mng-rem(margin-top, 24px);
+	@include mng-rem(font-size, 14px);
+	margin-left: 0;
+	table-layout: fixed;
+	width: 100%;
+	
+	th, td {
+		@include mng-rem(padding, 8px);
+		vertical-align: middle;
+		position: relative;
+		border: .1rem solid $color-iron;
+		/*@media only screen and ( max-width: 640px){
+			display: block;
+		}*/
+	}
+	td {
+		min-height: 3.5rem;
+		vertical-align: middle;
+		line-height: 1.5;
+	}
+	thead {
+		th{
+			background-color: $color-concrete;
+			height: 4rem;
+		}
+	}
+	tfoot {
+		td {
+		border-bottom: 0;
+		border-top: .1rem solid $color-woodsmoke;
+		}
+	}
+}

@@ -18,28 +18,28 @@ block general
                     p 
                         strong Segunda persona ("tu" o "tus“) 
                         |en la mayoría de las situaciones, como si la aplicación estuviera hablando directamente al usuario.
-                    img(src='/assets/img/design/voice/general/modal2pers.png', alt='En segunda persona').ds-img
+                    img(src='/assets/img/design/voice/general/modal2pers.png', alt='En segunda persona', class="ds-img", style="width:50%;")
                 li.ds-list__item
                     p
                         strong Primera persona ("yo" o "mi“) solo cuando quieras 
                         |enfatizar la propiedad del usuario sobre el contenido o las acciones.
-                    img(src='/assets/img/no-image.png', alt='Sé conciso').ds-img(style="width:50%;")
+                    img(src='/assets/img/no-image.png', alt='Sé conciso', class="ds-img", style="width:50%;")
         p Evita mezclar "mí" / "mi" con "usted" / "su". Puede causar confusión ver ambas formas de dirigirse al usuario en el mismo contexto.
 
         h3 Evita el pronombre "nosotros"
         p Concéntrate en el usuario y en lo éste puede hacer con la aplicación, en lugar de lo que tú o la aplicación estáis haciendo por el usuario.
         p Excepcionalmente podemos usarlo  cuando una persona realiza una acción para un usuario, como por ejemplo responder a una sugerencia. Aquí, el uso de "nosotros" es apropiado.
-        img(src='/assets/img/design/voice/general/pronombrenosotros.png', alt='Evita el pronombre nosotros').ds-img
+        img(src='/assets/img/design/voice/general/pronombrenosotros.png', alt='Evita el pronombre nosotros', class="ds-img")
 
         h3 Sé conciso
         p Los textos deben ser cortos, escaneables y segmentados para facilitar la navegación.
-            img(src='/assets/img/design/voice/general/conciso.png', alt='Sé conciso').ds-img
+            img(src='/assets/img/design/voice/general/conciso.png', alt='Sé conciso', class="ds-img")
 
         h3 Escribe simple y directamente
         p Usa un lenguaje simple y directo que sea fácil de entender por los usuarios.
             br 
             |Las frases introductorias comunes pueden omitirse.
-        img(src='/assets/img/no-image.png', alt='Sé conciso').ds-img(style="width:50%;")
+        img(src='/assets/img/no-image.png', alt='Sé conciso', class="ds-img", style="width:50%;")
 
         h3 Escribe para lectores de todos los niveles
         p Usa palabras habituales, que sean fácilmente entendibles por nuestros usuarios. Evita terminología técnica demasiado específica.
@@ -173,6 +173,30 @@ block general
                                 |Incorrecto
                             span Nunca compartiremos tus datos
 
+        h3 Algunos ejemplos de texto para botones y elementos relacionados	
+        table.ds-table
+            thead
+                +thead-row(["Botón","Uso"])
+            tbody
+                +tbody-row(["Expresar acción","Ver arriba el uso de los verbos con consistencia."])
+                +tbody-row(["Atràs","Permite retroceder procesos con varios pasos."])
+                +tbody-row(["Cancelar","Cancelar una acción."])
+                +tbody-row(["Hecho","Confirma la finalización de un proceso de varios pasos."])
+                +tbody-row(["OK","Hace que un mensaje o diálogo desaparezca sin consecuencias."])
+                +tbody-row(["Siguiente","Lleva al usuario al siguiente paso de un proceso de varios pasos."])
+                +tbody-row(["Seguir leyendo","Textos largos (noticias, manuales): Lleva al usuario a contenido adicional."])
+                +tbody-row(["Más detalles","Aplicaciones: Lleva al usuario a más contenido, información."])
+                +tbody-row(["No, gracias","Permite al usuario declinar un ofrecimiento o posibilidad."])
+                +tbody-row(["Ahora no","Permite al usuario posponer una acción o decisión. Usar solo cuando la llamada a la acción en el diálogo sea esencial para la funcionalidad del producto, por razones legales o por otro motivo urgente."])
+                +tbody-row(["De acuerdo","Permite al usuario confirmar una acción relevante para la tarea en cuestión."])
+                +tbody-row(["Omitir","Permite al usuario evitar una interrupción y seguir con una tarea."])
+
+
+        h3 Escritura global		
+        p Las aplicaciones tienen que ser entendidas por personas de todas las edades, culturas y niveles educativos. Una escritura simple y claro hace que sea fácil para cualquiera comprender su producto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     		
+        p Ten en cuenta el uso de los términos "izquierda" y "derecha" ya que hay idiomas en los que la dirección de la escritura es diferente (árabe, hebreo).		
+        img(alt="", src='/assets/img/no-image.png', class="ds-img", style="width:50%;")
+
 block tone
     section
         h3 Sé amigable, respetuoso y focalízate en el usuario.
@@ -220,7 +244,7 @@ block tone
                             span.ds-doDont__check
                                 |Incorrecto
                             span Absolutamente todo lo que hagas en un sitio que te encantará.
-        
+
         h3 Sé positivo
         p Presenta la información de manera positiva: es tranquilizador.
         .ds-doDont.u-spacer--3
@@ -378,6 +402,42 @@ block ortotype
                             span.ds-doDont__check
                                 |Incorrecto
                             span El archivo se enviará todos los Lunes.
+
+        table.ds-table
+            thead
+                +thead-row(["","Carácter", "HTML","Unicode","Uso","Ejemplo"])
+            tbody
+                tr  
+                    td.u-txtCenter= "Dos puntos"
+                    td.u-txtCenter= ":"
+                    td.u-txtCenter= "&#58;"
+                    td.u-txtCenter= "\u003A"
+                    td
+                        ul.ds-list
+                            li.ds-list__item= "No usar en etiquetas"
+                            li.ds-list__item= "Usar para comenzar a enumerar o listar."
+                            li.ds-list__item= "No poner espacio después."
+                    td.u-txtCenter= ""
+                tr  
+                    td.u-txtCenter= "Coma"
+                    td.u-txtCenter= ","
+                    td.u-txtCenter= "&#58;"
+                    td.u-txtCenter= "\u003A"
+                    td
+                        ul.ds-list
+                            li.ds-list__item= "Usar para enumerar elementos dentro de una frase."
+                    td.u-txtCenter= ""
+                tr  
+                    td.u-txtCenter= "Comillas"
+                    td.u-txtCenter= ""
+                    td.u-txtCenter= "&ldquo;  &rdquo;"
+                    td.u-txtCenter= "\\u201C  \u201D"
+                    td
+                        ul.ds-list
+                            li.ds-list__item= "Usar para enumerar elementos dentro de una frase."
+                    td.u-txtCenter= ""
+                
+
 
 
 block paginator
