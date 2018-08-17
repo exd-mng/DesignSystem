@@ -1,19 +1,32 @@
-//
-	extends ../../_layouts/design.view.pug
-	include ../../_includes/icons
+extends ../../_layouts/design.view.pug
+include ../../_includes/icons
 
-	block config
-		- var nav = "icons";
-		- var title = "Iconos";
+block config
+	- var active = "Iconography";
+	- var title = active;
 
-	block code
-		each ico in ICONS
-			h3.tit.tit--h3= ico.title
-			ul.o-grid__row
-				- for (var i = 0; i < ico.range.length; i++)
-					li.o-grid__col.o-grid__col--2
-						div.ds-icon.u-flex.u-flex--col.u-flex--alignItemsCenter
-							+svg-icon(ico.range[i].icon)(class="o-mngIco--x2")
-							p.ds-icon__txt
-								= ico.range[i].icon
-	block example
+block codeHead
+	:markdown-it
+		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus, non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
+
+block codeBody
+	each ico in ICONS
+		h3.tit.tit--h3= ico.title
+		ul.o-grid__row
+			- for (var i = 0; i < ico.range.length; i++)
+				li.o-grid__col.o-grid__col--2
+					div.ds-icon.u-flex.u-flex--col.u-flex--alignItemsCenter
+						+svg-icon(ico.range[i].icon)(class="o-mngIco--x2")
+						p.ds-icon__txt
+							= ico.range[i].icon
+block paginator
+	- var next = "layout";
+	- var prev = "grid";
+	+paginatorNav("paginatorOptions",[
+		{ 
+			titPrev: "Grid",
+			titNext:"Layout", 
+			familyNext: "design",
+			familyPrev: "design"
+		}
+	])

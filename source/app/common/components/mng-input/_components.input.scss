@@ -4,12 +4,20 @@ $mngInput-border: $color-woodsmoke !default;
 $mngInput-reverse-border: $color-bombay !default;
 $mngInput-error-border: $color-pomegranate !default;
 $mngInput-disabled-border: $color-bombay !default;
+$mngInput-reverse-disabled-border: $color-abbey !default;
 
 .#{$module} {
 	@include mng-typescale(zeta);
 	width: 100%;
 	border: 0;
 	border-bottom: 1px solid $mngInput-border;
+	&.is-error {
+		border-color: $mngInput-error-border;
+	}
+	&.is-disabled {
+		border-color: $mngInput-disabled-border;
+		pointer-events: none;
+	}
 	&__input {
 		@include mng-rem(height, 34px);
 		font-family: inherit;
@@ -31,13 +39,13 @@ $mngInput-disabled-border: $color-bombay !default;
 		input{
 			color: $color-white;	
 		}
+		&.is-disabled {
+			border-color: $mngInput-reverse-disabled-border;
+			pointer-events: none;
+			input{
+				color: $mngInput-reverse-disabled-border;
+			}
+		}
 		
-	}
-	&.is-error {
-		border-color: $mngInput-error-border;
-	}
-	&.is-disabled {
-		border-color: $mngInput-disabled-border;
-		pointer-events: none;
 	}
 }

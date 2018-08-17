@@ -1,7 +1,7 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Enlaces";
+	- var active = "Links";
 	- var title = active;
 
 block codeHead
@@ -77,12 +77,12 @@ block advice
 									!= dodont.info[i].info
 
 block paginator
-	- var next = "input";
-	- var prev = "checkbox";
+	- var next = "modal";
+	- var prev = "dropdown";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Checkbox",
-			titNext:"Input",
+			titPrev:"Dropdown",
+			titNext:"Modal",
 			familyPrev: "components", 
 			familyNext: "components" 
 		}

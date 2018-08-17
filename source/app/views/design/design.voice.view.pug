@@ -1,7 +1,7 @@
 extends ../../_layouts/design-tabs.view.pug
 
 block config
-    - var active = "Voz y tono";
+    - var active = "Voice & tone";
     - var title = active;
 
 block codeHead
@@ -382,11 +382,11 @@ block ortotype
 
 block paginator
     - var prev = "type";
-    - var next = "button";
+    - var next = "accordion";
     +paginatorNav("paginatorOptions",[
         { 
-            titPrev:"Tipografía",
-            titNext:"Buttons",  
+            titPrev:"Typography",
+            titNext:"Accordion",  
             familyPrev: "design", 
             familyNext: "components"
         }

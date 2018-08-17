@@ -1,7 +1,7 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Input"
+	- var active = "Text input"
 	- var title = active;
 
 
@@ -80,12 +80,12 @@ block codeBody
 block specification
 block advice
 block paginator
-	- var next = "pagination";
-	- var prev = "links";
+	- var next = "toogle";
+	- var prev = "tabs";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Enlaces",
-			titNext:"Radios",
+			titPrev:"Tabs",
+			titNext:"Toogle",
 			familyPrev: "components", 
 			familyNext: "components" 
 		}

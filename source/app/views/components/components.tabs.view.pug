@@ -157,13 +157,13 @@ block advice
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
-	- var next = "colors";
-	- var prev = "radio";
+	- var next = "input";
+	- var prev = "switch";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Botones",
-			titNext:"Enlaces",  
+			titPrev:"Switch",
+			titNext:"Text inputs",  
 			familyPrev: "components", 
-			familyNext: "design" 
+			familyNext: "components" 
 		}
 	])

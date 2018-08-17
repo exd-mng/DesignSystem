@@ -1,7 +1,7 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Botones";
+	- var active = "Buttons";
 	- var title = active;
 
 block codeHead
@@ -137,12 +137,12 @@ block advice
 									!= dodont.info[i].info
 block paginator
 	- var next = "checkbox";
-	- var prev = "type";
+	- var prev = "breadcrumb";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev: "Tipografía",
+			titPrev: "Breadcrumb",
 			titNext:"Checkbox",
-			familyPrev: "design",
+			familyPrev: "components",
 			familyNext: "components"
 		}
 	])
