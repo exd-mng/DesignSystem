@@ -28,6 +28,9 @@ $module: $c-prefix + 'BreadCrumb';
 			}
 			.c-mngLink{	
 				border-bottom: 0;
+				&:after{
+					height: 0;
+				}
 			}
 		}	
 	}
