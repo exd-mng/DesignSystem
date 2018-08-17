@@ -1,7 +1,7 @@
 extends ../../_layouts/design.view.pug
 
 block config
-	- var active = "Tipografía";
+	- var active = "Typography";
 	- var title = active;
 
 block codeHead
@@ -57,12 +57,12 @@ block codeBody
 
 block paginator
 	- var prev = "layout";
-	- var next = "button";
+	- var next = "voice";
 	+paginatorNav("paginatorOptions",[
 		{ 
 			titPrev:"Layout",
-			titNext:"Buttons",  
+			titNext:"Voice & tone",  
 			familyPrev: "design", 
-			familyNext: "components"
+			familyNext: "design"
 		}
 	])
