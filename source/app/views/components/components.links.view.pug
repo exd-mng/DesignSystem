@@ -1,7 +1,7 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Enlaces";
+	- var active = "Links";
 	- var title = active;
 
 block codeHead
@@ -59,7 +59,7 @@ block specification
 		ul.row.ds-specs
 			each val in [1, 2]
 				li.col-xs-12.col-md-6.ds-specs__list
-					img(src="/assets/img/components/links/specs/" + val + ".png", alt="")
+					img(src="../../../assets/img/components/links/specs/" + val + ".png", alt="")
 
 block advice
 	section
@@ -70,19 +70,19 @@ block advice
 					- for (var i = 0; i < dodont.info.length; i++)
 						.col-xs-12.col-md-6.ds-doDont__box
 							.ds-doDont__wrap
-								img(alt="", src='/assets/img/components/links/dodont/' + i + '.png').ds-doDont__img
+								img(alt="", src='../../../assets/img/components/links/dodont/' + i + '.png').ds-doDont__img
 							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
 								p
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 
 block paginator
-	- var next = "input";
-	- var prev = "checkbox";
+	- var next = "modal";
+	- var prev = "dropdown";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Checkbox",
-			titNext:"Input",
+			titPrev:"Dropdown",
+			titNext:"Modal",
 			familyPrev: "components", 
 			familyNext: "components" 
 		}

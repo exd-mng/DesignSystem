@@ -4,7 +4,7 @@ mixin paginatorNav(name,items)
 			if(item.titPrev)
 				a.ds-paginator__link(href="/app/views/" + item.familyPrev + "/" + item.familyPrev + "." + prev + ".view.html")
 					.ds-paginator__wrap
-						img(src='/assets/img/btn-prev.png', alt='')
+						img(src='../../../assets/img/btn-prev.png', alt='')
 						.ds-paginator__btn
 							span.ds-paginator__label Anterior
 							span.ds-paginator__tit #{item.titPrev}
@@ -14,4 +14,4 @@ mixin paginatorNav(name,items)
 						.ds-paginator__btn
 							span.ds-paginator__label Siguiente
 							span.ds-paginator__tit #{item.titNext}
-						img(src='/assets/img/btn-next.png', alt='')
+						img(src='../../../assets/img/btn-next.png', alt='')

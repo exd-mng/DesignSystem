@@ -363,6 +363,9 @@ pre {
 	&--fakes {
 		pointer-events: none;
 	}
+	&--center{
+		@include mng-rem(padding, 52px 0);
+	}
 }
 
 .ds-color {

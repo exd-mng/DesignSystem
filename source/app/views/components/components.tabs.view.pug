@@ -141,7 +141,7 @@ block specification
 		ul.ds-specs.row
 			each val in [1, 2, 3, 4]
 				li.ds-specs__list.col-xs-12.col-md-6
-					img(src="/assets/img/components/checkbox/specs/" + val + ".png", alt="")
+					img(src="../../../assets/img/components/checkbox/specs/" + val + ".png", alt="")
 block advice
 	section
 		h3 Recomendaciones
@@ -151,19 +151,19 @@ block advice
 					- for (var i = 0; i < dodont.info.length; i++)
 						.col-xs-12.col-md-6.ds-doDont__box
 							.ds-doDont__wrap
-								img(alt="", src='/assets/img/components/checkbox/dodont/' + i + '.png').ds-doDont__img
+								img(alt="", src='../../../assets/img/components/checkbox/dodont/' + i + '.png').ds-doDont__img
 							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
 								p
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
-	- var next = "colors";
-	- var prev = "radio";
+	- var next = "input";
+	- var prev = "switch";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Botones",
-			titNext:"Enlaces",  
+			titPrev:"Switch",
+			titNext:"Text inputs",  
 			familyPrev: "components", 
-			familyNext: "design" 
+			familyNext: "components" 
 		}
 	])
