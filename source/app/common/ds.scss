@@ -769,4 +769,23 @@ pre {
 		border-top: .1rem solid $color-woodsmoke;
 		}
 	}
+	.ds-list{
+		margin-top: 0;
+		padding-left: 1rem;
+		&__item{
+			&:last-child{
+				padding-bottom: .75rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&--vertical-head{
+		td{
+			&:first-of-type{
+				width: 30%;
+				background-color: $color-concrete;
+				font-weight: 400;
+			}
+		}
+	}
 }

@@ -9,7 +9,7 @@ $module: $c-prefix + 'Drop';
 		border-bottom: 1px solid $color-woodsmoke;
 		position: relative;
 		cursor: pointer;
-		&::after {
+		&::before {
 			content: "";
 			width: 100%;
 			height: 1px;
@@ -20,15 +20,24 @@ $module: $c-prefix + 'Drop';
 			opacity: 0;
 			transition: opacity .1s ease-in;
 		}
+		&:after{
+			font-family: 'mango-icons';
+			font-size: 1rem;
+			content: "\e901";
+			position: absolute;
+			background: red;
+			top: 0;
+			right: 0;
+		}
 		&:hover {
-			&::after {
+			&::before {
 				opacity: 1;
 			}
 		}
 	}
 	&__container {
 		position: absolute;
-    max-height: 28.1rem;
+		@include mng-rem(max-height,180px);
     width: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -51,6 +60,17 @@ $module: $c-prefix + 'Drop';
     }
 	}
 	&.is-open {
+		.#{$module}__btn{
+			&:after{
+				font-family: 'mango-icons';
+				font-size: 1rem;
+				content: "\e921";
+				position: absolute;
+				background: red;
+				top: 0;
+				right: 0;
+			}
+		}
 		.#{$module}__btn {
 			&::after {
 				opacity: 1;
@@ -58,7 +78,7 @@ $module: $c-prefix + 'Drop';
 		}
 		.#{$module}__container {
       transform: scaleY(1);
-      overflow: hidden;
+      //overflow: hidden;
       opacity: 1;
 		}
 	}
