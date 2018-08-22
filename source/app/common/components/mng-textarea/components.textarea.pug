@@ -1,0 +1,4 @@
+mixin mngTextarea(label,text,id,name)
+	.c-mngTextarea
+		label.c-mngTextarea__label(for=id)= label
+		textarea.c-mngTextarea__textarea(id= id, name= name, placeholder= text, rows="8")

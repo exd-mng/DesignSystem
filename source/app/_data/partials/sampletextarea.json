@@ -1,0 +1,14 @@
+{
+	"textarea": {
+		"info": [
+			{
+				"uso": "Correcto",
+				"info": ""
+			},
+			{
+				"uso": "Incorrecto",
+				"info": ""
+			}
+		]
+	}
+}

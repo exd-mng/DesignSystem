@@ -8,24 +8,44 @@ $mngInput-reverse-disabled-border: $color-abbey !default;
 
 .#{$module} {
 	@include mng-typescale(zeta);
+	@include mng-rem(padding-top,48px);
 	width: 100%;
 	border: 0;
-	border-bottom: 1px solid $mngInput-border;
+	position: relative;
+	//border-bottom: 1px solid $mngInput-border;
 	&.is-error {
-		border-color: $mngInput-error-border;
+		.#{$module}__input{
+			border-color: $mngInput-error-border;
+		}
+		.#{$module}__feedback{
+			display: block;
+			color:  $mngInput-error-border;
+			text-align: left;
+			@include mng-typescale(zeta);
+			@include mng-rem(margin-top,8px);
+		}
 	}
 	&.is-disabled {
-		border-color: $mngInput-disabled-border;
-		pointer-events: none;
+		.#{$module}__input{
+			border-color: $mngInput-disabled-border;
+			pointer-events: none;
+		}
+		&.is-error{
+			.#{$module}__feedback{
+				display: none;
+			}
+		}
 	}
 	&__input {
-		@include mng-rem(height, 34px);
+		//@include mng-rem(height, 30px);
 		font-family: inherit;
 		width: 100%;
 		background-color: transparent;
 		font-weight: 200;
 		border: none;
-		border-bottom: 1px solid transparent;
+		@include mng-rem(padding-bottom, 8px);
+		border-bottom: 1px solid $mngInput-border;
+		//border-bottom: 1px solid transparent;
 		&:focus {
 			border-bottom-color: inherit;
 		}
@@ -33,17 +53,39 @@ $mngInput-reverse-disabled-border: $color-abbey !default;
 			pointer-events: none;
 			cursor: not-allowed;
 		}
+		&--pl{
+			@include mng-rem(padding-left,22px);
+		}
 	}
+	&__feedback{
+		display: none;
+	}
+	&__btn{
+		position: absolute;
+		&--fr{
+			@include mng-rem(bottom, 8px);
+			@include mng-rem(right, 8px);
+		}
+		&--fl{
+			@include mng-rem(bottom, 8px);
+			@include mng-rem(left, 8px);
+		}
+		
+	}
+	
 	&--reverse {
-		border-color: $mngInput-reverse-border;
+		//border-color: $mngInput-reverse-border;
 		input{
-			color: $color-white;	
+			color: $color-white;
+			border-color: $mngInput-reverse-border;	
 		}
 		&.is-disabled {
-			border-color: $mngInput-reverse-disabled-border;
-			pointer-events: none;
+			//border-color: $mngInput-reverse-disabled-border;
+			//pointer-events: none;
 			input{
 				color: $mngInput-reverse-disabled-border;
+				border-color: $mngInput-reverse-disabled-border;
+				pointer-events: none;
 			}
 		}
 		

@@ -7,84 +7,168 @@ block config
 
 block codeHead
 	:markdown-it
-		Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus, non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.
+		Permiten al usuario introducir y editar texto. Suelen aparecer en formularios de contacto, logins, pasarelas de pago… y todas aquellas acciones que requieran información a cumplimentar por el usuario. 
 
 block codeBody
 	h3 HTML
 	section
 		h4 Reposo
-		.ds-sample
-			+mngInput('Texto label','ptt', 'ss')
+		.ds-sample.ds-sample--in-inputs
+			.row
+				+mngInput('Input text here','ptt', 'ss','Feedback message here')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput">
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<div class="c-mngInput__feedback">Feedback message here</div>
 					</div>
 	section
 		h4 Error
-		.ds-sample
-			+mngInputError('Texto label','ptt', 'ss')
+		.ds-sample.ds-sample--in-inputs
+			+mngInputError('Input text here','ptt', 'ss','Feedback message here')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput is-error">
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<div class="c-mngInput__feedback">Feedback message here</div>
 					</div>
 	section
 		h4 Deshabilitado
-		.ds-sample
-			+mngInputDisabled('Texto label','ptt', 'ss')
+		.ds-sample.ds-sample--in-inputs
+			+mngInputDisabled('Input text here','ptt', 'ss','Feedback message here')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput is-disabled">
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label" disabled="disabled">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here" disabled="disabled">
+						<div class="c-mngInput__feedback u-hidden">Feedback message here</div>
 					</div>
 	section
 		h4 Inverso
-		.ds-sample.ds-sample--inverse
-			+mngInputReverse('Texto label','ptt', 'ss')
+		.ds-sample.ds-sample--in-inputs.ds-sample--inverse
+			+mngInputReverse('Input text here','ptt', 'ss','Feedback message here')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput c-mngInput--reverse">
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<div class="c-mngInput__feedback">Feedback message here</div>
 					</div>
 	section
 		h4 Inverso Error
-		.ds-sample.ds-sample--inverse
-			+mngInputReverseError('Texto label','ptt','ss')
+		.ds-sample.ds-sample--in-inputs.ds-sample--inverse
+			+mngInputReverseError('Input text here','ptt','ss','Feedback message here')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput c-mngInput--reverse is-error">
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<div class="c-mngInput__feedback">Feedback message here</div>
 					</div>
 	section
 		h4 Inverso Deshabilitado
-		.ds-sample.ds-sample--inverse
-			+mngInputReverseDisabled('Texto label','ptt','ss')
+		.ds-sample.ds-sample--in-inputs.ds-sample--inverse
+			+mngInputReverseDisabled('Input text here','ptt','ss','Feedback message here')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput c-mngInput--reverse is-disabled">
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Texto label">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Texto label</label>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<div class="c-mngInput__feedback">Feedback message here</div>
 					</div>
+
+	section
+		h4 Reposo con icono
+		.ds-sample.ds-sample--in-inputs 
+			+mngInputIcon('Input text here','ptt','ss','Feedback message here','left','excel')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput col-md-8 col-hd-5">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input c-mngInput__input--pl" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<button class="c-mngInput__btn c-mngInput__btn--fl">
+						<svg class="o-mngIco o-mngIco--excel o-mngIco--mr">
+							<use xlink:href="../../../assets/icons/sprite.svg#excel"></use>
+						</svg>
+						</button>
+					</div>
+	
+	section
+		h4 Reposo con icono
+		.ds-sample.ds-sample--in-inputs 
+			+mngInputIcon('Input text here','ptt','ss','Feedback message here','right','down')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngInput col-md-8 col-hd-5">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<button class="c-mngInput__btn c-mngInput__btn--fr">
+						<svg class="o-mngIco o-mngIco--down">
+							<use xlink:href="../../../assets/icons/sprite.svg#down"></use>
+						</svg>
+						</button>
+					</div>
+					
+
 block specification
+	section
+		h3 TEXT INPUT
+		ul.ds-specs.row
+			each val in [1, 2, 3]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="../../../assets/img/components/inputs/specs/" + val + ".png", alt="")
+		
+		h3 TABLA ANCHOS MÁXIMOS
+		img(src='../../../assets/img/components/inputs/specs/4.png', alt='Tabla anchos máximos')
+
+		h3 ICONOS
+		ul.ds-specs.row
+			li.ds-specs__list.col-xs-12.col-md-6
+				img(src='../../../assets/img/components/inputs/specs/5.png', alt='Icono dropdown')
+			li.ds-specs__list.col-xs-12.col-md-6
+				p 
+					strong Icono dropdown: 
+					|Cuando un input va acompañado de una flecha a su derecha, es un indicador de que tiene opciones seleccionables anidadas.
+			li.ds-specs__list.col-xs-12.col-md-6
+				img(src='../../../assets/img/components/inputs/specs/6.png', alt='Icono descripción')
+			li.ds-specs__list.col-xs-12.col-md-6
+				p 
+					strong Icono descripción: 
+					|Se incluyen en los inputs a la iquierda de la etiqueta y la acompañaran para dar a conocer al usuario de que el input tiene opciones seleccionables anidadas. En este caso, se abriría un calendario para seleccionar las fechas deseadas.
+
+
 block advice
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLEINPUTS
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='../../../assets/img/components/inputs/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
+
+
 block paginator
 	- var next = "toogle";
-	- var prev = "tabs";
+	- var prev = "textarea";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Tabs",
+			titPrev:"Textarea",
 			titNext:"Toogle",
 			familyPrev: "components", 
 			familyNext: "components" 

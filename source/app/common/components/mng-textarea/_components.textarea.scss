@@ -1,0 +1,26 @@
+$module: $c-prefix + 'Textarea';
+
+$mngInput-border: $color-woodsmoke !default;
+$mngInput-reverse-border: $color-bombay !default;
+$mngInput-error-border: $color-pomegranate !default;
+$mngInput-disabled-border: $color-bombay !default;
+$mngInput-reverse-disabled-border: $color-abbey !default;
+
+.#{$module} {
+	@include mng-typescale(zeta);
+	width: 100%;
+	border: 0;
+	&__label{
+		display: block;
+		text-align: left;
+	}
+	&__textarea{
+		width: 100%;
+		font-family: inherit;
+		font-weight: 200;
+		@include mng-typescale(zeta);
+		@include mng-rem(margin-top,8px);
+		@include mng-rem(padding,8px);
+		
+	}
+}

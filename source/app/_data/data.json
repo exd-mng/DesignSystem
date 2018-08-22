@@ -363,6 +363,28 @@
 			]
 		}
 	},
+	"SAMPLEINPUTS": {
+		"inputs": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Los inputs se utilizan cuando el usuario solamente tiene que introducir un texto breve de no más de una línea."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Si el usuario tiene que insertar más de una línea de texto, se recomienda utilizar los text area."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Los iconos descriptivos solo se utilizarán cuando el input tenga opciones seleccionables anidadas."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Los iconos descriptivos no se colocan a la derecha de la etiqueta. Deberán ir siempre a la izquierda."
+				}
+			]
+		}
+	},
 	"SAMPLELINKS": {
 		"links": {
 			"info": [
@@ -443,6 +465,20 @@
 				{
 					"uso": "Incorrecto",
 					"info": "No uses los radio buttons para opciones dobles como on/off, activo/inactivo. En estos casos se recomienda usar toggles."
+				}
+			]
+		}
+	},
+	"SAMPLETEXTAREA": {
+		"textarea": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": ""
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
 				}
 			]
 		}
