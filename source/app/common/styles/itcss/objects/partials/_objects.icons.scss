@@ -4,6 +4,14 @@
   vertical-align: middle;
   top: -1px;
   position: relative;
+  &--x2 {
+    @include mng-rem(width, 24px);
+    @include mng-rem(height, 24px);
+  }
+  &--x3 {
+    @include mng-rem(width, 48px);
+    @include mng-rem(height, 48px);
+  }
   &--mr {
     @include mng-rem(margin-right, 8px);
   }
@@ -11,3 +19,9 @@
     @include mng-rem(margin-left, 8px);
   }
 }
+
+//list icons
+
+$icons: (
+  'excel' : "e901"
+);

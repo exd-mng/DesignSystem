@@ -1,0 +1,30 @@
+{
+	"tabs": {
+		"info": [
+			{
+				"uso": "Correcto",
+				"info": "Utilizar textos cortos y descriptivos en el título"
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "No utilizar más de dos palabras en el título."
+			},
+			{
+				"uso": "Correcto",
+				"info": "Utilizar una cantidad de tabs inferior a seis."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Si el número de tabs es excesivo, es mejor buscar otro tipo de navegación."
+			},
+			{
+				"uso": "Correcto",
+				"info": "El contenido del tab no debe tener un tamaño excesivo."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Para el usuario, es incómodo ver una web casi completa dentro de un tab."
+			}
+		]
+	}
+}

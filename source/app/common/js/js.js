@@ -46,3 +46,23 @@ $('.c-mngDrop__btn').on('click', function(e) {
 	e.preventDefault();
 	$(this).parent().toggleClass('is-open');
 });
+
+
+
+//dropdown in Voice & tone - Ortotipografia
+$('.c-mngDrop--in-voiceTone .c-mngDrop__item').on('click', function(event){
+	event.preventDefault();
+	showTable(this.parentElement.children.length,  event.target.text);
+	$(this).parent().parent().parent().removeClass('is-open');
+}); 
+
+function showTable(elements, initText){
+	for(var i = 0; i < elements; i++){
+		$('#tabla' + i).hide();
+	}
+	var textSelected = initText;
+	$("[data-value='" + textSelected + "']").show();
+	$('.c-mngDrop__btn').text(textSelected);
+}
+
+showTable(12, 'Dos puntos');
