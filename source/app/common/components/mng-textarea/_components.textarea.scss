@@ -25,6 +25,16 @@ $mngTextarea-reverse-disabled-border: $color-abbey !default;
 		@include mng-rem(max-height,120px);	
 		resize: vertical;	
 		border-color: $mngTextarea-border;
+		&::-webkit-scrollbar {
+			width: .6rem;
+			&-track {
+			  background-color: $color-concrete;
+			}
+			&-thumb {
+			  background-color: $color-iron;
+			  border-radius: .7rem;
+			}
+		  }
 	}
 	&--reverse {
 		label{
