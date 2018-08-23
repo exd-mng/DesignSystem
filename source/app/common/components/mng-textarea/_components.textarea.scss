@@ -1,10 +1,9 @@
 $module: $c-prefix + 'Textarea';
 
-$mngInput-border: $color-woodsmoke !default;
-$mngInput-reverse-border: $color-bombay !default;
-$mngInput-error-border: $color-pomegranate !default;
-$mngInput-disabled-border: $color-bombay !default;
-$mngInput-reverse-disabled-border: $color-abbey !default;
+$mngTextarea-border: $color-woodsmoke !default;
+$mngTextarea-reverse-border: $color-bombay !default;
+$mngTextarea-disabled-border: $color-bombay !default;
+$mngTextarea-reverse-disabled-border: $color-abbey !default;
 
 .#{$module} {
 	@include mng-typescale(zeta);
@@ -21,6 +20,42 @@ $mngInput-reverse-disabled-border: $color-abbey !default;
 		@include mng-typescale(zeta);
 		@include mng-rem(margin-top,8px);
 		@include mng-rem(padding,8px);
-		
+		@include mng-rem(min-height,80px);
+		height: auto;
+		@include mng-rem(max-height,120px);	
+		resize: vertical;	
+		border-color: $mngTextarea-border;
+		&::-webkit-scrollbar {
+			width: .6rem;
+			&-track {
+			  background-color: $color-concrete;
+			}
+			&-thumb {
+			  background-color: $color-iron;
+			  border-radius: .7rem;
+			}
+		  }
+	}
+	&--reverse {
+		label{
+			color: $color-white;
+			border-color: $mngTextarea-reverse-border;	
+		}	
+		&.is-disabled {
+			textarea{
+				color: $mngTextarea-reverse-disabled-border;
+				border-color: $mngTextarea-reverse-disabled-border;
+				pointer-events: none;
+				user-select: none;
+				background-color: $color-concrete;
+			}
+		}
+	}
+	&.is-disabled {
+		textarea{
+			color: $mngTextarea-disabled-border;
+			border-color: $mngTextarea-disabled-border;
+			background-color: $color-concrete;
+		}
 	}
 }

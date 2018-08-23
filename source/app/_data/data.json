@@ -504,7 +504,7 @@
 			"info": [
 				{
 					"uso": "Correcto",
-					"info": ""
+					"info": "Cuando el usuario tenga que rellenar campos de texto que requieran más de una línea de texto, se usarán áreas de texto."
 				},
 				{
 					"uso": "Incorrecto",
