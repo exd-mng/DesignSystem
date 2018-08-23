@@ -7,7 +7,7 @@
 			},
 			{
 				"uso": "Incorrecto",
-				"info": "Si el usuario tiene que insertar más de una línea de texto, se recomienda utilizar los text area."
+				"info": "Si el usuario tiene que insertar más de una línea de texto, se recomienda utilizar los <a href=\"/app/views/components/components.textarea.view.html\" class=\"c-mngLink\">text area</a>."
 			},
 			{
 				"uso": "Incorrecto",
