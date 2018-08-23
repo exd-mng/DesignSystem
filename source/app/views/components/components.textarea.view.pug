@@ -7,51 +7,63 @@ block config
 
 block codeHead
 	:markdown-it
-		Permiten a los usuarios la entrada de múltiples líneas de texto. Son útiles para recolectar o editar líneas largas de texto como mensajes, contenido de archivos, listas, reseñas, artículos, etc.
-
+		Permiten a los usuarios la entrada de múltiples líneas de texto.
+		Se diferencia del text input porque se pueden insertar varias líneas de texto (párrafos) dentro de una área delimitada por el componente.
 block codeBody
 	h3 HTML
 	section
 		h4 Reposo
 		.ds-sample
-			+mngTextarea('Text area title','Placeholder text example', 'ptt','ss')
+			+mngTextarea('Text area title','Placeholder text example', 'ptt1','ss')
 		pre
 			code.language-html
 				:markdown-it
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eveniet excepturi.</p>
+					<div class="c-mngTextarea">
+						<label class="c-mngTextarea__label" for="ptt1">Text area title</label>
+						<textarea class="c-mngTextarea__textarea" id="ptt1" name="ss" placeholder="Placeholder text example"></textarea>
+					</div>
 		
 
 	section
 		h4 Deshabilitado
 		.ds-sample
-			
+			+mngTextareaDisabled('Text area title','Placeholder text example', 'ptt2','ss')
 		pre
 			code.language-html
 				:markdown-it
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eveniet excepturi.</p>
+					<div class="c-mngTextarea is-disabled">
+						<label class="c-mngTextarea__label" for="ptt2">Text area title</label>
+						<textarea class="c-mngTextarea__textarea" id="ptt2" name="ss" placeholder="Placeholder text example" disabled="disabled"></textarea>
+					</div>
 	section
 		h4 Inverso
 		.ds-sample.ds-sample--inverse
-			
+			+mngTextareaReverse('Text area title','Placeholder text example', 'ptt3','ss')
 		pre
 			code.language-html
 				:markdown-it
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eveniet excepturi.</p>
+					<div class="c-mngTextarea c-mngTextarea--reverse">
+							<label class="c-mngTextarea__label" for="ptt3">Text area title</label>
+							<textarea class="c-mngTextarea__textarea" id="ptt3" name="ss" placeholder="Placeholder text example"></textarea>
+						</div>
 	
 	section
 		h4 Inverso Deshabilitado
 		.ds-sample.ds-sample--inverse
-			
+			+mngTextareaReverseDisabled('Text area title','Placeholder text example', 'ptt4','ss')
 		pre
 			code.language-html
 				:markdown-it
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eveniet excepturi.</p>
+					<div class="c-mngTextarea c-mngTextarea--reverse is-disabled">
+						<label class="c-mngTextarea__label" for="ptt4">Text area title</label>
+						<textarea class="c-mngTextarea__textarea" id="ptt4" name="ss" placeholder="Placeholder text example"></textarea>
+					</div>
 
 block specification
 	section
 		h3 DESKTOP - TABLET
 		ul.ds-specs.row
-			each val in [1, 2, 3]
+			each val in [1, 2, 3, 4]
 				li.ds-specs__list.col-xs-12.col-md-6
 					img(src="../../../assets/img/components/textarea/specs/" + val + ".png", alt="")
 		
