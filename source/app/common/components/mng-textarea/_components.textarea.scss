@@ -20,11 +20,10 @@ $mngTextarea-reverse-disabled-border: $color-abbey !default;
 		@include mng-typescale(zeta);
 		@include mng-rem(margin-top,8px);
 		@include mng-rem(padding,8px);
-		@include mng-rem(min-height,80px);
-		height: auto;
-		@include mng-rem(max-height,120px);	
-		resize: vertical;	
+		@include mng-rem(height,96px);	
 		border-color: $mngTextarea-border;
+		resize: none;
+		outline: 0;
 		&::-webkit-scrollbar {
 			width: .6rem;
 			&-track {

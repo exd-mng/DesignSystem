@@ -1,13 +1,12 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Textarea"
+	- var active = "Text area"
 	- var title = active;
 
 
 block codeHead
 	:markdown-it
-		Permiten a los usuarios la entrada de múltiples líneas de texto.
 		Se diferencia del text input porque se pueden insertar varias líneas de texto (párrafos) dentro de una área delimitada por el componente.
 block codeBody
 	h3 HTML
@@ -63,7 +62,7 @@ block specification
 	section
 		h3 DESKTOP - TABLET
 		ul.ds-specs.row
-			each val in [1, 2, 3, 4]
+			each val in [1, 2]
 				li.ds-specs__list.col-xs-12.col-md-6
 					img(src="../../../assets/img/components/textarea/specs/" + val + ".png", alt="")
 		

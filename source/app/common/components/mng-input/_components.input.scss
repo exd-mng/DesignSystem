@@ -68,7 +68,7 @@ $mngInput-reverse-disabled-border: $color-abbey !default;
 		}
 		&--fl{
 			@include mng-rem(bottom, 8px);
-			@include mng-rem(left, 8px);
+			@include mng-rem(left, 0px);
 		}
 		
 	}

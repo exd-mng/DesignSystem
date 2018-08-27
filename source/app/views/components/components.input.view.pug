@@ -15,110 +15,121 @@ block codeBody
 		h4 Reposo
 		.ds-sample.ds-sample--in-inputs
 			.row
-				+mngInput('Input text here','ptt', 'ss','Feedback message here')
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5
+							+mngInput('Text input','ptt', 'ss','Mensaje de error')
+                            
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
-						<div class="c-mngInput__feedback">Feedback message here</div>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Text input">
+						<div class="c-mngInput__feedback">Mensaje de error</div>
 					</div>
 	section
 		h4 Error
 		.ds-sample.ds-sample--in-inputs
-			+mngInputError('Input text here','ptt', 'ss','Feedback message here')
+			.row
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5
+							+mngInputError('Text input','ptt', 'ss','Mensaje de error')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput is-error">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
-						<div class="c-mngInput__feedback">Feedback message here</div>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Text input">
+						<div class="c-mngInput__feedback">Mensaje de error</div>
 					</div>
 	section
 		h4 Deshabilitado
 		.ds-sample.ds-sample--in-inputs
-			+mngInputDisabled('Input text here','ptt', 'ss','Feedback message here')
+			.row
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5
+							+mngInputDisabled('Text input','ptt', 'ss','Mensaje de error')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput is-disabled">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here" disabled="disabled">
-						<div class="c-mngInput__feedback u-hidden">Feedback message here</div>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Text input" disabled="disabled">
+						<div class="c-mngInput__feedback u-hidden">Mensaje de error</div>
 					</div>
 	section
 		h4 Inverso
 		.ds-sample.ds-sample--in-inputs.ds-sample--inverse
-			+mngInputReverse('Input text here','ptt', 'ss','Feedback message here')
+			.row
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5
+							+mngInputReverse('Text input','ptt', 'ss','Mensaje de error')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput c-mngInput--reverse">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
-						<div class="c-mngInput__feedback">Feedback message here</div>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Text input">
+						<div class="c-mngInput__feedback">Mensaje de error</div>
 					</div>
 	section
 		h4 Inverso Error
 		.ds-sample.ds-sample--in-inputs.ds-sample--inverse
-			+mngInputReverseError('Input text here','ptt','ss','Feedback message here')
+			.row
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5
+							+mngInputReverseError('Text input','ptt','ss','Mensaje de error')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput c-mngInput--reverse is-error">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
-						<div class="c-mngInput__feedback">Feedback message here</div>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Text input">
+						<div class="c-mngInput__feedback">Mensaje de error</div>
 					</div>
 	section
 		h4 Inverso Deshabilitado
 		.ds-sample.ds-sample--in-inputs.ds-sample--inverse
-			+mngInputReverseDisabled('Input text here','ptt','ss','Feedback message here')
+			.row
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5
+							+mngInputReverseDisabled('Text input','ptt','ss','Mensaje de error')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput c-mngInput--reverse is-disabled">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
-						<div class="c-mngInput__feedback">Feedback message here</div>
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Text input">
+						<div class="c-mngInput__feedback">Mensaje de error</div>
 					</div>
 
 	section
 		h4 Reposo con icono
-		.ds-sample.ds-sample--in-inputs 
-			+mngInputIcon('Input text here','ptt','ss','Feedback message here','left','excel')
+		.ds-sample.ds-sample--in-inputs
+			.row
+				.col-xs-12
+					.row.u-flex--justifyCenter
+						.col-xs-12.col-md-8.col-hd-5 
+							+mngInputIcon('Text input','ptt','ss','Mensaje de error','left','excel')
 		pre
 			code.language-html
 				:markdown-it
 					<div class="c-mngInput col-md-8 col-hd-5">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input c-mngInput__input--pl" id="ptt" name="ss" type="text" placeholder="Input text here">
+						<label class="c-mngInput__label u-hidden-visually" for="ptt">Text input</label>
+						<input class="c-mngInput__input c-mngInput__input--pl" id="ptt" name="ss" type="text" placeholder="Text input">
 						<button class="c-mngInput__btn c-mngInput__btn--fl">
 						<svg class="o-mngIco o-mngIco--excel o-mngIco--mr">
 							<use xlink:href="../../../assets/icons/sprite.svg#excel"></use>
 						</svg>
 						</button>
 					</div>
-	
-	section
-		h4 Reposo con icono
-		.ds-sample.ds-sample--in-inputs 
-			+mngInputIcon('Input text here','ptt','ss','Feedback message here','right','down')
-		pre
-			code.language-html
-				:markdown-it
-					<div class="c-mngInput col-md-8 col-hd-5">
-						<label class="c-mngInput__label u-hidden-visually" for="ptt">Input text here</label>
-						<input class="c-mngInput__input" id="ptt" name="ss" type="text" placeholder="Input text here">
-						<button class="c-mngInput__btn c-mngInput__btn--fr">
-						<svg class="o-mngIco o-mngIco--down">
-							<use xlink:href="../../../assets/icons/sprite.svg#down"></use>
-						</svg>
-						</button>
-					</div>
-					
+				
 
 block specification
 	section
@@ -134,13 +145,7 @@ block specification
 		h3 ICONOS
 		ul.ds-specs.row
 			li.ds-specs__list.col-xs-12.col-md-6
-				img(src='../../../assets/img/components/inputs/specs/5.png', alt='Icono dropdown')
-			li.ds-specs__list.col-xs-12.col-md-6
-				p 
-					strong Icono dropdown: 
-					|Cuando un input va acompañado de una flecha a su derecha, es un indicador de que tiene opciones seleccionables anidadas.
-			li.ds-specs__list.col-xs-12.col-md-6
-				img(src='../../../assets/img/components/inputs/specs/6.png', alt='Icono descripción')
+				img(src='../../../assets/img/components/inputs/specs/5.png', alt='Icono descripción')
 			li.ds-specs__list.col-xs-12.col-md-6
 				p 
 					strong Icono descripción: 
