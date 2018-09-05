@@ -276,6 +276,9 @@ pre {
 			@include mng-rem(margin-bottom, 24px);
 		}
 	}
+	&--ol{
+		list-style: decimal;
+	}
 }
 
 .ds-wrap {
@@ -317,7 +320,7 @@ pre {
 		@include mng-rem(padding-top, 10px);
 		@include mng-rem(padding-bottom, 10px);
 		display: block;
-    text-align: center;
+    	text-align: center;
 		position: relative;
 		&::after {
 			content: "";
@@ -356,6 +359,7 @@ pre {
 	@include mng-rem(padding, 52px 34px);
 	@include mng-rem(margin-top, 24px);
 	background-color: rgba($color-concrete, .5);
+	position: relative;
 	text-align: center;
 	&--inverse {
 		background-color: $color-woodsmoke;
@@ -499,6 +503,12 @@ pre {
 			margin-top: 0;
 			&:nth-child(n+3) {
 				@include mng-rem(margin-top, 16px);
+			}
+		}
+		&--full{
+			@include mng-rem(margin-top, 16px);
+			&:first-child {
+				@include mng-rem(margin-top, 0);
 			}
 		}
 	}

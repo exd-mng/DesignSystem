@@ -1,8 +1,72 @@
-mixin mngSteps()
-	ol.c-mngSteps
-		li.c-mngSteps__item.is-complete
-			a.c-mngSteps__link(href='#') Detalles
-		li.c-mngSteps__item.is-active
-			a.c-mngSteps__link(href='#') Prendas
-		li.c-mngSteps__item
-			a.c-mngSteps__link(href='#') Resumen
+mixin mngSteps(active,style)
+	if active == 1
+		if (style !== "is-mobile")
+			ol.c-mngSteps
+				li.c-mngSteps__item.is-active
+					a.c-mngSteps__link(href='#') 
+						span Detalles
+				li.c-mngSteps__item
+					a.c-mngSteps__link(href='#')
+						span Prendas
+				li.c-mngSteps__item
+					a.c-mngSteps__link(href='#') 
+						span Resumen
+		else
+			ol.c-mngSteps.c-mngSteps--mobile
+				li.c-mngSteps__item.is-active
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Detalles
+				li.c-mngSteps__item
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Prendas
+				li.c-mngSteps__item
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Resumen
+			.c-mngSteps.is-mobile
+				| Detalles
+
+	if active == 2
+		if (style !== "is-mobile")
+			ol.c-mngSteps
+				li.c-mngSteps__item.is-complete
+					a.c-mngSteps__link(href='#') Detalles
+				li.c-mngSteps__item.is-active
+					a.c-mngSteps__link(href='#') Prendas
+				li.c-mngSteps__item
+					a.c-mngSteps__link(href='#') Resumen
+		else
+			ol.c-mngSteps.c-mngSteps--mobile
+				li.c-mngSteps__item.is-complete
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Detalles
+				li.c-mngSteps__item.is-active
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Prendas
+				li.c-mngSteps__item
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Resumen
+			.c-mngSteps.is-mobile
+				| Prendas
+
+	else if active == 3
+		if (style !== "is-mobile")
+			ol.c-mngSteps
+				li.c-mngSteps__item.is-complete
+					a.c-mngSteps__link(href='#') Detalles
+				li.c-mngSteps__item.is-complete
+					a.c-mngSteps__link(href='#') Prendas
+				li.c-mngSteps__item.is-active
+					a.c-mngSteps__link(href='#') Resumen
+		else
+			ol.c-mngSteps.c-mngSteps--mobile
+				li.c-mngSteps__item.is-complete
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Detalles
+				li.c-mngSteps__item.is-complete
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Prendas
+				li.c-mngSteps__item.is-active
+					a.c-mngSteps__link(href='#') 
+						span.u-hidden Resumen
+			.c-mngSteps.is-mobile
+				| Resumen

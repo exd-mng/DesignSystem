@@ -1,0 +1,30 @@
+{
+    "steps": {
+        "info": [
+            {
+                "uso": "Correcto",
+                "info": "Indica al usuario que está realizando un proceso de varios pasos y muéstrale la dirección del movimiento (de izquierda a derecha)."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "Evitar desordenar o no dar cooerencia entre todos los pasos (diferente enumeración por ejemplo)."
+            },
+            {
+                "uso": "Correcto",
+                "info": "Mantén al usuario informado de su situación actual dentro del proceso o tarea, así tendrá una mayor sensación de control sobre lo que ha hecho y lo que le queda por hacer. "
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "El proceso no se finaliza hasta acabar todos los pasos, así que el usuario puede volver al punto anterior en todo momento."
+            },
+            {
+                "uso": "Correcto",
+                "info": "Escribe literales claros y cortos (una o dos palabras) para cada paso."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "Evita describir los pasos mediante iconos."
+            }
+        ]
+    }
+}

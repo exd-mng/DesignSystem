@@ -265,6 +265,36 @@
 			]
 		}
 	},
+	"SAMPLEACCORDION": {
+		"accordion": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "El contenido que aparece cuando se despliega el componente debe tener un tamaño medio para que no sea necesario el uso del scroll. "
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Si el contenido es muy extenso debemos usar otro tipo de componente (por ejemplo tabs). Si es demasiado corto es mejor optar por un literal que no sea expandible."
+				},
+				{
+					"uso": "Correcto",
+					"info": "La información que queda oculta y se muestra en segundo nivel, no debe ser ni demasiado larga ni demasiado corta. "
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Al expandir el acordeón, evitar que se genere una sola línea de texto."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Se debe cambiar el incono cuando está colapsado o expandido."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Mantener el mismo icono cuando el acordeón está expandido."
+				}
+			]
+		}
+	},
 	"SAMPLEBREADCRUMB": {
 		"breadcrumb": {
 			"info": [
@@ -431,6 +461,28 @@
 			]
 		}
 	},
+	"SAMPLEPAGINATION": {
+		"pagination": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Mostrar siempre el número total de páginas."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				},
+				{
+					"uso": "Correcto",
+					"info": "Mostrar siempre la primera y la última página."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": ""
+				}
+			]
+		}
+	},
 	"SAMPLERADIO": {
 		"radio": {
 			"info": [
@@ -465,6 +517,66 @@
 				{
 					"uso": "Incorrecto",
 					"info": "No uses los radio buttons para opciones dobles como on/off, activo/inactivo. En estos casos se recomienda usar toggles."
+				}
+			]
+		}
+	},
+	"SAMPLESTEPS": {
+		"steps": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Indica al usuario que está realizando un proceso de varios pasos y muéstrale la dirección del movimiento (de izquierda a derecha)."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Evitar desordenar o no dar cooerencia entre todos los pasos (diferente enumeración por ejemplo)."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Mantén al usuario informado de su situación actual dentro del proceso o tarea, así tendrá una mayor sensación de control sobre lo que ha hecho y lo que le queda por hacer. "
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "El proceso no se finaliza hasta acabar todos los pasos, así que el usuario puede volver al punto anterior en todo momento."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Escribe literales claros y cortos (una o dos palabras) para cada paso."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Evita describir los pasos mediante iconos."
+				}
+			]
+		}
+	},
+	"SAMPLESWITCH": {
+		"switch": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Usa el swich en estado de reposo para indicar que no hay ninguna opción seleccionada."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Si hay dos opciones no se pueden seleccionar las dos a la vez."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Correcto. Mostrar al usuario todas las opciones disponibles, tanto la seleccionada como las restantes. "
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Mostrar sólo la opción que está seleccionada."
+				},
+				{
+					"uso": "Correcto",
+					"info": "Pueden existir más de 2 opciones que se mostrarán todas a primera vista."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "Si tenemos poco espacio y podemos ocultar todas las opciones, es mejor usar un <a href=\"/app/views/components/components.dropdown.view.html\" class=\"c-mngLink\">dropdown</a>.."
 				}
 			]
 		}
@@ -509,6 +621,20 @@
 				{
 					"uso": "Incorrecto",
 					"info": ""
+				}
+			]
+		}
+	},
+	"SAMPLETOOLTIP": {
+		"breadcrumb": {
+			"info": [
+				{
+					"uso": "Correcto",
+					"info": "Deben tener un icono que actúe como activador de la información e informador de cara al usuario."
+				},
+				{
+					"uso": "Incorrecto",
+					"info": "No debe contener contenido interactivo."
 				}
 			]
 		}

@@ -1,5 +1,5 @@
-mixin mngPagination()
-	ul.c-mngPagination
+mixin mngPagination(style)
+	ul.c-mngPagination(class=style)
 		li.c-mngPagination__item.c-mngPagination__item--btn
 			a(href="").c-mngPagination__link &lt;
 		li.c-mngPagination__item
@@ -14,8 +14,13 @@ mixin mngPagination()
 			a(href="").c-mngPagination__link 5
 		li.c-mngPagination__item
 			a(href="").c-mngPagination__link 6
+		li.c-mngPagination__item
+			a(href="").c-mngPagination__link 7
 		li.c-mngPagination__item.c-mngPagination__item--gap ...
 		li.c-mngPagination__item
-			a(href="").c-mngPagination__link 102
+			a(href="").c-mngPagination__link 15
 		li.c-mngPagination__item.c-mngPagination__item--btn
 			a(href="").c-mngPagination__link &gt;
+
+mixin mngPaginationReverse()
+	+mngPagination('c-mngPagination--reverse')

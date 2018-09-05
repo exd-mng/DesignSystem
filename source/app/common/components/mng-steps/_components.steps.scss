@@ -7,11 +7,19 @@ $module: $c-prefix + 'Steps';
 	position: relative;
 	color: $color-bombay;
 	display: inline-flex;
+	@include mng-rem(margin-top, 16px);
+	@include mng-rem(margin-bottom, 16px);
+	&--mobile{
+		.#{$module}__link:after{
+			@include mng-rem(top, 8px);
+		}
+		
+	}
 	&__item {
 		flex: 1;
 		text-align: center;
 	}
-	&__link {
+	&__link{
 		display: block;
 		pointer-events: none;
 		position: relative;
@@ -19,7 +27,7 @@ $module: $c-prefix + 'Steps';
 			@include mng-rem(width, 24px);
 			@include mng-rem(height, 24px);
 			@include mng-rem(line-height, 24px);
-			@include mng-rem(margin-bottom, 8px);
+			@include mng-rem(margin-bottom, 24px);
 			counter-increment: steps;
 			content: counter(steps);
 			background-color: $color-white;
@@ -28,8 +36,12 @@ $module: $c-prefix + 'Steps';
 			border-radius: 50%;
 			border: 1px solid;
 			display: block;
-			box-shadow: 0 0 0 6px $color-white;
+			box-shadow: 0 0 0 12px $color-white;
+			@include mng-breakpoint($screen-md-min){
+				@include mng-rem(margin-bottom,12px);
+			}
 		}
+		
 		&::after {
 			@include mng-rem(height, 1px);
 			width: 100%;
@@ -70,6 +82,17 @@ $module: $c-prefix + 'Steps';
 				background-color: $color-woodsmoke;
 				color: $color-white;
 			}
+		}
+	}
+	&.is-mobile{
+		font-weight: 400;
+		text-align: center;
+		display: block;
+		color: $color-woodsmoke;
+		margin-bottom: 0;
+		@include mng-rem(margin-top,24px)
+		&::before{
+			content: none;
 		}
 	}
 }

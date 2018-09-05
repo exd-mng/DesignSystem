@@ -1,18 +1,55 @@
+extends ../../_layouts/components.view.pug
+
+block config
+	- var active = "Switch";
+	- var title = active;
+
+block codeHead
+	:markdown-it
+		LLamamos Switch al componente visual que vincula 2 o más opciones dispuestas de manera horizontal. Por defecto, siempre aparece una seleccionada.
+
+block codeBody
+	section
+		h3 HTML
+		section
+			h4 Desktop - Tablet	
+			.ds-sample
 
 
-//block config
-	- var nav = "switch"
-	- var title = "Switch";
-	- var desc = "";
+
+block specification
+	section
+		h3 DESKTOP - TABLET
+		ul.ds-specs.row
+			each val in [1,2,3,4]
+				li.ds-specs__list.ds-specs__list--full.col-xs-12
+					img(src="../../../assets/img/components/switch/specs/" + val + ".png", alt="")
 
 
-	.ds-sample
-		+mngSwitch("switchOptions",[{caption:"Button 1"},{caption:"Button 2"},{caption:"Button 3"}],0)
-	pre
-		code.language-html
-			:markdown-it
-				<div class="c-mngSwitch">
-					<button class="c-mngSwitch__btn is-active">First section</button>
-					<button class="c-mngSwitch__btn">Second section</button>
-					<button class="c-mngSwitch__btn">Third section</button>
-				</div>
+
+block advice
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLESWITCH
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='../../../assets/img/components/switch/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
+
+block paginator
+	- var next = "tabs";
+	- var prev = "steps";
+	+paginatorNav("paginatorOptions",[
+		{ 
+			titPrev: "Steps",
+			titNext:"Tabs",
+			familyPrev: "components",
+			familyNext: "components"
+		}
+	])
