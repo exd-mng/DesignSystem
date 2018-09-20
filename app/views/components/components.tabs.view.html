@@ -1,7 +1,35 @@
 
+<!--TABLE-->
 <!-- components-->
+<!--mixin mngInput(text, id, name, style)
+.c-mngInput(class=style)
+	if (style !== "is-disabled")
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+	else
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+	label.c-mngInput__label.u-hidden-visually(for=id)
+		= text
+-->
+<!--INPUT-->
 <!-- BUTTONS-->
-<!-- LINKS--><!DOCTYPE html>
+<!-- LINKS-->
+<!--mixin mngDrop()
+.c-mngDrop
+	p.c-mngDrop__btn Selecciona una tienda...
+	.c-mngDrop__container
+		ul.c-mngDrop__list
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 1
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 2
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 3
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 4
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 5
+
+--><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -24,25 +52,33 @@
           <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
               <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Colores</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Color</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.icons.view.html">Iconography</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.layout.view.html">Layout</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Tipografía</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voz y tono</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Typography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voice &amp; tone</a></li>
             </ul>
           </li>
           <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Botones</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.accordion.view.html">Accordion</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Buttons</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.checkbox.view.html">Checkbox</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Enlaces</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Input</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radios</a></li>
+              <!--+item('Dropdown', '../components/components.dropdown.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Links</a></li>
+              <!--+item('Modal', '../components/components.modal.view.html')-->
+              <!--+item('Notifications', '../components/components.notifications.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.pagination.view.html">Pagination</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radio button</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.steps.view.html">Steps</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.switch.view.html">Switch</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../components/components.tabs.view.html">Tabs</a></li>
-              <!--Modales-->
-              <!--Mensajes-->
-              <!--tooltips-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.textarea.view.html">Textarea</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Text inputs</a></li>
+              <!--+item('Toogle', '../components/components.toogle.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tooltip.view.html">Tooltip</a></li>
             </ul>
           </li>
         </ul>
@@ -58,7 +94,7 @@
                 <h2>Tabs</h2>
                 <div class="row">
                   <div class="col-xs col-lg-9 col-hd-6">
-                    <div class="ds-headLine"><p>LLamamos Tabs al componente visual que vincula 2 o másopciones dispuestas de manera horizontal. Por defecto, siempreaparece una seleccionada.</p>
+                    <div class="ds-headLine"><p>Se utiliza para organizar distintos grupos de contenido que están relacionados entre si, pero que su vez tiene la misma jerarquía. Por ejemplo: “En carrito”, “No finalizados”.</p>
 
                     </div>
                   </div>
@@ -236,10 +272,10 @@
                             <section>
                               <h3>Desktop - Tablet</h3>
                               <ul class="ds-specs row">
-                                <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/checkbox/specs/1.png" alt=""></li>
-                                <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/checkbox/specs/2.png" alt=""></li>
-                                <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/checkbox/specs/3.png" alt=""></li>
-                                <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/checkbox/specs/4.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/tabs/specs/1.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/tabs/specs/2.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/tabs/specs/3.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/tabs/specs/4.png" alt=""></li>
                               </ul>
                             </section>
                           </div>
@@ -253,58 +289,44 @@
                               <div class="ds-doDont">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/0.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/tabs/dodont/0.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span>Utiliza checkbox para permitir seleccionar más de un elemento de la lista.
+                                      <p><span class="ds-doDont__check">Correcto</span>Utilizar textos cortos y descriptivos en el título
                                       </p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/1.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/tabs/dodont/1.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span>Si solo se puede seleccionar un solo elemento de la lista usar <a href="/app/views/components/components.radio.view.html" class="c-mngLink">Radio Button</a>.
+                                      <p><span class="ds-doDont__check">Incorrecto</span>No utilizar más de dos palabras en el título.
                                       </p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/2.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/tabs/dodont/2.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span>Por defecto, no debemos mostrar ningún valor preseleccionado.
+                                      <p><span class="ds-doDont__check">Correcto</span>Utilizar una cantidad de tabs inferior a seis.
                                       </p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/3.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/tabs/dodont/3.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span>Las etiquetas de texto deben aparecer a la derecha del checkbox.
+                                      <p><span class="ds-doDont__check">Incorrecto</span>Si el número de tabs es excesivo, es mejor buscar otro tipo de navegación.
                                       </p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/4.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/tabs/dodont/4.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span>Usar un checkbox principal para agrupar una lista con múltiples opciones. Esto permitirá seleccionar o deseleccionar fácilmente todos los elementos.
+                                      <p><span class="ds-doDont__check">Correcto</span>El contenido del tab no debe tener un tamaño excesivo.
                                       </p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/5.png"></div>
-                                    <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span>Cuando el check principal esté desmarcado, todas los checkbox secundarias estarán desmarcadas.
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/6.png"></div>
-                                    <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span>Si se seleccionan solo algunas opciones, el checkbox principal debe convertirse en una casilla indeterminada.
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/checkbox/dodont/7.png"></div>
-                                    <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span>Los títulos de las etiquetas tienen que ser cortos (no más de 3 palabras) y bien definidos facilitando al usuario la toma de decisión.
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/tabs/dodont/5.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--dont">
+                                      <p><span class="ds-doDont__check">Incorrecto</span>Para el usuario, es incómodo ver una web casi completa dentro de un tab.
                                       </p>
                                     </div>
                                   </div>
@@ -322,12 +344,12 @@
           </div>
           <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
-              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/components/components.radio.view.html">
+              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/components/components.switch.view.html">
                   <div class="ds-paginator__wrap"><img src="../../../assets/img/btn-prev.png" alt=""/>
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Botones</span></div>
-                  </div></a><a class="ds-paginator__link is-right" href="/app/views/design/design.colors.view.html">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Switch</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.input.view.html">
                   <div class="ds-paginator__wrap">
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Enlaces</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Text inputs</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
                   </div></a>
               </div>
             </div>

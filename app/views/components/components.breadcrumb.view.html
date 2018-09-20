@@ -1,7 +1,35 @@
 
+<!--TABLE-->
 <!-- components-->
+<!--mixin mngInput(text, id, name, style)
+.c-mngInput(class=style)
+	if (style !== "is-disabled")
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+	else
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+	label.c-mngInput__label.u-hidden-visually(for=id)
+		= text
+-->
+<!--INPUT-->
 <!-- BUTTONS-->
-<!-- LINKS--><!DOCTYPE html>
+<!-- LINKS-->
+<!--mixin mngDrop()
+.c-mngDrop
+	p.c-mngDrop__btn Selecciona una tienda...
+	.c-mngDrop__container
+		ul.c-mngDrop__list
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 1
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 2
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 3
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 4
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 5
+
+--><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -24,25 +52,33 @@
           <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
               <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Colores</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Color</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.icons.view.html">Iconography</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.layout.view.html">Layout</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Tipografía</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voz y tono</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Typography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voice &amp; tone</a></li>
             </ul>
           </li>
           <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Botones</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.accordion.view.html">Accordion</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Buttons</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.checkbox.view.html">Checkbox</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Enlaces</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Input</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radios</a></li>
+              <!--+item('Dropdown', '../components/components.dropdown.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Links</a></li>
+              <!--+item('Modal', '../components/components.modal.view.html')-->
+              <!--+item('Notifications', '../components/components.notifications.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.pagination.view.html">Pagination</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radio button</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.steps.view.html">Steps</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.switch.view.html">Switch</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tabs.view.html">Tabs</a></li>
-              <!--Modales-->
-              <!--Mensajes-->
-              <!--tooltips-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.textarea.view.html">Textarea</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Text inputs</a></li>
+              <!--+item('Toogle', '../components/components.toogle.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tooltip.view.html">Tooltip</a></li>
             </ul>
           </li>
         </ul>
@@ -89,15 +125,41 @@
                             <section>
                               <h3>HTML</h3>
                               <section>
-                                <div class="ds-sample">
+                                <div class="ds-sample ds-sample--center">
                                   <ol class="c-mngBreadCrumb">
-                                    <li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Books</a></li>
+                                    <li class="c-mngBreadCrumb__item">
+                                      <svg class="o-mngIco o-mngIco--left o-mngIco--mr u-hidden">
+                                        <use xlink:href="../../../assets/icons/sprite.svg#left"></use>
+                                      </svg><a class="c-mngLink" href="#">Books</a>
+                                    </li>
                                     <li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Science Fiction</a></li>
                                     <li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Award Winners</a></li>
                                   </ol>
                                 </div>
                                 <pre><code class="language-html"><p>&lt;ol class=&quot;c-mngBreadCrumb&quot;&gt;
 &lt;li class=&quot;c-mngBreadCrumb__item&quot;&gt;&lt;a class=&quot;c-mngLink&quot; href=&quot;#&quot;&gt;Books&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;c-mngBreadCrumb__item&quot;&gt;&lt;a class=&quot;c-mngLink&quot; href=&quot;#&quot;&gt;Science Fiction&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;c-mngBreadCrumb__item&quot;&gt;&lt;a class=&quot;c-mngLink&quot; href=&quot;#&quot;&gt;Award Winners&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</p>
+</code></pre>
+                              </section>
+                              <h3>HTML - Mobile</h3>
+                              <section>
+                                <div class="ds-sample">
+                                  <ol class="c-mngBreadCrumb c-mngBreadCrumb--mobile">
+                                    <li class="c-mngBreadCrumb__item">
+                                      <svg class="o-mngIco o-mngIco--left o-mngIco--mr">
+                                        <use xlink:href="../../../assets/icons/sprite.svg#left"></use>
+                                      </svg><a class="c-mngLink" href="#">Books</a>
+                                    </li>
+                                    <li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Science Fiction</a></li>
+                                    <li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Award Winners</a></li>
+                                  </ol>
+                                </div>
+                                <pre><code class="language-html"><p>&lt;ol class=&quot;c-mngBreadCrumb c-mngBreadCrumb--mobile&quot;&gt;
+&lt;li class=&quot;c-mngBreadCrumb__item&quot;&gt;&lt;a class=&quot;c-mngLink&quot; href=&quot;#&quot;&gt;
+&lt;svg class=&quot;o-mngIco o-mngIco--left o-mngIco--mr&quot;&gt;&lt;use xlink:href=&quot;../../../assets/icons/sprite.svg#left&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Books&lt;/a&gt;
+&lt;/li&gt;
 &lt;li class=&quot;c-mngBreadCrumb__item&quot;&gt;&lt;a class=&quot;c-mngLink&quot; href=&quot;#&quot;&gt;Science Fiction&lt;/a&gt;&lt;/li&gt;
 &lt;li class=&quot;c-mngBreadCrumb__item&quot;&gt;&lt;a class=&quot;c-mngLink&quot; href=&quot;#&quot;&gt;Award Winners&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</p>
@@ -115,6 +177,12 @@
                               <ul class="ds-specs row">
                                 <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/breadcrumb/specs/general/1.png" alt=""></li>
                                 <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/breadcrumb/specs/general/2.png" alt=""></li>
+                              </ul>
+                            </section>
+                            <section>
+                              <h3>Mobile</h3>
+                              <ul class="ds-specs row">
+                                <li class="ds-specs__list col-xs-12 col-md-6"><img src="../../../assets/img/components/breadcrumb/specs/mobile/1.png" alt=""></li>
                               </ul>
                             </section>
                           </div>
@@ -204,12 +272,12 @@
           </div>
           <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
-              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/components/components.buttons.view.html">
+              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/components/components.accordion.view.html">
                   <div class="ds-paginator__wrap"><img src="../../../assets/img/btn-prev.png" alt=""/>
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Botones</span></div>
-                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.checkbox.view.html">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Accordion</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.button.view.html">
                   <div class="ds-paginator__wrap">
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Checkbox</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Button</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
                   </div></a>
               </div>
             </div>
