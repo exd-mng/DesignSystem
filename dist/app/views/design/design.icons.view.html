@@ -1,21 +1,638 @@
 
-<!--
-extends ../../_layouts/design.view.pug
-include ../../_includes/icons
-
-block config
-	- var nav = "icons";
-	- var title = "Iconos";
-
-block code
-	each ico in ICONS
-		h3.tit.tit--h3= ico.title
-		ul.o-grid__row
-			- for (var i = 0; i < ico.range.length; i++)
-				li.o-grid__col.o-grid__col--2
-					div.ds-icon.u-flex.u-flex--col.u-flex--alignItemsCenter
-						+svg-icon(ico.range[i].icon)(class="o-mngIco--x2")
-						p.ds-icon__txt
-							= ico.range[i].icon
-block example
+<!--TABLE-->
+<!-- components-->
+<!--mixin mngInput(text, id, name, style)
+.c-mngInput(class=style)
+	if (style !== "is-disabled")
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+	else
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+	label.c-mngInput__label.u-hidden-visually(for=id)
+		= text
 -->
+<!--INPUT-->
+<!-- BUTTONS-->
+<!-- LINKS-->
+<!--mixin mngDrop()
+.c-mngDrop
+	p.c-mngDrop__btn Selecciona una tienda...
+	.c-mngDrop__container
+		ul.c-mngDrop__list
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 1
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 2
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 3
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 4
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 5
+
+--><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Iconography - Design System?</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../common/styles/css.css">
+    <link rel="stylesheet" href="../../common/ds.css">
+  </head>
+  <body>
+    <header class="ds-mainHeader">
+      <h1></h1>
+      <button class="ds-mainHeader__btn"><span class="ds-mainHeader__btnLine"></span></button>
+      <nav class="ds-mainNav">
+        <ul class="ds-mainNav__list">
+          <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
+              <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Color</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../design/design.icons.view.html">Iconography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.layout.view.html">Layout</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Typography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voice &amp; tone</a></li>
+            </ul>
+          </li>
+          <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.accordion.view.html">Accordion</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Buttons</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.checkbox.view.html">Checkbox</a></li>
+              <!--+item('Dropdown', '../components/components.dropdown.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Links</a></li>
+              <!--+item('Modal', '../components/components.modal.view.html')-->
+              <!--+item('Notifications', '../components/components.notifications.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.pagination.view.html">Pagination</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radio button</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.steps.view.html">Steps</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.switch.view.html">Switch</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tabs.view.html">Tabs</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.textarea.view.html">Textarea</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Text inputs</a></li>
+              <!--+item('Toogle', '../components/components.toogle.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tooltip.view.html">Tooltip</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header class="ds-intro">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+                <p class="ds-intro__family">Diseño</p>
+                <h2>Iconography</h2>
+                <div class="row">
+                  <div class="col-xs col-lg-9 col-hd-6">
+                    <div class="ds-headLine"><p>Breve descripción. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend ex eget nunc faucibus, non suscipit libero viverra. Maecenas pretium, felis sit amet molestie blandit puipsum.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+              <div class="row">
+                <div class="col-xs col-lg-11 col-hd-8">
+                  <h3 class="tit tit--h3">Básicos</h3>
+                  <ul class="o-grid__row">
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--plus o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#plus"></use>
+                        </svg>
+                        <p class="ds-icon__txt">plus
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--minus o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#minus"></use>
+                        </svg>
+                        <p class="ds-icon__txt">minus
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--up o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#up"></use>
+                        </svg>
+                        <p class="ds-icon__txt">up
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--down o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#down"></use>
+                        </svg>
+                        <p class="ds-icon__txt">down
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--right o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#right"></use>
+                        </svg>
+                        <p class="ds-icon__txt">right
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--left o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#left"></use>
+                        </svg>
+                        <p class="ds-icon__txt">left
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--intro o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#intro"></use>
+                        </svg>
+                        <p class="ds-icon__txt">intro
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--forward o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#forward"></use>
+                        </svg>
+                        <p class="ds-icon__txt">forward
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--back o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#back"></use>
+                        </svg>
+                        <p class="ds-icon__txt">back
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--close o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#close"></use>
+                        </svg>
+                        <p class="ds-icon__txt">close
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--session o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#session"></use>
+                        </svg>
+                        <p class="ds-icon__txt">session
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--checked o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#checked"></use>
+                        </svg>
+                        <p class="ds-icon__txt">checked
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h3 class="tit tit--h3">Acciones</h3>
+                  <ul class="o-grid__row">
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--edit o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#edit"></use>
+                        </svg>
+                        <p class="ds-icon__txt">edit
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--player o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#player"></use>
+                        </svg>
+                        <p class="ds-icon__txt">player
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--scan o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#scan"></use>
+                        </svg>
+                        <p class="ds-icon__txt">scan
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--connection o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#connection"></use>
+                        </svg>
+                        <p class="ds-icon__txt">connection
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--print o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#print"></use>
+                        </svg>
+                        <p class="ds-icon__txt">print
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--email o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#email"></use>
+                        </svg>
+                        <p class="ds-icon__txt">email
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--language o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#language"></use>
+                        </svg>
+                        <p class="ds-icon__txt">language
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--search o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#search"></use>
+                        </svg>
+                        <p class="ds-icon__txt">search
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--delete o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#delete"></use>
+                        </svg>
+                        <p class="ds-icon__txt">delete
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--shopping o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#shopping"></use>
+                        </svg>
+                        <p class="ds-icon__txt">shopping
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--show o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#show"></use>
+                        </svg>
+                        <p class="ds-icon__txt">show
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--hide o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#hide"></use>
+                        </svg>
+                        <p class="ds-icon__txt">hide
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--no-connection o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#no-connection"></use>
+                        </svg>
+                        <p class="ds-icon__txt">no-connection
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--add-user o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#add-user"></use>
+                        </svg>
+                        <p class="ds-icon__txt">add-user
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--delete-user o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#delete-user"></use>
+                        </svg>
+                        <p class="ds-icon__txt">delete-user
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--unauthorised o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#unauthorised"></use>
+                        </svg>
+                        <p class="ds-icon__txt">unauthorised
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--user o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#user"></use>
+                        </svg>
+                        <p class="ds-icon__txt">user
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--duplicate o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#duplicate"></use>
+                        </svg>
+                        <p class="ds-icon__txt">duplicate
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--new-order o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#new-order"></use>
+                        </svg>
+                        <p class="ds-icon__txt">new-order
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--refresh o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#refresh"></use>
+                        </svg>
+                        <p class="ds-icon__txt">refresh
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h3 class="tit tit--h3">Utilidades</h3>
+                  <ul class="o-grid__row">
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--provisional o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#provisional"></use>
+                        </svg>
+                        <p class="ds-icon__txt">provisional
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--expired o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#expired"></use>
+                        </svg>
+                        <p class="ds-icon__txt">expired
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--hanger o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#hanger"></use>
+                        </svg>
+                        <p class="ds-icon__txt">hanger
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--best o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#best"></use>
+                        </svg>
+                        <p class="ds-icon__txt">best
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--mother o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#mother"></use>
+                        </svg>
+                        <p class="ds-icon__txt">mother
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--lock o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#lock"></use>
+                        </svg>
+                        <p class="ds-icon__txt">lock
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--euro o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#euro"></use>
+                        </svg>
+                        <p class="ds-icon__txt">euro
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--help o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#help"></use>
+                        </svg>
+                        <p class="ds-icon__txt">help
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--pause o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#pause"></use>
+                        </svg>
+                        <p class="ds-icon__txt">pause
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--box o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#box"></use>
+                        </svg>
+                        <p class="ds-icon__txt">box
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--proposal o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#proposal"></use>
+                        </svg>
+                        <p class="ds-icon__txt">proposal
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--warning o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#warning"></use>
+                        </svg>
+                        <p class="ds-icon__txt">warning
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--erase o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#erase"></use>
+                        </svg>
+                        <p class="ds-icon__txt">erase
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--ok o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#ok"></use>
+                        </svg>
+                        <p class="ds-icon__txt">ok
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--ko o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#ko"></use>
+                        </svg>
+                        <p class="ds-icon__txt">ko
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--shop o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#shop"></use>
+                        </svg>
+                        <p class="ds-icon__txt">shop
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--daughter o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#daughter"></use>
+                        </svg>
+                        <p class="ds-icon__txt">daughter
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--shop-online o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#shop-online"></use>
+                        </svg>
+                        <p class="ds-icon__txt">shop-online
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h3 class="tit tit--h3">Formatos</h3>
+                  <ul class="o-grid__row">
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--pdf o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#pdf"></use>
+                        </svg>
+                        <p class="ds-icon__txt">pdf
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--excel o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#excel"></use>
+                        </svg>
+                        <p class="ds-icon__txt">excel
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h3 class="tit tit--h3">Propios</h3>
+                  <ul class="o-grid__row">
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--beta-mark o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#beta-mark"></use>
+                        </svg>
+                        <p class="ds-icon__txt">beta-mark
+                        </p>
+                      </div>
+                    </li>
+                    <li class="o-grid__col o-grid__col--2">
+                      <div class="ds-icon u-flex u-flex--col u-flex--alignItemsCenter">
+                        <svg class="o-mngIco o-mngIco--nexus o-mngIco--x2">
+                          <use xlink:href="../../../assets/icons/sprite.svg#nexus"></use>
+                        </svg>
+                        <p class="ds-icon__txt">nexus
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/design/design.grid.view.html">
+                  <div class="ds-paginator__wrap"><img src="../../../assets/img/btn-prev.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Grid</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/design/design.layout.view.html">
+                  <div class="ds-paginator__wrap">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Layout</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer class="ds-footer">
+        <!--p © 2018 XXXXX Todos los derechos reservados-->
+      </footer>
+    </main>
+    <div class="ds-overlay"></div>
+    <script src="../../common/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="../../common/js/js.js"></script>
+  </body>
+</html>

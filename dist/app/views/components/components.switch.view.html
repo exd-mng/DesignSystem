@@ -1,18 +1,233 @@
 
-<!--block config
-- var nav = "switch"
-- var title = "Switch";
-- var desc = "";
-
-
-.ds-sample
-	+mngSwitch("switchOptions",[{caption:"Button 1"},{caption:"Button 2"},{caption:"Button 3"}],0)
-pre
-	code.language-html
-		:markdown-it
-			<div class="c-mngSwitch">
-				<button class="c-mngSwitch__btn is-active">First section</button>
-				<button class="c-mngSwitch__btn">Second section</button>
-				<button class="c-mngSwitch__btn">Third section</button>
-			</div>
+<!--TABLE-->
+<!-- components-->
+<!--mixin mngInput(text, id, name, style)
+.c-mngInput(class=style)
+	if (style !== "is-disabled")
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+	else
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+	label.c-mngInput__label.u-hidden-visually(for=id)
+		= text
 -->
+<!--INPUT-->
+<!-- BUTTONS-->
+<!-- LINKS-->
+<!--mixin mngDrop()
+.c-mngDrop
+	p.c-mngDrop__btn Selecciona una tienda...
+	.c-mngDrop__container
+		ul.c-mngDrop__list
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 1
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 2
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 3
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 4
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 5
+
+--><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Switch - Design System?</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../common/styles/css.css">
+    <link rel="stylesheet" href="../../common/ds.css">
+  </head>
+  <body>
+    <header class="ds-mainHeader">
+      <h1></h1>
+      <button class="ds-mainHeader__btn"><span class="ds-mainHeader__btnLine"></span></button>
+      <nav class="ds-mainNav">
+        <ul class="ds-mainNav__list">
+          <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
+              <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Color</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.icons.view.html">Iconography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.layout.view.html">Layout</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Typography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voice &amp; tone</a></li>
+            </ul>
+          </li>
+          <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
+            <ul class="ds-mainNav__subList">
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.accordion.view.html">Accordion</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Buttons</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.checkbox.view.html">Checkbox</a></li>
+              <!--+item('Dropdown', '../components/components.dropdown.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Links</a></li>
+              <!--+item('Modal', '../components/components.modal.view.html')-->
+              <!--+item('Notifications', '../components/components.notifications.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.pagination.view.html">Pagination</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radio button</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.steps.view.html">Steps</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../components/components.switch.view.html">Switch</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tabs.view.html">Tabs</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.textarea.view.html">Textarea</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Text inputs</a></li>
+              <!--+item('Toogle', '../components/components.toogle.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tooltip.view.html">Tooltip</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header class="ds-intro">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+                <p class="ds-intro__family">Componentes</p>
+                <h2>Switch</h2>
+                <div class="row">
+                  <div class="col-xs col-lg-9 col-hd-6">
+                    <div class="ds-headLine"><p>LLamamos Switch al componente visual que vincula 2 o más opciones dispuestas de manera horizontal. Por defecto, siempre aparece una seleccionada.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
+              <div class="ds-tabs">
+                <div class="row">
+                  <div class="col-xs-12 col-md-12 col-md-offset-0">
+                    <ul class="ds-tabs__list">
+                      <li class="ds-tabs__item"><a class="ds-tabs__link is-active" href="#tab1">Código</a></li>
+                      <li class="ds-tabs__item"><a class="ds-tabs__link" href="#tab2">Especificaciones</a></li>
+                      <li class="ds-tabs__item"><a class="ds-tabs__link" href="#tab3">Recomendaciones</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                    <div class="ds-tabs__content">
+                      <div class="ds-tabs__panel" id="tab1">
+                        <div class="row">
+                          <div class="col-xs col-lg-11 col-hd-8">
+                            <section>
+                              <h3>HTML</h3>
+                              <section>
+                                <h4>Desktop - Tablet	</h4>
+                                <div class="ds-sample"></div>
+                              </section>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ds-tabs__panel u-hidden" id="tab2">
+                        <div class="row">
+                          <div class="col-xs col-lg-11 col-hd-8">
+                            <section>
+                              <h3>DESKTOP - TABLET</h3>
+                              <ul class="ds-specs row">
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/switch/specs/1.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/switch/specs/2.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/switch/specs/3.png" alt=""></li>
+                                <li class="ds-specs__list ds-specs__list--full col-xs-12"><img src="../../../assets/img/components/switch/specs/4.png" alt=""></li>
+                              </ul>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ds-tabs__panel u-hidden" id="tab3">
+                        <div class="row">
+                          <div class="col-xs col-lg-11 col-hd-8">
+                            <section>
+                              <h3>Recomendaciones</h3>
+                              <div class="ds-doDont">
+                                <div class="row">
+                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/switch/dodont/0.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--do">
+                                      <p><span class="ds-doDont__check">Correcto</span>Usa el swich en estado de reposo para indicar que no hay ninguna opción seleccionada.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/switch/dodont/1.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--dont">
+                                      <p><span class="ds-doDont__check">Incorrecto</span>Si hay dos opciones no se pueden seleccionar las dos a la vez.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/switch/dodont/2.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--do">
+                                      <p><span class="ds-doDont__check">Correcto</span>Correcto. Mostrar al usuario todas las opciones disponibles, tanto la seleccionada como las restantes. 
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/switch/dodont/3.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--dont">
+                                      <p><span class="ds-doDont__check">Incorrecto</span>Mostrar sólo la opción que está seleccionada.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/switch/dodont/4.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--do">
+                                      <p><span class="ds-doDont__check">Correcto</span>Pueden existir más de 2 opciones que se mostrarán todas a primera vista.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-12 col-md-6 ds-doDont__box">
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/components/switch/dodont/5.png"></div>
+                                    <div class="ds-doDont__txt ds-doDont__txt--dont">
+                                      <p><span class="ds-doDont__check">Incorrecto</span>Si tenemos poco espacio y podemos ocultar todas las opciones, es mejor usar un <a href="/app/views/components/components.dropdown.view.html" class="c-mngLink">dropdown</a>..
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+              <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/components/components.steps.view.html">
+                  <div class="ds-paginator__wrap"><img src="../../../assets/img/btn-prev.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Steps</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.tabs.view.html">
+                  <div class="ds-paginator__wrap">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Tabs</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer class="ds-footer">
+        <!--p © 2018 XXXXX Todos los derechos reservados-->
+      </footer>
+    </main>
+    <div class="ds-overlay"></div>
+    <script src="../../common/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="../../common/js/js.js"></script>
+  </body>
+</html>

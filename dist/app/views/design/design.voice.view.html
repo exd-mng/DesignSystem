@@ -1,7 +1,35 @@
 
+<!--TABLE-->
 <!-- components-->
+<!--mixin mngInput(text, id, name, style)
+.c-mngInput(class=style)
+	if (style !== "is-disabled")
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+	else
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+	label.c-mngInput__label.u-hidden-visually(for=id)
+		= text
+-->
+<!--INPUT-->
 <!-- BUTTONS-->
-<!-- LINKS--><!DOCTYPE html>
+<!-- LINKS-->
+<!--mixin mngDrop()
+.c-mngDrop
+	p.c-mngDrop__btn Selecciona una tienda...
+	.c-mngDrop__container
+		ul.c-mngDrop__list
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 1
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 2
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 3
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 4
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 5
+
+--><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -10,7 +38,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Voz y tono - Design System?</title>
+    <title>Voice &amp; tone - Design System?</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="../../common/styles/css.css">
     <link rel="stylesheet" href="../../common/ds.css">
@@ -24,25 +52,33 @@
           <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
               <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Colores</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Color</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.icons.view.html">Iconography</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.layout.view.html">Layout</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Tipografía</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../design/design.voice.view.html">Voz y tono</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Typography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../design/design.voice.view.html">Voice &amp; tone</a></li>
             </ul>
           </li>
           <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Botones</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.accordion.view.html">Accordion</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Buttons</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.checkbox.view.html">Checkbox</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Enlaces</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Input</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radios</a></li>
+              <!--+item('Dropdown', '../components/components.dropdown.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Links</a></li>
+              <!--+item('Modal', '../components/components.modal.view.html')-->
+              <!--+item('Notifications', '../components/components.notifications.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.pagination.view.html">Pagination</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radio button</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.steps.view.html">Steps</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.switch.view.html">Switch</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tabs.view.html">Tabs</a></li>
-              <!--Modales-->
-              <!--Mensajes-->
-              <!--tooltips-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.textarea.view.html">Textarea</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Text inputs</a></li>
+              <!--+item('Toogle', '../components/components.toogle.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tooltip.view.html">Tooltip</a></li>
             </ul>
           </li>
         </ul>
@@ -55,11 +91,14 @@
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0 col-lg-offset-4 col-lg-8 col-hd-offset-3 col-hd-9">
                 <p class="ds-intro__family">Diseño</p>
-                <h2>Voz y tono</h2>
+                <h2>Voice &amp; tone</h2>
                 <div class="row">
                   <div class="col-xs col-lg-9 col-hd-6">
-                    <div class="ds-headLine"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, tempora? Facilis aperiam sunt obcaecati ut tenetur itaque impedit fuga laudantium perferendis totam doloremque consequatur dolorem velit, sequi aut! Odio, totam?</p>
-
+                    <div class="ds-headLine">
+                      <!--:markdown-it
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, tempora? Facilis aperiam sunt obcaecati ut tenetur itaque impedit fuga laudantium perferendis totam doloremque consequatur dolorem velit, sequi aut! Odio, totam?
+                      
+                      -->
                     </div>
                   </div>
                 </div>
@@ -95,7 +134,7 @@
                                     <p> <strong>Segunda persona ("tu" o "tus“) </strong>en la mayoría de las situaciones, como si la aplicación estuviera hablando directamente al usuario.</p><img class="ds-img" src="../../../assets/img/design/voice/general/modal2pers.png" alt="En segunda persona">
                                   </li>
                                   <li class="ds-list__item">
-                                    <p><strong>Primera persona ("yo" o "mi“) solo cuando quieras </strong>enfatizar la propiedad del usuario sobre el contenido o las acciones.</p><img class="ds-img" src="../../../assets/img/no-image.png" alt="Sé conciso" style="width:50%;">
+                                    <p><strong>Primera persona ("yo" o "mi“), </strong>solo cuando quieras enfatizar la propiedad del usuario sobre el contenido o las acciones.</p><img class="ds-img" src="../../../assets/img/design/voice/general/primera-pers.png" alt="En primera persona">
                                   </li>
                                 </ul>
                               </p>
@@ -106,21 +145,21 @@
                               <h3>Sé conciso</h3>
                               <p>Los textos deben ser cortos, escaneables y segmentados para facilitar la navegación.<img class="ds-img" src="../../../assets/img/design/voice/general/conciso.png" alt="Sé conciso"></p>
                               <h3>Escribe simple y directamente</h3>
-                              <p>Usa un lenguaje simple y directo que sea fácil de entender por los usuarios.<br>Las frases introductorias comunes pueden omitirse.</p><img class="ds-img" src="../../../assets/img/no-image.png" alt="Sé conciso" style="width:50%;">
+                              <p>Usa un lenguaje simple y directo que sea fácil de entender por los usuarios.<br>Las frases introductorias comunes pueden omitirse.</p><img class="ds-img" src="../../../assets/img/design/voice/general/write-simply-and-directly.png" alt="Sé conciso">
                               <h3>Escribe para lectores de todos los niveles</h3>
                               <p>Usa palabras habituales, que sean fácilmente entendibles por nuestros usuarios. Evita terminología técnica demasiado específica.</p>
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/1-A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Preparando video</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/1-B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Buffering</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -129,15 +168,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/2-A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Haz clic en continuar</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/2-B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Haz clic en el botón continuar</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -147,15 +186,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/3-A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Eliminar foto<br>¿Eliminar foto?</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/3-B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Borrar foto<br>¿Eliminar foto de la página?</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -168,15 +207,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/4-A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Para eliminar una foto de este álbum, arrástrala a la papelera</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/4-B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Arrastra una foto a la papelera para eliminarla de este álbum.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -186,15 +225,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/5-A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>¿Eliminar el archivo descargado? </span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/5-B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>¿Estás seguro de eliminar el archivo que has descargado? No podrás recuperarlo a menos que estés en línea.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -204,18 +243,85 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/6-A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Tus datos no serán compartidos </span></p>
+                                      <p><span class="ds-doDont__check">Correcto </span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/general/6-B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Nunca compartiremos tus datos</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
+                              </div>
+                              <h3>Algunos ejemplos de texto para botones y elementos relacionados	</h3>
+                              <table class="ds-table">
+                                <thead>
+                                  <tr>   
+                                    <th> <strong>Botón</strong></th>
+                                    <th> <strong>Uso</strong></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>   
+                                    <td>Expresar acción</td>
+                                    <td>Ver arriba el uso de los verbos con consistencia.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Atràs</td>
+                                    <td>Permite retroceder procesos con varios pasos.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Cancelar</td>
+                                    <td>Cancelar una acción.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Hecho</td>
+                                    <td>Confirma la finalización de un proceso de varios pasos.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>OK</td>
+                                    <td>Hace que un mensaje o diálogo desaparezca sin consecuencias.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Siguiente</td>
+                                    <td>Lleva al usuario al siguiente paso de un proceso de varios pasos.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Seguir leyendo</td>
+                                    <td>Textos largos (noticias, manuales): Lleva al usuario a contenido adicional.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Más detalles</td>
+                                    <td>Aplicaciones: Lleva al usuario a más contenido, información.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>No, gracias</td>
+                                    <td>Permite al usuario declinar un ofrecimiento o posibilidad.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ahora no</td>
+                                    <td>Permite al usuario posponer una acción o decisión. Usar solo cuando la llamada a la acción en el diálogo sea esencial para la funcionalidad del producto, por razones legales o por otro motivo urgente.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>De acuerdo</td>
+                                    <td>Permite al usuario confirmar una acción relevante para la tarea en cuestión.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Omitir</td>
+                                    <td>Permite al usuario evitar una interrupción y seguir con una tarea.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <h3>Escritura global		</h3>
+                              <p>Las aplicaciones tienen que ser entendidas por personas de todas las edades, culturas y niveles educativos. Una escritura simple y claro hace que sea fácil para cualquiera comprender su producto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     		</p>
+                              <p>Ten en cuenta el uso de los términos "izquierda" y "derecha" ya que hay idiomas en los que la dirección de la escritura es diferente (árabe, hebreo).		</p>
+                              <!--img(alt="", src='/assets/img/no-image.png', class="ds-img", style="width:50%;")-->
+                              <div class="row">
+                                <div class="col-xs-12 col-md-6"><img class="ds-img" alt="" src="../../../assets/img/design/voice/general/7-A.png" style="width:70%;"></div>
+                                <div class="col-xs-12 col-md-6"><img class="ds-img" alt="" src="../../../assets/img/design/voice/general/7-B.png" style="width:70%;"></div>
                               </div>
                             </section>
                           </div>
@@ -230,15 +336,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/1A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>XXX no responde ¿Quieres cerrarla?</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/1B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>¡Lo sentimos!<br>La actividad en YYYY no responde.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -248,15 +354,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/2A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Todos tus pedidos en un solo lugar.</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/2B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Absolutamente todo lo que hagas en un sitio que te encantará.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -266,15 +372,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/3A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Inténtalo de nuevo.</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/3B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>La acción ha fallado.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -284,15 +390,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/4A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Iniciando sesión...Estamos conectando con el servidor. El proceso puede tardar hasta cinco minutos.</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/4B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Iniciando sesión...La aplicación tiene que  comunicarse con nuestros servidores para poder iniciar sesión correctamente. Ten paciencia, el proceso puede tardar hasta cinco minutos.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -302,15 +408,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/5A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Usa la voz activa como norma, te ayudará a conseguir implicar al usuario directamente en la decisión.</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/5B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Se han introducido más de 99 unidades, ¿el proceso debe continuarse?  </span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -319,15 +425,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/6A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>El valor introducido no es correcto.</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/tone/6B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Has introducido un valor incorrecto.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -345,15 +451,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/ortotype/1A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Tienes 3 mensajes</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/ortotype/1B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>Tienes tres mensajes</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -363,15 +469,15 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/ortotype/2A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>Mi tienda<br>Mi agenda<br>Mis solicitudes</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/ortotype/2B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>MI TIENDA</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
@@ -381,18 +487,385 @@
                               <div class="ds-doDont u-spacer--3">
                                 <div class="row">
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/ortotype/3A.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--do">
-                                      <p><span class="ds-doDont__check">Correcto</span><span>El archivo se enviará todos los lunes</span></p>
+                                      <p><span class="ds-doDont__check">Correcto</span></p>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-md-6 ds-doDont__box">
-                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/no-image.png"></div>
+                                    <div class="ds-doDont__wrap"><img class="ds-doDont__img" alt="" src="../../../assets/img/design/voice/ortotype/3B.png"></div>
                                     <div class="ds-doDont__txt ds-doDont__txt--dont">
-                                      <p><span class="ds-doDont__check">Incorrecto</span><span>El archivo se enviará todos los Lunes.</span></p>
+                                      <p><span class="ds-doDont__check">Incorrecto</span></p>
                                     </div>
                                   </div>
                                 </div>
+                              </div>
+                            </section>
+                            <section>
+                              <div class="c-mngDrop c-mngDrop--in-voiceTone u-spacer--5">
+                                <p class="c-mngDrop__btn">Selecciona una opción
+                                  <div class="c-mngDrop__container">
+                                    <ul class="c-mngDrop__list">
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Dos puntos</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Coma</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Comillas</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Guión bajo</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Guión medio</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Puntos suspensivos</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Exclamación</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Símbolo negativo</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Paréntesis</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Punto</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Apóstrofe</a></li>
+                                      <li class="c-mngDrop__item"><a class="c-mngDrop__link" href="">Barra diagonal</a></li>
+                                    </ul>
+                                  </div>
+                                </p>
+                              </div>
+                              <div class="ds-table--vertical-head">
+                                <!--Dos puntos-->
+                                <table class="ds-table" id="tabla0" data-value="Dos puntos">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>:</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td>&amp;#58;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Unicode</td>
+                                    <td><code>\u003A</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">No usar en etiquetas.</li>
+                                        <li class="ds-list__item">Usar para comenzar a enumerar o listar.</li>
+                                        <li class="ds-list__item">No poner espacio después.</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                                <!--Coma-->
+                                <table class="ds-table" id="tabla1" data-value="Coma">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>,</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td>
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usar para enumerar elementos dentro de una frase.  </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                                <!--Comillas-->
+                                <table class="ds-table" id="tabla2" data-value="Comillas">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>“ ”</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td>&amp;ldquo;    &amp;rdquo;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Unicode</td>
+                                    <td><code>\u201C    \u201D</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usar para enmarcar la reproducción de citas textuales.</li>
+                                        <li class="ds-list__item">Usar para indicar que una palabra o expresión es impropia, vulgar, procede de otra lengua o se utiliza irónicamente o con un sentido especial.           </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                                <!--Guión bajo-->
+                                <table class="ds-table" id="tabla3" data-value="Guión bajo">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>_</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td>&amp;mdash;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Unicode</td>
+                                    <td> <code>\u2014</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usar en la mayoría de los casos el guion medio.</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                                <!--Guión medio-->
+                                <table class="ds-table" id="tabla4" data-value="Guión medio">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>-</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usar para indicar un rango o listado, con espacio posterior.</li>
+                                        <li class="ds-list__item">No usar para separar texto, si lo necesitas para ello - como esto - úsalo con espacios. </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ejemplo</td>
+                                    <td>
+                                      <p>Muebles:</p>
+                                      <ul>
+                                        <li>- Altos</li>
+                                        <li>- Bajos</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!--Puntos suspensivos-->
+                                <table class="ds-table" id="tabla5" data-value="Puntos suspensivos">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>...</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td>&amp;hellip;</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usar para indicar una acción en progreso o un texto incompleto o truncado. No poner espacio antes de los puntos suspensivos.</li>
+                                        <li class="ds-list__item">No usar en elementos del menú o botones que abren un cuadro de diálogo o inician un proceso.</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td>Descargando...</td>
+                                  </tr>
+                                </table>
+                                <!--Exclamación-->
+                                <table class="ds-table" id="tabla6" data-value="Exclamación">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>¡!</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Evita los signos de exclamación ya que tienden a aparecer como gritos. Excepcionalmente se pueden usar en saludos, mensajes de felicitación o expresiones más coloquiales. </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ejemplo</td>
+                                    <td> 
+                                      <p>¡Hola!</p>¡Gracias!
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!--Símbolo negativo-->
+                                <table class="ds-table" id="tabla7" data-value="Símbolo negativo">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>-</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usar para representar números negativos, o para crear palabras compuestas.</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td>-5</td>
+                                  </tr>
+                                </table>
+                                <!--Paréntesis-->
+                                <table class="ds-table" id="tabla8" data-value="Paréntesis">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>()</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Usa paréntesis para definir acrónimos o para especificar un tema.</li>
+                                        <li class="ds-list__item">No dejar espacios</li>
+                                        <li class="ds-list__item">Si hay que poner punto que sea al final</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td>SSL (Secure Socket Layer)</td>
+                                  </tr>
+                                </table>
+                                <!--Punto-->
+                                <table class="ds-table" id="tabla9" data-value="Punto">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>.</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Evita poner punto en listados con literales cortos. </li>
+                                        <li class="ds-list__item">Pon punto en frases largas o complejas o en cualquier frase seguida de un link.</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                                <!--Apóstrofe-->
+                                <table class="ds-table" id="tabla10" data-value="Apóstrofe">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>'</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Para indicar minutos</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Ejemplo</td>
+                                    <td>3º 15' 35''</td>
+                                  </tr>
+                                </table>
+                                <!--Barra diagonal-->
+                                <table class="ds-table" id="tabla11" data-value="Barra diagonal">
+                                  <tr>   
+                                    <td>Carácter</td>
+                                    <td>/</td>
+                                  </tr>
+                                  <tr>   
+                                    <td>HTML</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>   
+                                    <td>Unicode</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Uso</td>
+                                    <td> 
+                                      <ul class="ds-list">
+                                        <li class="ds-list__item">Para separar las partes de una fecha (sin espacios).</li>
+                                        <li class="ds-list__item">Para declinar el número de un literal (sin espacios).</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ejemplo</td>
+                                    <td>
+                                      <p>dd/mm/aaaa </p>Solicitud/es
+                                    </td>
+                                  </tr>
+                                </table>
                               </div>
                             </section>
                           </div>
@@ -408,10 +881,10 @@
             <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
               <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/design/design.type.view.html">
                   <div class="ds-paginator__wrap"><img src="../../../assets/img/btn-prev.png" alt=""/>
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Tipografía</span></div>
-                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.button.view.html">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Typography</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.accordion.view.html">
                   <div class="ds-paginator__wrap">
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Buttons</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Accordion</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
                   </div></a>
               </div>
             </div>

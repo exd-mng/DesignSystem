@@ -1,7 +1,35 @@
 
+<!--TABLE-->
 <!-- components-->
+<!--mixin mngInput(text, id, name, style)
+.c-mngInput(class=style)
+	if (style !== "is-disabled")
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text)
+	else
+		input.c-mngInput__input(id=id, name=name, type="text", placeholder=text, disabled)
+	label.c-mngInput__label.u-hidden-visually(for=id)
+		= text
+-->
+<!--INPUT-->
 <!-- BUTTONS-->
-<!-- LINKS--><!DOCTYPE html>
+<!-- LINKS-->
+<!--mixin mngDrop()
+.c-mngDrop
+	p.c-mngDrop__btn Selecciona una tienda...
+	.c-mngDrop__container
+		ul.c-mngDrop__list
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 1
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 2
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 3
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 4
+			li.c-mngDrop__item
+				a.c-mngDrop__link(href='#') Option 5
+
+--><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -24,25 +52,33 @@
           <li class="ds-mainNav__item"><b class="ds-mainNav__tit">Diseño
               <!--+svg-icon("right")(class="o-mngIco--ml")--></b>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Colores</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.colors.view.html">Color</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.grid.view.html">Grid</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.icons.view.html">Iconography</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.layout.view.html">Layout</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Tipografía</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voz y tono</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.type.view.html">Typography</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../design/design.voice.view.html">Voice &amp; tone</a></li>
             </ul>
           </li>
           <li class="ds-mainNav__item"><strong class="ds-mainNav__tit">Componentes</strong>
             <ul class="ds-mainNav__subList">
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Botones</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.accordion.view.html">Accordion</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.breadcrumb.view.html">Breadcrumb</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.button.view.html">Buttons</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link is-active" href="../components/components.checkbox.view.html">Checkbox</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Enlaces</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Input</a></li>
-                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radios</a></li>
+              <!--+item('Dropdown', '../components/components.dropdown.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.links.view.html">Links</a></li>
+              <!--+item('Modal', '../components/components.modal.view.html')-->
+              <!--+item('Notifications', '../components/components.notifications.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.pagination.view.html">Pagination</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.radio.view.html">Radio button</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.steps.view.html">Steps</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.switch.view.html">Switch</a></li>
                     <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tabs.view.html">Tabs</a></li>
-              <!--Modales-->
-              <!--Mensajes-->
-              <!--tooltips-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.textarea.view.html">Textarea</a></li>
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.input.view.html">Text inputs</a></li>
+              <!--+item('Toogle', '../components/components.toogle.view.html')-->
+                    <li class="ds-mainNav__item"><a class="ds-mainNav__link" href="../components/components.tooltip.view.html">Tooltip</a></li>
             </ul>
           </li>
         </ul>
@@ -244,22 +280,22 @@
                                   <ul class="o-list o-list--inline">
                                     <li class="o-list__item">
                                       <div class="c-mngCheck c-mngCheck--reverse">
-                                        <input class="c-mngCheck__checkbox u-hidden-visually" id="ptt4" type="checkbox" name="rr"/>
-                                        <label class="c-mngCheck__label" for="ptt4"><span class="c-mngCheck__fake"></span>Checkbox
+                                        <input class="c-mngCheck__checkbox u-hidden-visually" id="ptt10" type="checkbox" name="rr"/>
+                                        <label class="c-mngCheck__label" for="ptt10"><span class="c-mngCheck__fake"></span>Checkbox
                                         </label>
                                       </div>
                                     </li>
                                     <li class="o-list__item">
                                       <div class="c-mngCheck c-mngCheck--reverse">
-                                        <input class="c-mngCheck__checkbox u-hidden-visually" id="ptt5" type="checkbox" name="rr" disabled="disabled"/>
-                                        <label class="c-mngCheck__label" for="ptt5"><span class="c-mngCheck__fake"></span>Checkbox
+                                        <input class="c-mngCheck__checkbox u-hidden-visually" id="ptt11" type="checkbox" name="rr" disabled="disabled"/>
+                                        <label class="c-mngCheck__label" for="ptt11"><span class="c-mngCheck__fake"></span>Checkbox
                                         </label>
                                       </div>
                                     </li>
                                     <li class="o-list__item">
                                       <div class="c-mngCheck c-mngCheck--reverse">
-                                        <input class="c-mngCheck__checkbox u-hidden-visually" id="ptt6" type="checkbox" name="rr"/>
-                                        <label class="c-mngCheck__label" for="ptt6"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
+                                        <input class="c-mngCheck__checkbox u-hidden-visually" id="ptt12" type="checkbox" name="rr"/>
+                                        <label class="c-mngCheck__label" for="ptt12"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
                                         </label>
                                       </div>
                                     </li>
@@ -268,22 +304,22 @@
                                 <pre><code class="language-html"><p>&lt;ul class=&quot;o-list o-list--inline&quot;&gt;
 &lt;li class=&quot;o-list__item&quot;&gt;
 &lt;div class=&quot;c-mngCheck c-mngCheck--reverse&quot;&gt;
-&lt;input class=&quot;c-mngCheck__checkbox u-hidden-visually&quot; id=&quot;ptt4&quot; type=&quot;checkbox&quot; name=&quot;rr&quot;&gt;
-&lt;label class=&quot;c-mngCheck__label&quot; for=&quot;ptt4&quot;&gt;&lt;span class=&quot;c-mngCheck__fake&quot;&gt;&lt;/span&gt;Checkbox
+&lt;input class=&quot;c-mngCheck__checkbox u-hidden-visually&quot; id=&quot;ptt10&quot; type=&quot;checkbox&quot; name=&quot;rr&quot;&gt;
+&lt;label class=&quot;c-mngCheck__label&quot; for=&quot;ptt10&quot;&gt;&lt;span class=&quot;c-mngCheck__fake&quot;&gt;&lt;/span&gt;Checkbox
 &lt;/label&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li class=&quot;o-list__item&quot;&gt;
 &lt;div class=&quot;c-mngCheck c-mngCheck--reverse&quot;&gt;
-&lt;input class=&quot;c-mngCheck__checkbox u-hidden-visually&quot; id=&quot;ptt5&quot; type=&quot;checkbox&quot; name=&quot;rr&quot; disabled=&quot;disabled&quot;&gt;
-&lt;label class=&quot;c-mngCheck__label&quot; for=&quot;ptt5&quot;&gt;&lt;span class=&quot;c-mngCheck__fake&quot;&gt;&lt;/span&gt;Checkbox
+&lt;input class=&quot;c-mngCheck__checkbox u-hidden-visually&quot; id=&quot;ptt11&quot; type=&quot;checkbox&quot; name=&quot;rr&quot; disabled=&quot;disabled&quot;&gt;
+&lt;label class=&quot;c-mngCheck__label&quot; for=&quot;ptt11&quot;&gt;&lt;span class=&quot;c-mngCheck__fake&quot;&gt;&lt;/span&gt;Checkbox
 &lt;/label&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li class=&quot;o-list__item&quot;&gt;
 &lt;div class=&quot;c-mngCheck c-mngCheck--reverse&quot;&gt;
-&lt;input class=&quot;c-mngCheck__checkbox u-hidden-visually&quot; id=&quot;ptt6&quot; type=&quot;checkbox&quot; name=&quot;rr&quot;&gt;
-&lt;label class=&quot;c-mngCheck__label&quot; for=&quot;ptt6&quot;&gt;&lt;span class=&quot;c-mngCheck__fake c-mngCheck__fake--indeterminate&quot;&gt;&lt;/span&gt;Checkbox
+&lt;input class=&quot;c-mngCheck__checkbox u-hidden-visually&quot; id=&quot;ptt12&quot; type=&quot;checkbox&quot; name=&quot;rr&quot;&gt;
+&lt;label class=&quot;c-mngCheck__label&quot; for=&quot;ptt12&quot;&gt;&lt;span class=&quot;c-mngCheck__fake c-mngCheck__fake--indeterminate&quot;&gt;&lt;/span&gt;Checkbox
 &lt;/label&gt;
 &lt;/div&gt;
 &lt;/li&gt;
@@ -388,10 +424,10 @@
             <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
               <div class="ds-paginator u-flex"><a class="ds-paginator__link" href="/app/views/components/components.button.view.html">
                   <div class="ds-paginator__wrap"><img src="../../../assets/img/btn-prev.png" alt=""/>
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Botones</span></div>
-                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.links.view.html">
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Anterior</span><span class="ds-paginator__tit">Button</span></div>
+                  </div></a><a class="ds-paginator__link is-right" href="/app/views/components/components.dropdown.view.html">
                   <div class="ds-paginator__wrap">
-                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Enlaces</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
+                    <div class="ds-paginator__btn"><span class="ds-paginator__label">Siguiente</span><span class="ds-paginator__tit">Dropdown</span></div><img src="../../../assets/img/btn-next.png" alt=""/>
                   </div></a>
               </div>
             </div>
