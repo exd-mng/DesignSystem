@@ -1,0 +1,14 @@
+{
+    "breadcrumb": {
+        "info": [
+            {
+                "uso": "Correcto",
+                "info": "Deben tener un icono que actúe como activador de la información e informador de cara al usuario."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "No debe contener contenido interactivo."
+            }
+        ]
+    }
+}

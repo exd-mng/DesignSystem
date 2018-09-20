@@ -1,0 +1,96 @@
+extends ../../_layouts/components.view.pug
+
+block config
+	- var active = "Text area"
+	- var title = active;
+
+
+block codeHead
+	:markdown-it
+		Se diferencia del text input porque se pueden insertar varias líneas de texto (párrafos) dentro de una área delimitada por el componente.
+block codeBody
+	h3 HTML
+	section
+		h4 Reposo
+		.ds-sample
+			+mngTextarea('Text area title','Placeholder text example', 'ptt1','ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngTextarea">
+						<label class="c-mngTextarea__label" for="ptt1">Text area title</label>
+						<textarea class="c-mngTextarea__textarea" id="ptt1" name="ss" placeholder="Placeholder text example"></textarea>
+					</div>
+		
+
+	section
+		h4 Deshabilitado
+		.ds-sample
+			+mngTextareaDisabled('Text area title','Placeholder text example', 'ptt2','ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngTextarea is-disabled">
+						<label class="c-mngTextarea__label" for="ptt2">Text area title</label>
+						<textarea class="c-mngTextarea__textarea" id="ptt2" name="ss" placeholder="Placeholder text example" disabled="disabled"></textarea>
+					</div>
+	section
+		h4 Inverso
+		.ds-sample.ds-sample--inverse
+			+mngTextareaReverse('Text area title','Placeholder text example', 'ptt3','ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngTextarea c-mngTextarea--reverse">
+							<label class="c-mngTextarea__label" for="ptt3">Text area title</label>
+							<textarea class="c-mngTextarea__textarea" id="ptt3" name="ss" placeholder="Placeholder text example"></textarea>
+						</div>
+	
+	section
+		h4 Inverso Deshabilitado
+		.ds-sample.ds-sample--inverse
+			+mngTextareaReverseDisabled('Text area title','Placeholder text example', 'ptt4','ss')
+		pre
+			code.language-html
+				:markdown-it
+					<div class="c-mngTextarea c-mngTextarea--reverse is-disabled">
+						<label class="c-mngTextarea__label" for="ptt4">Text area title</label>
+						<textarea class="c-mngTextarea__textarea" id="ptt4" name="ss" placeholder="Placeholder text example"></textarea>
+					</div>
+
+block specification
+	section
+		h3 DESKTOP - TABLET
+		ul.ds-specs.row
+			each val in [1, 2, 3]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="../../../assets/img/components/textarea/specs/" + val + ".png", alt="")
+		
+
+block advice
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLETEXTAREA
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='../../../assets/img/components/textarea/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
+
+
+block paginator
+	- var next = "input";
+	- var prev = "tabs";
+	+paginatorNav("paginatorOptions",[
+		{ 
+			titPrev:"Tabs",
+			titNext:"Text Inputs",
+			familyPrev: "components", 
+			familyNext: "components" 
+		}
+	])

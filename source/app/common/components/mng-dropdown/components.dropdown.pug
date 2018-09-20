@@ -1,4 +1,4 @@
-mixin mngDrop()
+//mixin mngDrop()
 	.c-mngDrop
 		p.c-mngDrop__btn Selecciona una tienda...
 		.c-mngDrop__container
@@ -13,3 +13,12 @@ mixin mngDrop()
 					a.c-mngDrop__link(href='#') Option 4
 				li.c-mngDrop__item
 					a.c-mngDrop__link(href='#') Option 5
+
+mixin mngDrop--voiceAndTone(options)
+	.c-mngDrop.c-mngDrop--in-voiceTone.u-spacer--5
+		p.c-mngDrop__btn Selecciona una opción
+			.c-mngDrop__container
+				ul.c-mngDrop__list
+					for option in options   
+						li.c-mngDrop__item
+							a.c-mngDrop__link(href="")= option

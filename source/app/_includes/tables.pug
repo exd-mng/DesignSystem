@@ -1,0 +1,17 @@
+//TABLE
+
+mixin thead-row(titles)
+    tr    
+        for title in titles   
+            th 
+                strong= title
+
+mixin tfoot-row(texts)
+    tr    
+        for text in texts   
+            td= text
+
+mixin tbody-row(contents)
+    tr    
+        for content in contents   
+            td= content

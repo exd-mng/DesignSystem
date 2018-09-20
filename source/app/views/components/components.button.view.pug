@@ -1,7 +1,7 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Botones";
+	- var active = "Buttons";
 	- var title = active;
 
 block codeHead
@@ -135,14 +135,33 @@ block advice
 								p
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
+
+		h3 Algunos ejemplos de texto para botones y elementos relacionados	
+		table.ds-table
+			thead
+				+thead-row(["Botón","Uso"])
+			tbody
+				+tbody-row(["Expresar acción","Ver arriba el uso de los verbos con consistencia."])
+				+tbody-row(["Atràs","Permite retroceder procesos con varios pasos."])
+				+tbody-row(["Cancelar","Cancelar una acción."])
+				+tbody-row(["Hecho","Confirma la finalización de un proceso de varios pasos."])
+				+tbody-row(["OK","Hace que un mensaje o diálogo desaparezca sin consecuencias."])
+				+tbody-row(["Siguiente","Lleva al usuario al siguiente paso de un proceso de varios pasos."])
+				+tbody-row(["Seguir leyendo","Textos largos (noticias, manuales): Lleva al usuario a contenido adicional."])
+				+tbody-row(["Más detalles","Aplicaciones: Lleva al usuario a más contenido, información."])
+				+tbody-row(["No, gracias","Permite al usuario declinar un ofrecimiento o posibilidad."])
+				+tbody-row(["Ahora no","Permite al usuario posponer una acción o decisión. Usar solo cuando la llamada a la acción en el diálogo sea esencial para la funcionalidad del producto, por razones legales o por otro motivo urgente."])
+				+tbody-row(["De acuerdo","Permite al usuario confirmar una acción relevante para la tarea en cuestión."])
+				+tbody-row(["Omitir","Permite al usuario evitar una interrupción y seguir con una tarea."])
+
 block paginator
 	- var next = "checkbox";
-	- var prev = "type";
+	- var prev = "breadcrumb";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev: "Tipografía",
+			titPrev: "Breadcrumb",
 			titNext:"Checkbox",
-			familyPrev: "design",
+			familyPrev: "components",
 			familyNext: "components"
 		}
 	])

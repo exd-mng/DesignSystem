@@ -120,33 +120,33 @@ block codeBody
 			.ds-sample.ds-sample--inverse
 				ul.o-list.o-list--inline
 					li.o-list__item
-						+mngCheck('Checkbox','ptt4', 'rr', 'c-mngCheck--reverse')
+						+mngCheck('Checkbox','ptt10', 'rr', 'c-mngCheck--reverse')
 					li.o-list__item
-						+mngCheck('Checkbox', 'ptt5', 'rr', 'c-mngCheck--reverse')(disabled)
+						+mngCheck('Checkbox', 'ptt11', 'rr', 'c-mngCheck--reverse')(disabled)
 					li.o-list__item
-						+mngCheck('Checkbox','ptt6', 'rr', 'c-mngCheck--reverse', 'c-mngCheck__fake--indeterminate')
+						+mngCheck('Checkbox','ptt12', 'rr', 'c-mngCheck--reverse', 'c-mngCheck__fake--indeterminate')
 			pre
 				code.language-html
 					:markdown-it
 						<ul class="o-list o-list--inline">
 						<li class="o-list__item">
 						<div class="c-mngCheck c-mngCheck--reverse">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt4" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt4"><span class="c-mngCheck__fake"></span>Checkbox
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt10" type="checkbox" name="rr">
+						<label class="c-mngCheck__label" for="ptt10"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck c-mngCheck--reverse">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt5" type="checkbox" name="rr" disabled="disabled">
-						<label class="c-mngCheck__label" for="ptt5"><span class="c-mngCheck__fake"></span>Checkbox
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt11" type="checkbox" name="rr" disabled="disabled">
+						<label class="c-mngCheck__label" for="ptt11"><span class="c-mngCheck__fake"></span>Checkbox
 						</label>
 						</div>
 						</li>
 						<li class="o-list__item">
 						<div class="c-mngCheck c-mngCheck--reverse">
-						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt6" type="checkbox" name="rr">
-						<label class="c-mngCheck__label" for="ptt6"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
+						<input class="c-mngCheck__checkbox u-hidden-visually" id="ptt12" type="checkbox" name="rr">
+						<label class="c-mngCheck__label" for="ptt12"><span class="c-mngCheck__fake c-mngCheck__fake--indeterminate"></span>Checkbox
 						</label>
 						</div>
 						</li>
@@ -174,12 +174,12 @@ block advice
 									span.ds-doDont__check= dodont.info[i].uso
 									!= dodont.info[i].info
 block paginator
-	- var next = "links";
+	- var next = "dropdown";
 	- var prev = "button";
 	+paginatorNav("paginatorOptions",[
 		{
-			titPrev:"Botones", 
-			titNext:"Enlaces", 
+			titPrev:"Button", 
+			titNext:"Dropdown", 
 			familyPrev: "components", 
 			familyNext: "components" 
 		}

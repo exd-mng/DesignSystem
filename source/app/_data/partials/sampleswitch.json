@@ -1,0 +1,30 @@
+{
+    "switch": {
+        "info": [
+            {
+                "uso": "Correcto",
+                "info": "Usa el swich en estado de reposo para indicar que no hay ninguna opción seleccionada."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "Si hay dos opciones no se pueden seleccionar las dos a la vez."
+            },
+            {
+                "uso": "Correcto",
+                "info": "Correcto. Mostrar al usuario todas las opciones disponibles, tanto la seleccionada como las restantes. "
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "Mostrar sólo la opción que está seleccionada."
+            },
+            {
+                "uso": "Correcto",
+                "info": "Pueden existir más de 2 opciones que se mostrarán todas a primera vista."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": "Si tenemos poco espacio y podemos ocultar todas las opciones, es mejor usar un <a href=\"/app/views/components/components.dropdown.view.html\" class=\"c-mngLink\">dropdown</a>.."
+            }
+        ]
+    }
+}

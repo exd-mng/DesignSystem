@@ -1,54 +1,56 @@
+extends ../../_layouts/components.view.pug
 
+block config
+	- var active = "Accordion";
+	- var title = active;
 
-// block config
-	- var active = "Botones" ;
-	- var title = "Botones";
+block codeHead
+	:markdown-it
+		Permite a los usuarios expandir y contraer secciones de contenido.
 
+block codeBody
+	section
+		h3 HTML
+		section
+			h4 Accordion contraído
+			img(src="../../../assets/img/components/accordion/code/1.png", alt="")
+					
+		section
+			h4 Accordion expandido
+			img(src="../../../assets/img/components/accordion/code/2.png", alt="")
+			img(src="../../../assets/img/components/accordion/code/3.png", alt="", style="margin-top: 36px;")
 
-	.ds-sample
-		+mngAccordion()
-	pre
-		code.language-html
-			:markdown-it
-				<article class="c-mngAccordion">
-					<section class="c-mngAccordion__tab is-open">
-						<h2 class="c-mngAccordion__tit">
-						<button class="c-mngAccordion__btn" type="button">Descripción del producto
-						<svg class="o-mngIco o-mngIco--down c-mngAccordion__ico">
-						<use xlink:href="/icons/sprite.svg#down"></use>
-						</svg>
-						</button>
-						</h2>
-						<div class="c-mngAccordion__content">
-						<div class="c-mngAccordion__inner">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu dui scelerisque libero porttitor convallis. Sed non sapien vel diam mattis porttitor vel vitae enim. Maecenas tristique erat at lorem lobortis bibendum. Cras viverra sollicitudin mauris at facilisis. Curabitur hendrerit odio ut purus porta, a dapibus felis scelerisque. In consequat orci quis fringilla ornare. Morbi vel augue feugiat, laoreet dui vitae, mattis quam. Praesent a lectus eu ipsum ullamcorper vestibulum.</p>
-						<ul class="o-menuList">
-						<li class="o-menuList__item">Lorem ipsim sit amet dolor</li>
-						<li class="o-menuList__item">Curabitur hendrerit odio ut purus porta, a dapibus felis scelerisque.</li>
-						<li class="o-menuList__item"> Morbi vel augue feugiat, laoreet dui vitae.</li>
-						</ul>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu dui scelerisque libero porttitor convallis. Sed non sapien vel diam mattis porttitor vel vitae enim. Maecenas tristique erat at lorem lobortis bibendum. Cras viverra sollicitudin mauris at facilisis.</p>
-						</div>
-						</div>
-					</section>
-					<section class="c-mngAccordion__tab">
-						<h2 class="c-mngAccordion__tit">
-						<button class="c-mngAccordion__btn" type="button">Detalles de composición
-						<svg class="o-mngIco o-mngIco--down c-mngAccordion__ico">
-						<use xlink:href="/icons/sprite.svg#down"></use>
-						</svg>
-						</button>
-						</h2>
-						<div class="c-mngAccordion__content">
-						<div class="c-mngAccordion__inner">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu dui scelerisque libero porttitor convallis. Sed non sapien vel diam mattis porttitor vel vitae enim. Maecenas tristique erat at lorem lobortis bibendum. Cras viverra sollicitudin mauris at facilisis. Curabitur hendrerit odio ut purus porta, a dapibus felis scelerisque. In consequat orci quis fringilla ornare. Morbi vel augue feugiat, laoreet dui vitae, mattis quam. Praesent a lectus eu ipsum ullamcorper vestibulum.</p>
-						<ul class="o-menuList">
-						<li class="o-menuList__item">Lorem ipsim sit amet dolor</li>
-						<li class="o-menuList__item">Curabitur hendrerit odio ut purus porta, a dapibus felis scelerisque.</li>
-						<li class="o-menuList__item"> Morbi vel augue feugiat, laoreet dui vitae.</li>
-						</ul>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu dui scelerisque libero porttitor convallis. Sed non sapien vel diam mattis porttitor vel vitae enim. Maecenas tristique erat at lorem lobortis bibendum. Cras viverra sollicitudin mauris at facilisis.</p>
-						</div>
-						</div>
-					</section>
-				</article>
+block specification
+	section
+		h3 Desktop - Tablet
+		ul.ds-specs.row
+			each val in [1,2,3,4]
+				li.ds-specs__list.ds-specs__list--full.col-xs-12
+					img(src="../../../assets/img/components/accordion/specs/general/" + val + ".png", alt="")
+
+block advice
+	h3 Recomendaciones
+	.ds-doDont
+		each dodont in SAMPLEACCORDION
+			.row
+				- for (var i = 0; i < dodont.info.length; i++)
+					.col-xs-12.col-md-6.ds-doDont__box
+						.ds-doDont__wrap
+							img(alt="", src='../../../assets/img/components/accordion/dodont/' + i + '.png').ds-doDont__img
+						.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+							p
+								span.ds-doDont__check= dodont.info[i].uso
+								!= dodont.info[i].info
+
+block paginator
+	- var prev = "voice";
+	- var next = "breadcrumb";
+	
+	+paginatorNav("paginatorOptions",[
+		{ 
+			titPrev: "Voice & tone",
+			titNext:"Breadcrumb",
+			familyPrev: "design",
+			familyNext: "components"
+		}
+	])

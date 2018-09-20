@@ -12,13 +12,27 @@ block codeBody
 	section
 		h3 HTML
 		section
-			.ds-sample
+			.ds-sample.ds-sample--center
 				+mngBreadCrumb()
 			pre
 				code.language-html
 					:markdown-it
 						<ol class="c-mngBreadCrumb">
 							<li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Books</a></li>
+							<li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Science Fiction</a></li>
+							<li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Award Winners</a></li>
+						</ol>	
+		h3 HTML - Mobile
+		section
+			.ds-sample
+				+mngBreadCrumbMobile()
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngBreadCrumb c-mngBreadCrumb--mobile">
+							<li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">
+								<svg class="o-mngIco o-mngIco--left o-mngIco--mr"><use xlink:href="../../../assets/icons/sprite.svg#left"></use></svg>Books</a>
+							</li>
 							<li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Science Fiction</a></li>
 							<li class="c-mngBreadCrumb__item"><a class="c-mngLink" href="#">Award Winners</a></li>
 						</ol>	
@@ -30,6 +44,12 @@ block specification
 			each val in [1,2]
 				li.ds-specs__list.col-xs-12.col-md-6
 					img(src="../../../assets/img/components/breadcrumb/specs/general/" + val + ".png", alt="")
+	section
+		h3 Mobile
+		ul.ds-specs.row
+			each val in [1]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="../../../assets/img/components/breadcrumb/specs/mobile/" + val + ".png", alt="")
 
 block advice
 	section
@@ -62,12 +82,12 @@ block advice
 									!= dodont.info[i].info
 
 block paginator
-	- var next = "checkbox";
-	- var prev = "buttons";
+	- var next = "button";
+	- var prev = "accordion";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev: "Botones",
-			titNext:"Checkbox",
+			titPrev: "Accordion",
+			titNext:"Button",
 			familyPrev: "components",
 			familyNext: "components"
 		}

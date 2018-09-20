@@ -1,0 +1,22 @@
+{
+	"inputs": {
+		"info": [
+			{
+				"uso": "Correcto",
+				"info": "Los inputs se utilizan cuando el usuario solamente tiene que introducir un texto breve de no más de una línea."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Si el usuario tiene que insertar más de una línea de texto, se recomienda utilizar los <a href=\"/app/views/components/components.textarea.view.html\" class=\"c-mngLink\">text area</a>."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Los iconos descriptivos solo se utilizarán cuando el input tenga opciones seleccionables anidadas."
+			},
+			{
+				"uso": "Incorrecto",
+				"info": "Los iconos descriptivos no se colocan a la derecha de la etiqueta. Deberán ir siempre a la izquierda."
+			}
+		]
+	}
+}

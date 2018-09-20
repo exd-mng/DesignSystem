@@ -1,24 +1,166 @@
+extends ../../_layouts/components.view.pug
+
+block config
+	- var active = "Steps";
+	- var title = active;
+
+block codeHead
+	:markdown-it
+		Nos ayudarán a representar visualmente el progreso de un usuario a través de un conjunto de pasos hasta completar un proceso.
+
+block codeBody
+	section
+		h3 HTML
+		section
+			h4 Desktop - Tablet	
+			.ds-sample
+				+mngSteps(1)
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngSteps">
+							<li class="c-mngSteps__item is-active">
+								<a href="#" class="c-mngSteps__link">Detalles</a>
+							</li>
+							<li class="c-mngSteps__item">
+								<a href="#" class="c-mngSteps__link">Prendas</a>
+							</li>
+							<li class="c-mngSteps__item">
+								<a href="#" class="c-mngSteps__link">Resumen</a>
+							</li>
+						</ol>
+			
+			.ds-sample
+				+mngSteps(2)
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngSteps">
+							<li class="c-mngSteps__item is-complete">
+								<a href="#" class="c-mngSteps__link">Detalles</a>
+							</li>
+							<li class="c-mngSteps__item is-active">
+								<a href="#" class="c-mngSteps__link">Prendas</a>
+							</li>
+							<li class="c-mngSteps__item">
+								<a href="#" class="c-mngSteps__link">Resumen</a>
+							</li>
+						</ol>
+
+			.ds-sample
+				+mngSteps(3)
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngSteps">
+							<li class="c-mngSteps__item is-complete">
+								<a href="#" class="c-mngSteps__link">Detalles</a>
+							</li>
+							<li class="c-mngSteps__item is-complete">
+								<a href="#" class="c-mngSteps__link">Prendas</a>
+							</li>
+							<li class="c-mngSteps__item is-active">
+								<a href="#" class="c-mngSteps__link">Resumen</a>
+							</li>
+						</ol>
+
+		section
+			h4 Mobile
+			.ds-sample
+				+mngSteps(1, "is-mobile")
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngSteps">
+							<li class="c-mngSteps__item is-active">
+								<a href="#" class="c-mngSteps__link">Detalles</a>
+							</li>
+							<li class="c-mngSteps__item">
+								<a href="#" class="c-mngSteps__link">Prendas</a>
+							</li>
+							<li class="c-mngSteps__item">
+								<a href="#" class="c-mngSteps__link">Resumen</a>
+							</li>
+						</ol>
+			
+			.ds-sample
+				+mngSteps(2, "is-mobile")
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngSteps">
+							<li class="c-mngSteps__item is-complete">
+								<a href="#" class="c-mngSteps__link">Detalles</a>
+							</li>
+							<li class="c-mngSteps__item is-active">
+								<a href="#" class="c-mngSteps__link">Prendas</a>
+							</li>
+							<li class="c-mngSteps__item">
+								<a href="#" class="c-mngSteps__link">Resumen</a>
+							</li>
+						</ol>
+
+			.ds-sample
+				+mngSteps(3, "is-mobile")
+			pre
+				code.language-html
+					:markdown-it
+						<ol class="c-mngSteps">
+							<li class="c-mngSteps__item is-complete">
+								<a href="#" class="c-mngSteps__link">Detalles</a>
+							</li>
+							<li class="c-mngSteps__item is-complete">
+								<a href="#" class="c-mngSteps__link">Prendas</a>
+							</li>
+							<li class="c-mngSteps__item is-active">
+								<a href="#" class="c-mngSteps__link">Resumen</a>
+							</li>
+						</ol>
+
+block specification
+	section
+		h3 DESKTOP - TABLET (width + 640px)
+		ul.ds-specs.row
+			each val in [1,2,3]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="../../../assets/img/components/steps/specs/" + val + ".png", alt="")
+
+		h3 MOBILE (width 320 - 639 px)
+		ul.ds-specs.row
+			each val in [4,5]
+				li.ds-specs__list.col-xs-12.col-md-6
+					img(src="../../../assets/img/components/steps/specs/" + val + ".png", alt="")
+
+		h3 TABLA ANCHOS
+		ul.ds-specs.row
+			each val in [6]
+				li.ds-specs__list.col-xs-12
+					img(src="../../../assets/img/components/steps/specs/" + val + ".png", alt="")
 
 
-//block config
-	- var nav = "steps";
-	- var title = "Steps";
-	- var desc = "";
+block advice
+	section
+		h3 Recomendaciones
+		.ds-doDont
+			each dodont in SAMPLESTEPS
+				.row
+					- for (var i = 0; i < dodont.info.length; i++)
+						.col-xs-12.col-md-6.ds-doDont__box
+							.ds-doDont__wrap
+								img(alt="", src='../../../assets/img/components/steps/dodont/' + i + '.png').ds-doDont__img
+							.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+								p
+									span.ds-doDont__check= dodont.info[i].uso
+									!= dodont.info[i].info
 
-
-	.ds-sample
-		+mngSteps()
-	pre
-		code.language-html
-			:markdown-it
-				<ol class="c-mngSteps">
-					<li class="c-mngSteps__item is-complete">
-						<a href="#" class="c-mngSteps__link">Detalles</a>
-					</li>
-					<li class="c-mngSteps__item is-active">
-						<a href="#" class="c-mngSteps__link">Prendas</a>
-					</li>
-					<li class="c-mngSteps__item">
-						<a href="#" class="c-mngSteps__link">Resumen</a>
-					</li>
-				</ol>
+block paginator
+	- var next = "switch";
+	- var prev = "radio";
+	+paginatorNav("paginatorOptions",[
+		{ 
+			titPrev: "Radio Button",
+			titNext:"Switch",
+			familyPrev: "components",
+			familyNext: "components"
+		}
+	])

@@ -276,6 +276,9 @@ pre {
 			@include mng-rem(margin-bottom, 24px);
 		}
 	}
+	&--ol{
+		list-style: decimal;
+	}
 }
 
 .ds-wrap {
@@ -317,7 +320,7 @@ pre {
 		@include mng-rem(padding-top, 10px);
 		@include mng-rem(padding-bottom, 10px);
 		display: block;
-    text-align: center;
+    	text-align: center;
 		position: relative;
 		&::after {
 			content: "";
@@ -356,12 +359,19 @@ pre {
 	@include mng-rem(padding, 52px 34px);
 	@include mng-rem(margin-top, 24px);
 	background-color: rgba($color-concrete, .5);
+	position: relative;
 	text-align: center;
 	&--inverse {
 		background-color: $color-woodsmoke;
 	}
 	&--fakes {
 		pointer-events: none;
+	}
+	&--center{
+		@include mng-rem(padding, 52px 0);
+	}
+	&--in-inputs{
+		padding-top: 0;
 	}
 }
 
@@ -493,6 +503,12 @@ pre {
 			margin-top: 0;
 			&:nth-child(n+3) {
 				@include mng-rem(margin-top, 16px);
+			}
+		}
+		&--full{
+			@include mng-rem(margin-top, 16px);
+			&:first-child {
+				@include mng-rem(margin-top, 0);
 			}
 		}
 	}
@@ -731,5 +747,58 @@ pre {
 	.ds-overlay {
 		opacity: 1;
 		z-index: auto;
+	}
+}
+.ds-table {
+	@include mng-rem(margin-top, 24px);
+	@include mng-rem(font-size, 14px);
+	margin-left: 0;
+	table-layout: fixed;
+	width: 100%;
+	
+	th, td {
+		@include mng-rem(padding, 8px);
+		vertical-align: middle;
+		position: relative;
+		border: .1rem solid $color-iron;
+		/*@media only screen and ( max-width: 640px){
+			display: block;
+		}*/
+	}
+	td {
+		min-height: 3.5rem;
+		vertical-align: middle;
+		line-height: 1.5;
+	}
+	thead {
+		th{
+			background-color: $color-concrete;
+			height: 4rem;
+		}
+	}
+	tfoot {
+		td {
+		border-bottom: 0;
+		border-top: .1rem solid $color-woodsmoke;
+		}
+	}
+	.ds-list{
+		margin-top: 0;
+		padding-left: 1rem;
+		&__item{
+			&:last-child{
+				padding-bottom: .75rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&--vertical-head{
+		td{
+			&:first-of-type{
+				width: 30%;
+				background-color: $color-concrete;
+				font-weight: 400;
+			}
+		}
 	}
 }

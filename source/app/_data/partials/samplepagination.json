@@ -1,0 +1,22 @@
+{
+    "pagination": {
+        "info": [
+            {
+                "uso": "Correcto",
+                "info": "Mostrar siempre el número total de páginas."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": ""
+            },
+            {
+                "uso": "Correcto",
+                "info": "Mostrar siempre la primera y la última página."
+            },
+            {
+                "uso": "Incorrecto",
+                "info": ""
+            }
+        ]
+    }
+}

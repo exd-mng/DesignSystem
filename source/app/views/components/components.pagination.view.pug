@@ -1,12 +1,12 @@
 extends ../../_layouts/components.view.pug
 
 block config
-	- var active = "Paginador";
+	- var active = "Pagination";
 	- var title = active;
 
 block codeHead
 	:markdown-it
-		La paginación se usa para organizar contenidos muy extensos o gran cantidad de datos.
+		Permite dividir el contenido en diferentes páginas y navegar por ellas (adelante, atrás y/o de manera aleatoria). 
 
 block codeBody
 	section
@@ -24,19 +24,80 @@ block codeBody
 					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">4</a></li>
 					<li class="c-mngPagination__item is-active"><a class="c-mngPagination__link" href="">5</a></li>
 					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">6</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">7</a></li>
 					<li class="c-mngPagination__item c-mngPagination__item--gap">...</li>
-					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">102</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">15</a></li>
+					<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&gt;</a></li>
+					</ul>
+
+	section
+		h3 Inverse
+		.ds-sample.ds-sample--inverse
+			+mngPaginationReverse()
+		pre
+			code
+				:markdown-it
+					<ul class="c-mngPagination c-mngPagination--reverse">
+					<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&lt;</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">1</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">2</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">3</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">4</a></li>
+					<li class="c-mngPagination__item is-active"><a class="c-mngPagination__link" href="">5</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">6</a></li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">7</a></li>
+					<li class="c-mngPagination__item c-mngPagination__item--gap">...</li>
+					<li class="c-mngPagination__item"><a class="c-mngPagination__link" href="">15</a></li>
 					<li class="c-mngPagination__item c-mngPagination__item--btn"><a class="c-mngPagination__link" href="">&gt;</a></li>
 					</ul>
 block specification
+	section
+		h3 Desktop
+		img(src="../../../assets/img/components/pagination/specs/general/1.png", alt="")
+	
+	section
+		h3 Móvil - Tablet
+		img(src="../../../assets/img/components/pagination/specs/general/2.png", alt="")
+
+	section
+		h3 Funcionalidad
+		img(src="../../../assets/img/components/pagination/specs/general/1.png", alt="")
+
+	section
+		ol.ds-list.ds-list--ol
+			li.ds-list__item 
+				p Seleccionando una página se añade a la misma.
+			li.ds-list__item 
+				p Mediante las flechas izquierda y derecha se puede navegar por las páginas de forma secuencial. 
+			li.ds-list__item 
+				p El usuario puede ir seleccionando páginas hasta la nº4 sin que nada cambie en el componente. Si selecciona la página 5, se empiezan a mostrar las páginas siguientes, mientras que las páginas anteriores se ocultan.
+			li.ds-list__item 
+				p La página 1 se muestra fija a la izquierda para poder volver al inicio del listado. 
+			li.ds-list__item 
+				p Los puntos suspensivos indican que hay un intervalo de páginas ocultas.
+			li.ds-list__item 
+				p El último número en la derecha, corresponde a la última página del listado. Si el usuario accede a ella, solamente se mostrarán puntos suspensivos a la izquierda.
+
 block advice
+	h3 Recomendaciones
+	.ds-doDont
+		each dodont in SAMPLEPAGINATION
+			.row
+				- for (var i = 0; i < dodont.info.length; i++)
+					.col-xs-12.col-md-6.ds-doDont__box
+						.ds-doDont__wrap
+							img(alt="", src='../../../assets/img/components/pagination/dodont/' + i + '.png').ds-doDont__img
+						.ds-doDont__txt(class=dodont.info[i].uso === "Correcto" ? "ds-doDont__txt--do" : "ds-doDont__txt--dont")
+							p
+								span.ds-doDont__check= dodont.info[i].uso
+								!= dodont.info[i].info
 
 block paginator
 	- var next = "radio";
-	- var prev = "input";
+	- var prev = "notifications";
 	+paginatorNav("paginatorOptions",[
 		{ 
-			titPrev:"Input",
+			titPrev:"Notifications",
 			titNext:"Radio Buttons",
 			familyPrev: "components", 
 			familyNext: "components" 
