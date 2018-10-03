@@ -1,26 +1,28 @@
-extends ../../_layouts/components.view.pug
+extends ../../_layouts/layout.view.pug
 
 block config
+	- var family = "Components";
 	- var active = "Accordion";
 	- var title = active;
+	- var tabs = ['Codigo','Especificaciones','Recomendaciones'];
 
 block codeHead
 	:markdown-it
 		Permite a los usuarios expandir y contraer secciones de contenido.
 
-block codeBody
+block Codigo
 	section
 		h3 HTML
 		section
 			h4 Accordion contraído
 			img(src="../../../assets/img/components/accordion/code/1.png", alt="")
-					
+
 		section
 			h4 Accordion expandido
 			img(src="../../../assets/img/components/accordion/code/2.png", alt="")
 			img(src="../../../assets/img/components/accordion/code/3.png", alt="", style="margin-top: 36px;")
 
-block specification
+block Especificaciones
 	section
 		h3 Desktop - Tablet
 		ul.ds-specs.row
@@ -28,7 +30,7 @@ block specification
 				li.ds-specs__list.ds-specs__list--full.col-xs-12
 					img(src="../../../assets/img/components/accordion/specs/general/" + val + ".png", alt="")
 
-block advice
+block Recomendaciones
 	h3 Recomendaciones
 	.ds-doDont
 		each dodont in SAMPLEACCORDION
@@ -45,7 +47,7 @@ block advice
 block paginator
 	- var prev = "voice";
 	- var next = "breadcrumb";
-	
+
 	+paginatorNav("paginatorOptions",[
 		{ 
 			titPrev: "Voice & tone",

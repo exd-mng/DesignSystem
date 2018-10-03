@@ -3,9 +3,9 @@ mixin item(title, url)
 		a.ds-mainNav__link(href=url, class=active == title ? 'is-active' : '')= title
 
 mixin itemGeneral(title, url)
-	li.ds-mainNav__item
-		strong.ds-mainNav__tit
-			a(href=url, class=active == title ? 'is-active' : '')= title
+	strong(class=active == title ? 'is-active ds-mainNav__tit' : 'ds-mainNav__tit')
+		a(href=url)= title
+
 
 
 nav.ds-mainNav
@@ -25,7 +25,7 @@ nav.ds-mainNav
 				| Voice and tone
 			ul.ds-mainNav__subList
 				+item('General', '../voice/voice.general.view.html')
-				+item('Ortotypography', '../voice/voice.ortotype.view.html')
+				+item('Orthotypography', '../voice/voice.ortotype.view.html')
 				+item('Tone', '../voice/voice.tone.view.html')
 		li.ds-mainNav__item
 			strong.ds-mainNav__tit
@@ -40,7 +40,7 @@ nav.ds-mainNav
 				//+item('Modal', '../components/components.modal.view.html')
 				//+item('Notifications', '../components/components.notifications.view.html')
 				+item('Pagination', '../components/components.pagination.view.html')
-				+item('Radio button', '../components/components.radio.view.html')
+				+item('Radio Button', '../components/components.radio.view.html')
 				+item('Steps', '../components/components.steps.view.html')
 				+item('Switch', '../components/components.switch.view.html')
 				+item('Tabs', '../components/components.tabs.view.html')
@@ -48,5 +48,7 @@ nav.ds-mainNav
 				+item('Text inputs', '../components/components.input.view.html')
 				//+item('Toogle', '../components/components.toogle.view.html')
 				+item('Tooltip', '../components/components.tooltip.view.html')
-		+itemGeneral('Resources', '../others/others.resources.view.html')
-		+itemGeneral('Status', '../others/others.status.view.html')
+		li.ds-mainNav__item
+			+itemGeneral('Resources', '../others/others.resources.view.html')
+		li.ds-mainNav__item
+			+itemGeneral('Status', '../others/others.status.view.html')
