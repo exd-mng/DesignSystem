@@ -1,0 +1,142 @@
+extends ../../_layouts/design.view.pug
+
+block config
+    - var family = "Voice & tone";
+    - var active = "Tone";
+    - var title = active;
+
+block codeHead
+    :markdown-it
+        El tono transmite la actitud del “redactor” sobre lo que escribe y la traslada al lector que es quien, al final, tiene que leer e interpretar el texto.
+
+block codeBody
+    section
+        h3 Sé amigable, respetuoso y focalízate en el usuario.
+        p El texto de una aplicación debe complementar su diseño: debe ser intuitivo, eficiente, casual y confiable.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/1A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/1B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Sé humilde
+        p Revela lo que hace la funcionalidad, sin alardear mucho o ser demasiado prometedor. 
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src="../../../assets/img/design/voice/tone/2A.png", class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src="../../../assets/img/design/voice/tone/2B.png", class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Sé positivo
+        p Presenta la información de manera positiva: es tranquilizador.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/3A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/3B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Sé esencial
+        p Comunica solo los detalles esenciales para que los usuarios puedan enfocarse en sus propias tareas. A veces, la interfaz de usuario más efectiva no contiene ningún texto.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/4A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/4B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Tiempos verbales
+        p Usa la voz activa como norma, te ayudará a conseguir implicar al usuario directamente en la decisión.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/5A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/5B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+        p.u-spacer--3 La voz pasiva, en cambio, es muy útil cuando no queremos culpar al usuario o evitar sonar sentenciosos.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/6A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/tone/6B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+block paginator
+    - var prev = "type";
+    - var next = "accordion";
+    +paginatorNav("paginatorOptions",[
+        { 
+            titPrev:"Typography",
+            titNext:"Accordion",  
+            familyPrev: "design", 
+            familyNext: "components"
+        }
+    ])

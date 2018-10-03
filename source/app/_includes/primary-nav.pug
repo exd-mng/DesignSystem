@@ -2,11 +2,17 @@ mixin item(title, url)
 	li.ds-mainNav__item
 		a.ds-mainNav__link(href=url, class=active == title ? 'is-active' : '')= title
 
+mixin itemGeneral(title, url)
+	li.ds-mainNav__item
+		strong.ds-mainNav__tit
+			a(href=url, class=active == title ? 'is-active' : '')= title
+
+
 nav.ds-mainNav
 	ul.ds-mainNav__list
 		li.ds-mainNav__item
 			b.ds-mainNav__tit
-				| Diseño
+				| Style
 				//+svg-icon("right")(class="o-mngIco--ml")
 			ul.ds-mainNav__subList
 				+item('Color', '../design/design.colors.view.html')
@@ -14,10 +20,16 @@ nav.ds-mainNav
 				+item('Iconography', '../design/design.icons.view.html')
 				+item('Layout', '../design/design.layout.view.html')
 				+item('Typography', '../design/design.type.view.html')
-				+item('Voice & tone', '../design/design.voice.view.html')
 		li.ds-mainNav__item
 			strong.ds-mainNav__tit
-				| Componentes
+				| Voice and tone
+			ul.ds-mainNav__subList
+				+item('General', '../voice/voice.general.view.html')
+				+item('Ortotypography', '../voice/voice.ortotype.view.html')
+				+item('Tone', '../voice/voice.tone.view.html')
+		li.ds-mainNav__item
+			strong.ds-mainNav__tit
+				| Components
 			ul.ds-mainNav__subList
 				+item('Accordion', '../components/components.accordion.view.html')
 				+item('Breadcrumb', '../components/components.breadcrumb.view.html')
@@ -36,3 +48,5 @@ nav.ds-mainNav
 				+item('Text inputs', '../components/components.input.view.html')
 				//+item('Toogle', '../components/components.toogle.view.html')
 				+item('Tooltip', '../components/components.tooltip.view.html')
+		+itemGeneral('Resources', '../others/others.resources.view.html')
+		+itemGeneral('Status', '../others/others.status.view.html')

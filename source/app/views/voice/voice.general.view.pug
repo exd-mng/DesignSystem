@@ -1,0 +1,201 @@
+extends ../../_layouts/design.view.pug
+
+block config
+    - var family = "Voice & tone";
+    - var active = "General";
+    - var title = active;
+    
+
+block codeHead
+    :markdown-it
+        El uso de la voz y el tono adecuados nos permite conectarnos mejor con nuestros usuarios. Atrás han quedado los días en los que éstos percibían su experiencia con los contenidos como compleja, distante o desarticulada. Hemos evolucionado y ahora adoptamos un estilo conversacional, fácil de relacionar, claro, útil e interesante. Un estilo claro y conciso que cualquiera puede entender.
+block codeBody
+    section
+        p(style="margin-top: 4rem") El texto debe ser comprensible para cualquiera, en cualquier lugar, independientemente de su cultura o idioma. Para conseguirlo te damos una serie de buenas prácticas:
+        h3 Escribe de manera clara, precisa y concisa
+        p   Así las interfaces seran más utilizables y crea confianza. Para ello usa la:
+            ul.ds-list
+                li.ds-list__item
+                    p 
+                        strong Segunda persona ("tu" o "tus“) 
+                        |en la mayoría de las situaciones, como si la aplicación estuviera hablando directamente al usuario.
+                    img(src='../../../assets/img/design/voice/general/modal2pers.png', alt='En segunda persona', class="ds-img")
+                li.ds-list__item
+                    p
+                        strong Primera persona ("yo" o "mi“), 
+                        |solo cuando quieras enfatizar la propiedad del usuario sobre el contenido o las acciones.
+                    img(src='../../../assets/img/design/voice/general/primera-pers.png', alt='En primera persona', class="ds-img")
+        p Evita mezclar "mí" / "mi" con "usted" / "su". Puede causar confusión ver ambas formas de dirigirse al usuario en el mismo contexto.
+
+        h3 Evita el pronombre "nosotros"
+        p Concéntrate en el usuario y en lo éste puede hacer con la aplicación, en lugar de lo que tú o la aplicación estáis haciendo por el usuario.
+        p Excepcionalmente podemos usarlo  cuando una persona realiza una acción para un usuario, como por ejemplo responder a una sugerencia. Aquí, el uso de "nosotros" es apropiado.
+        img(src='../../../assets/img/design/voice/general/pronombrenosotros.png', alt='Evita el pronombre nosotros', class="ds-img")
+
+        h3 Sé conciso
+        p Los textos deben ser cortos, escaneables y segmentados para facilitar la navegación.
+            img(src='../../../assets/img/design/voice/general/conciso.png', alt='Sé conciso', class="ds-img")
+
+        h3 Escribe simple y directamente
+        p Usa un lenguaje simple y directo que sea fácil de entender por los usuarios.
+            br 
+            |Las frases introductorias comunes pueden omitirse.
+        img(src='../../../assets/img/design/voice/general/write-simply-and-directly.png', alt='Sé conciso', class="ds-img")
+
+        h3 Escribe para lectores de todos los niveles
+        p Usa palabras habituales, que sean fácilmente entendibles por nuestros usuarios. Evita terminología técnica demasiado específica.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/1-A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/1-B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+        p.u-spacer--5 Las acciones deben recomendarse indicando el nombre de los literales que aparecen en la interfaz, no el tipo de elemento (como menú o botón).
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/2-A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/2-B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Usa los verbos de manera consistente en diferentes acciones
+        p Si usas un verbo en concreto continúa usándolo en diferentes situaciones. 
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/3-A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/3-B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Género y número
+        p No combines opciones de género o número como "él/ella" o "él/ella", producto/s, etc. En general, opta siempre que sea posible por el masculino plural.
+        p Por ejemplo: Los productos se han añadido correctamente al carrito.
+
+        h3 Empieza con el objetivo
+        p Si una oración describe tanto un objetivo como la acción necesaria para lograr ese objetivo, comienza la oración con el objetivo
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/4-A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/4-B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Ve revelando los detalles según la necesidad
+        p No es necesario dar todos los detalles al principio, es mejor ir dando los detalles a medida que el usuario navega y va necesitando más información.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/5-A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/5-B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Nunca digas "nunca"
+        p Evita la palabra “nunca” y usa otras alternativas.
+        .ds-doDont.u-spacer--3
+            .row
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/6-A.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--do
+                        p
+                            span.ds-doDont__check
+                                |Correcto 
+                .col-xs-12.col-md-6.ds-doDont__box
+                    .ds-doDont__wrap
+                        img(alt="", src='../../../assets/img/design/voice/general/6-B.png', class="ds-doDont__img")
+                    .ds-doDont__txt.ds-doDont__txt--dont
+                        p
+                            span.ds-doDont__check
+                                |Incorrecto
+
+        h3 Algunos ejemplos de texto para botones y elementos relacionados	
+        table.ds-table
+            thead
+                +thead-row(["Botón","Uso"])
+            tbody
+                +tbody-row(["Expresar acción","Ver arriba el uso de los verbos con consistencia."])
+                +tbody-row(["Atràs","Permite retroceder procesos con varios pasos."])
+                +tbody-row(["Cancelar","Cancelar una acción."])
+                +tbody-row(["Hecho","Confirma la finalización de un proceso de varios pasos."])
+                +tbody-row(["OK","Hace que un mensaje o diálogo desaparezca sin consecuencias."])
+                +tbody-row(["Siguiente","Lleva al usuario al siguiente paso de un proceso de varios pasos."])
+                +tbody-row(["Seguir leyendo","Textos largos (noticias, manuales): Lleva al usuario a contenido adicional."])
+                +tbody-row(["Más detalles","Aplicaciones: Lleva al usuario a más contenido, información."])
+                +tbody-row(["No, gracias","Permite al usuario declinar un ofrecimiento o posibilidad."])
+                +tbody-row(["Ahora no","Permite al usuario posponer una acción o decisión. Usar solo cuando la llamada a la acción en el diálogo sea esencial para la funcionalidad del producto, por razones legales o por otro motivo urgente."])
+                +tbody-row(["De acuerdo","Permite al usuario confirmar una acción relevante para la tarea en cuestión."])
+                +tbody-row(["Omitir","Permite al usuario evitar una interrupción y seguir con una tarea."])
+
+
+        h3 Escritura global		
+        p Las aplicaciones tienen que ser entendidas por personas de todas las edades, culturas y niveles educativos. Una escritura simple y claro hace que sea fácil para cualquiera comprender su producto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     		
+        p Ten en cuenta el uso de los términos "izquierda" y "derecha" ya que hay idiomas en los que la dirección de la escritura es diferente (árabe, hebreo).		
+        //img(alt="", src='/assets/img/no-image.png', class="ds-img", style="width:50%;")
+        .row
+            .col-xs-12.col-md-6
+                img(alt="", src='../../../assets/img/design/voice/general/7-A.png', class="ds-img", style="width:70%;")
+
+            .col-xs-12.col-md-6
+                img(alt="", src='../../../assets/img/design/voice/general/7-B.png', class="ds-img", style="width:70%;")
+
+block paginator
+    - var prev = "type";
+    - var next = "accordion";
+    +paginatorNav("paginatorOptions",[
+        { 
+            titPrev:"Typography",
+            titNext:"Accordion",  
+            familyPrev: "design", 
+            familyNext: "components"
+        }
+    ])

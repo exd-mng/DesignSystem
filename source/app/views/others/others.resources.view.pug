@@ -1,0 +1,24 @@
+extends ../../_layouts/design.view.pug
+
+block config
+    - var family = "";
+    - var active = "Resources";
+    - var title = active;
+    
+
+block codeHead
+    :markdown-it
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in neque at tellus aliquet semper et ac nisi. Donec non tempus lectus, sed pretium mi. Maecenas accumsan quis quam sed placerat. Quisque nisi ante. 
+block codeBody
+
+block paginator
+    - var prev = "tooltip";
+    - var next = "status";
+    +paginatorNav("paginatorOptions",[
+        { 
+            titPrev:"Tooltip",
+            titNext:"Status",  
+            familyPrev: "components", 
+            familyNext: "design"
+        }
+    ])
